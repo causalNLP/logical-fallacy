@@ -1,0 +1,318 @@
+ caus
+accident
+ad absurdum
+ad antiquitatem
+ad antiquitatis
+ad baculum
+ad consequentiam
+ad crumenam
+ad hominem
+ad ignorantiam
+ad ignorantium
+ad infinitum
+ad lapidem
+ad lazarum
+ad misericordiam
+ad nauseam
+ad populum
+ad temperantiam
+ad verecundiam
+affirmative conclusion from a negative premise
+affirming a disjunct
+affirming the consequent
+after this therefore because of this
+ambiguity
+ambiguous middle term
+anecdotal
+anti-naturalistic fallacy
+appeal to accomplishment
+appeal to authority
+appeal to common belief
+appeal to common sense
+appeal to consequences
+appeal to crowd
+appeal to emotion
+appeal to fear
+appeal to flattery
+appeal to force
+appeal to ignorance
+appeal to motive
+appeal to nature
+appeal to normality
+appeal to novelty
+appeal to pity
+appeal to popularity
+appeal to poverty
+appeal to probability
+appeal to ridicule
+appeal to spite
+appeal to the crowd
+appeal to the majority
+appeal to the people
+appeal to the stick
+appeal to the stone
+appeal to threat
+appeal to tradition
+appeal to wealth
+appeal to widespread belief
+appeal to worse problems
+argument by emotive language
+argument by half-truth
+argument from authority
+argument from fallacy
+argument from ignorance
+argument from repetition
+argument from silence
+argument of the beard
+argument to moderation
+association fallacy
+baconian fallacy
+bad analogy
+bald man
+band wagon
+bandwagon
+bare assertion
+base rate
+begging the claim
+begging the question
+biased sample
+black & white
+black and white
+black-or-white
+bulverism
+burden of proof
+camel's nose
+card stacking
+categorical claim
+causal fallacy
+causal oversimplification
+causality
+cherry picking
+chronological snobbery
+circular
+circulus in demonstrando
+circumstantial ad hominem
+coincidental correlation
+complex question
+composition fallacy
+concretism
+conjunction fallacy
+contextomy
+contextotomy
+continuum fallacy
+converse accident
+converse error
+correlation implies causation
+correlation without causation
+correlative-based fallacies
+courtier's reply
+cum hoc ergo propter hoc
+decision-point fallacy
+definist fallacy
+definitional retreat
+denying the antecedent
+dicto simpliciter
+disjunctive fallacy
+divine fallacy
+division fallacy
+double counting
+ecological fallacy
+either/or
+emotional appeal
+equivocation
+ergo decedo
+ethical appeal
+etymological fallacy
+ex silentio
+exclusive premises
+existential fallacy
+fake dilemma
+fallacy fallacy
+fallacy of accent
+fallacy of bifurcation
+fallacy of composition
+fallacy of division
+fallacy of exclusion
+fallacy of ignorance
+fallacy of opposition
+fallacy of presuppositions
+fallacy of the beard
+fallacy of the heap
+fallacy of the mean
+false (irrelevant) authority
+false analogy
+false attribution
+false authority
+false caus
+false cause and effect
+false compromise
+false continuum
+false dichotomy
+false dilema
+false dilemma
+false effect
+false equivalence
+false or careless analogy
+false/not authority
+faulty analogy
+faulty authority
+faulty cause/effect
+faulty comparison
+faulty generalization
+feedback fallacy
+four terms
+furtive fallacy
+gambler's fallacy
+genetic fallacy
+glittering generalities
+golden mean
+guilt by association
+guilt by association and honor by association
+hasty generalization
+hasty induction
+historian's fallacy
+historical fallacy
+homunculus fallacy
+honor by association
+hypostatization
+i'm entitled to my opinion
+ignoratio elenchi
+ignoring a common cause
+illegitimate authority
+illicit affirmative
+illicit major
+illicit minor
+illicit negative
+illicit substitution of identicals
+inappropriate authority
+incomplete comparison
+incomplete evidence
+inconsistent comparison
+incredulity
+inductive fallacy
+insufficient sample
+insufficient statistics
+intentionality fallacy
+inverse gambler's
+ipse dixit
+irrelevant authority
+irrelevant conclusion
+is–ought fallacy
+it attacks the person. 
+it changes the argument to something else. 
+it leads to something that probably won't happen.
+it says a is true and b is true so a+b must be true.
+it stereotypes.
+it tells you to like something because a lot of people do.
+judgmental language
+jumping to conclusions
+kettle logic
+leading question
+line-drawing fallacy
+loaded label
+loaded language
+loaded question
+logic chopping
+lonely fact
+ludic fallacy
+lump of labour
+magical thinking
+many questions
+masked-man fallacy
+mcnamara fallacy
+middle ground
+mind projection
+misleading vividness
+misplaced concreteness
+missing the point
+modal fallacy
+modal scope
+moral equivalence
+moralistic fallacy
+motte-and-bailey fallacy
+moving the goalposts
+name-calling
+naturalistic fallacy
+negative conclusion from affirmative premises
+nirvana fallacy
+nit-picking
+no fallacy
+no true scotsman
+non-sequitur
+not as bad as
+novitatis
+nut-picking
+observational selection
+overgeneraliz
+overwhelming exception
+package deal
+perfect-solution fallacy
+personal attack
+persuasive definition
+petitio principii
+plurium interrogationum
+poisoning the well
+pooh-pooh
+post hoc
+post hoc ergo propter hoc
+proof by assertion
+prosecutor's fallacy
+proving too much
+psychogenetic fallacy
+psychologist's fallacy
+quantitative fallacy
+quaternio terminorum
+questionable authority
+questionable use of statistics
+quotation mining
+quoting out of context
+raising the bar
+red herring
+reductio ad absurdum
+reductio ad ridiculum
+referential fallacy
+regression fallacy
+reification
+relative privation
+retrospective determinism
+reverse causation
+scare tactics
+secundum quid
+sentimental appeal
+single authority
+single cause
+slanting
+slipperty slope
+slippery slope
+sorites fallacy
+special pleading
+stawman
+stereotyp
+straw man
+straw person
+strawmam
+strawman
+superstition
+suppressed correlative
+suppressed evidence
+survivorship bias
+sweeping generaliz
+temporal sequence implies causation
+texas sharpshooter
+thin edge of the wedge
+thought-terminating cliché
+thus leave
+tone policing
+traitorous critic
+trivial objections
+tu quoque
+two wrongs make a right
+undistributed middle
+vacuous truth
+vagueness
+weak analogy
+weak authority
+wishful thinking
+with this therefore because of this
+wrong direction
+you too

@@ -1,0 +1,14 @@
+{
+"tokenizer_name": "../../results/fallacy/finetuned/roberta/best-epoch",
+"model_name": "../../results/fallacy/finetuned/roberta/best-epoch",
+"data_dir": "../../datasets/fallacy/article/",
+"max_source_length": 512, # bigbird 4096
+"task_type": "sequence_matching", # always set to this
+"mode": "output_prob",
+
+"num_labels":3,
+"test_type": "test", # file name
+"output_dir": "../../results/fallacy/finetuned/roberta", # save probs to a txt file of probs
+"per_device_eval_batch_size": 64,
+"fp16": false # mobilebert does not support this
+}
