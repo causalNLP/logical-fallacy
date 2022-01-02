@@ -183,3 +183,5 @@ fabric.properties
 saved_models/electra/
 saved_models/deberta/
 
+#api keys
+data/api_openai.txt

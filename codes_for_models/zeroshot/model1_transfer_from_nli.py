@@ -1,6 +1,6 @@
 class Constants:
     url_csv_sentence_logical_fallacies = "https://doc-14-14-sheets.googleusercontent.com/export/70cmver1f290kjsnpar5ku2h9g/i58lts2ik9nn8ft0mbaeqpivuc/1630142750000/106535178685861528249/*/1Mf3aaSmo4DUUsymgIIxm_Vl4Hd-wnGsO0WB3pbD_u-k?format=csv&amp;id=1Mf3aaSmo4DUUsymgIIxm_Vl4Hd-wnGsO0WB3pbD_u-k&amp;gid=0"
-    data_folder = 'data/'
+    data_folder = '../../data/'
     csv_sentence_logic = data_folder + 'sentence_logic.csv'
     csv_sentence_logic_with_neg_labels = data_folder + 'sentence_logic_with_neg_labels.csv'
     csv_article_logic = data_folder + 'onehot_9class_20210825.csv'

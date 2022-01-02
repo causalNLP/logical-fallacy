@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import Dataset, TensorDataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
-from transformers import ElectraTokenizer,ElectraForSequenceClassification, AdamW,AutoModelForSequenceClassification
+from transformers import AutoTokenizer, AdamW,AutoModelForSequenceClassification
 import pandas as pd
 import random
 from torch import nn
@@ -24,7 +24,7 @@ def get_unique_labels(df,label_col_name):
   candidate_labels=list(labels_set)
   return candidate_labels
 
-class MNLIDataElectra(Dataset):
+class MNLIDataset(Dataset):
 
   def __init__(self,tokenizer_path, train_df, val_df,label_col_name,test_df=None,fallacy=False,undersample_train=False,undersample_val=False,undersample_test=False,undersample_rate=0.04):
     self.label_dict = {'entailment': 0, 'contradiction': 1, 'neutral': 2}
@@ -33,7 +33,7 @@ class MNLIDataElectra(Dataset):
     self.val_df = val_df
     self.test_df = test_df
     self.base_path = '/content/'
-    self.tokenizer = ElectraTokenizer.from_pretrained(tokenizer_path, do_lower_case=True)
+    self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, do_lower_case=True)
     self.train_data = None
     self.val_data = None
     self.label_col_name=label_col_name
@@ -145,14 +145,14 @@ class MNLIDataElectra(Dataset):
 
     return train_loader, val_loader,test_loader
 
-def get_logger():
+def get_logger(level='DEBUG'):
     logger = logging.getLogger()
     logger.handlers=[]
     file_log_handler = logging.FileHandler('logfile.log')
     logger.addHandler(file_log_handler)
     stderr_log_handler = logging.StreamHandler()
     logger.addHandler(stderr_log_handler)
-    logger.setLevel('DEBUG')
+    logger.setLevel(level)
     return logger
 
 def multi_acc(y_pred, y_test):
@@ -181,7 +181,7 @@ def multi_acc(y_pred, y_test):
 
 import time
 
-def get_metrics(logits,labels,threshold=0.5,sig=True):
+def get_metrics(logits,labels,threshold=0.5,sig=True,tensors=True):
   if sig:
     sig=nn.Sigmoid()
     preds=sig(logits)
@@ -189,8 +189,12 @@ def get_metrics(logits,labels,threshold=0.5,sig=True):
   else:
     preds=logits
   # print(preds.cpu().int(),labels.cpu().int())
-  y_true=labels.cpu().int()
-  y_pred=preds.cpu().int()
+  if tensors:
+    y_true=labels.cpu().int()
+    y_pred=preds.cpu().int()
+  else:
+    y_true=np.array(labels)
+    y_pred=np.array(preds)
   temp = 0
   for i in range(y_true.shape[0]):
       temp += sum(np.logical_and(y_true[i], y_pred[i])) / sum(np.logical_or(y_true[i], y_pred[i]))
@@ -202,7 +206,7 @@ def get_metrics(logits,labels,threshold=0.5,sig=True):
   macro_f1_score=sklearn.metrics.f1_score(y_true,y_pred,average='macro',zero_division=0)
   return accuracy,precision,recall,exact_match,micro_f1_score,macro_f1_score
 
-def train(model, dataset, optimizer,epochs=5,ratio=0.04):  
+def train(model, dataset, optimizer,logger,epochs=5,ratio=0.04):  
   train_loader,val_loader,_=dataset.get_data_loaders()
   min_val_loss=float('inf')
   loss_fn=nn.CrossEntropyLoss(weight=torch.tensor([12,1,1]).float())
@@ -285,7 +289,7 @@ def train(model, dataset, optimizer,epochs=5,ratio=0.04):
     logger.info(f'Epoch {epoch+1}: train_loss: {train_loss:.4f} train_acc: {train_acc:.4f} train_prec: {train_prec:.4f} train_rec: {train_rec:.4f}| val_loss: {val_loss:.4f} val_acc: {val_acc:.4f} val_prec: {val_prec:.4f} val_rec: {val_rec:.4f}')
     logger.info("{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds))
 
-def eval1(model,test_loader):
+def eval1(model,test_loader,logger):
   with torch.no_grad():
       all_preds=[]
       all_labels=[]
@@ -295,18 +299,21 @@ def eval1(model,test_loader):
         mask_ids = mask_ids.to(device)
         seg_ids = seg_ids.to(device)
         labels = y.to(device)
-        _, prediction = model(pair_token_ids, 
-                             token_type_ids=seg_ids, 
-                             attention_mask=mask_ids, 
-                             labels=labels).values()
-
+        if model=="random":
+          prediction=torch.rand([15,3])
+        else:
+          _, prediction = model(pair_token_ids, 
+                              token_type_ids=seg_ids, 
+                              attention_mask=mask_ids, 
+                              labels=labels).values()
         all_preds.append(torch.log_softmax(prediction, dim=1).argmax(dim=1))
         all_labels.append(labels)
-      all_preds=1-torch.stack(all_preds[:-1])
-      all_labels=1-torch.stack(all_labels[:-1])
+      all_preds=1-torch.stack(all_preds)
+      all_labels=1-torch.stack(all_labels)
       all_preds[all_preds<0]=0
       all_labels[all_labels<0]=0
       return get_metrics(all_preds,all_labels,sig=False)
+
 
 #return accuracy,precision,recall,exact_match,micro_f1_score,macro_f1_score
 if __name__ == "__main__":
@@ -316,18 +323,18 @@ if __name__ == "__main__":
     fallacy_all=pd.read_csv('../../data/edu_all_updated.csv')[['source_article','updated_label']]
     fallacy_train,fallacy_rem=train_test_split(fallacy_all,test_size=600,random_state=10)
     fallacy_dev,fallacy_test=train_test_split(fallacy_rem,test_size=300,random_state=10)
-    fallacy_ds=MNLIDataElectra("howey/electra-small-mnli",fallacy_train,fallacy_dev,'updated_label',fallacy_test,fallacy=True)
+    fallacy_ds=MNLIDataset("facebook/bart-large-mnli",fallacy_train,fallacy_dev,'updated_label',fallacy_test,fallacy=True)
     
     device="cuda"
     logger.info("initializing model")
-    model=AutoModelForSequenceClassification.from_pretrained("howey/electra-small-mnli",num_labels=3)
+    model=AutoModelForSequenceClassification.from_pretrained("facebook/bart-large-mnli")
     model.to(device)
     optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
     
-    logger.info("starting training")
-    train(model, fallacy_ds, optimizer,ratio=1,epochs=1)
+    # logger.info("starting training")
+    # train(model, fallacy_ds, optimizer,ratio=1,epochs=1)
 
-    logger.info("starting training")
-    _,val_loader,test_loader=fallacy_ds.get_data_loaders()
-    scores=eval1(model,test_loader)
+    logger.info("starting testing")
+    _,_,test_loader=fallacy_ds.get_data_loaders()
+    scores=eval1("random",test_loader,logger)
     logger.info("micro f1: %f macro f1:%f precision: %f recall: %f exact match %f",scores[4],scores[5],scores[1],scores[2],scores[3])
