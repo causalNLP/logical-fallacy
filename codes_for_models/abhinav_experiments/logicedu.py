@@ -1,3 +1,4 @@
+import cv2
 import torch
 from torch.utils.data import Dataset, TensorDataset, DataLoader
 from torch.nn.utils.rnn import pad_sequence
@@ -11,6 +12,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import sklearn.metrics
 import logging
+import argparse
 
 def get_unique_labels(df,label_col_name):
   candidate_labels=df[label_col_name].unique()
@@ -206,10 +208,10 @@ def get_metrics(logits,labels,threshold=0.5,sig=True,tensors=True):
   macro_f1_score=sklearn.metrics.f1_score(y_true,y_pred,average='macro',zero_division=0)
   return accuracy,precision,recall,exact_match,micro_f1_score,macro_f1_score
 
-def train(model, dataset, optimizer,logger,epochs=5,ratio=0.04):  
+def train(model, dataset, optimizer,logger,save_path,epochs=5,ratio=0.04,positive_weight=12):  
   train_loader,val_loader,_=dataset.get_data_loaders()
   min_val_loss=float('inf')
-  loss_fn=nn.CrossEntropyLoss(weight=torch.tensor([12,1,1]).float())
+  loss_fn=nn.CrossEntropyLoss(weight=torch.tensor([positive_weight,1,1]).float())
   loss_fn.to(device)
   for epoch in range(epochs):
     start = time.time()
@@ -281,7 +283,7 @@ def train(model, dataset, optimizer,logger,epochs=5,ratio=0.04):
     if(val_loss<min_val_loss):
         min_val_loss=val_loss
         logger.info("saving model")
-        model.save_pretrained("saved_models/electra_small_finetuned_logicedu")
+        model.save_pretrained(save_path)
     end = time.time()
     hours, rem = divmod(end-start, 3600)
     minutes, seconds = divmod(rem, 60)
@@ -318,23 +320,31 @@ def eval1(model,test_loader,logger):
 #return accuracy,precision,recall,exact_match,micro_f1_score,macro_f1_score
 if __name__ == "__main__":
     logger=get_logger()
-    
+    parser = argparse.ArgumentParser()
     logger.info("creating dataset")
+    parser.add_argument("-t", "--tokenizer", help = "tokenizer path")
+    parser.add_argument("-m", "--model", help = "model path")
+    parser.add_argument("-w", "--weight", help = "Weight of entailment loss")
+    parser.add_argument("-s", "--savepath", help = "Path to save finetuned model")
+    args = parser.parse_args()
+    print(args)
     fallacy_all=pd.read_csv('../../data/edu_all_updated.csv')[['source_article','updated_label']]
     fallacy_train,fallacy_rem=train_test_split(fallacy_all,test_size=600,random_state=10)
     fallacy_dev,fallacy_test=train_test_split(fallacy_rem,test_size=300,random_state=10)
-    fallacy_ds=MNLIDataset("facebook/bart-large-mnli",fallacy_train,fallacy_dev,'updated_label',fallacy_test,fallacy=True)
+    fallacy_ds=MNLIDataset(args.tokenizer,fallacy_train,fallacy_dev,'updated_label',fallacy_test,fallacy=True)
     
     device="cuda"
     logger.info("initializing model")
-    model=AutoModelForSequenceClassification.from_pretrained("facebook/bart-large-mnli")
+    model=AutoModelForSequenceClassification.from_pretrained(args.model)
     model.to(device)
     optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
     
-    # logger.info("starting training")
-    # train(model, fallacy_ds, optimizer,ratio=1,epochs=1)
+    logger.info("starting training")
+    train(model, fallacy_ds, optimizer,logger,args.savepath,ratio=1,epochs=10,positive_weight=int(args.weight))
 
+    model=AutoModelForSequenceClassification.from_pretrained(args.savepath)
+    model.to(device)
     logger.info("starting testing")
     _,_,test_loader=fallacy_ds.get_data_loaders()
-    scores=eval1("random",test_loader,logger)
+    scores=eval1(model,test_loader,logger)
     logger.info("micro f1: %f macro f1:%f precision: %f recall: %f exact match %f",scores[4],scores[5],scores[1],scores[2],scores[3])
