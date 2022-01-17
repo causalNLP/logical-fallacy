@@ -6,7 +6,6 @@ from transformers import AutoTokenizer, AdamW,AutoModelForSequenceClassification
 import pandas as pd
 import random
 from torch import nn
-import time
 import sklearn
 from sklearn.model_selection import train_test_split
 import numpy as np
@@ -19,7 +18,7 @@ def get_unique_labels(df,label_col_name):
   labels_set=set()
   for label in candidate_labels:
     labels=label.split(';')
-    if(len(labels)>1):
+    if len(labels)>1:
       print(labels)
     labels = [x.strip() for x in labels]
     labels_set.update(labels)
@@ -97,7 +96,7 @@ class MNLIDataset(Dataset):
 
       segment_ids = torch.tensor([0] * (premise_len + 2) + [1] * (hypothesis_len + 1))  # sentence 0 and sentence 1
       attention_mask_ids = torch.tensor([1] * (premise_len + hypothesis_len + 3))  # mask padded values
-      if(len(pair_token_ids)>MAX_LEN or len(segment_ids)>MAX_LEN or len(attention_mask_ids)>MAX_LEN):
+      if len(pair_token_ids)>MAX_LEN or len(segment_ids)>MAX_LEN or len(attention_mask_ids)>MAX_LEN:
         continue
       token_ids.append(torch.tensor(pair_token_ids))
       seg_ids.append(segment_ids)
@@ -198,6 +197,8 @@ def get_metrics(logits,labels,threshold=0.5,sig=True,tensors=True):
     y_true=np.array(labels)
     y_pred=np.array(preds)
   temp = 0
+  print("y_true shape=",y_true.shape)
+  print("y_pred shape=",y_pred.shape)
   for i in range(y_true.shape[0]):
       temp += sum(np.logical_and(y_true[i], y_pred[i])) / sum(np.logical_or(y_true[i], y_pred[i]))
   accuracy=temp / y_true.shape[0]
@@ -208,7 +209,7 @@ def get_metrics(logits,labels,threshold=0.5,sig=True,tensors=True):
   macro_f1_score=sklearn.metrics.f1_score(y_true,y_pred,average='macro',zero_division=0)
   return accuracy,precision,recall,exact_match,micro_f1_score,macro_f1_score
 
-def train(model, dataset, optimizer,logger,save_path,epochs=5,ratio=0.04,positive_weight=12):  
+def train(model, dataset, optimizer,logger,save_path,epochs=5,ratio=0.04,positive_weight=12):
   train_loader,val_loader,_=dataset.get_data_loaders()
   min_val_loss=float('inf')
   loss_fn=nn.CrossEntropyLoss(weight=torch.tensor([positive_weight,1,1]).float())
@@ -280,16 +281,21 @@ def train(model, dataset, optimizer,logger,save_path,epochs=5,ratio=0.04,positiv
     val_loss = total_val_loss/len(val_loader)
     val_rec = total_val_rec/len(val_loader)
     val_prec = total_val_prec/len(val_loader)
-    if(val_loss<min_val_loss):
+    flag=True
+    if val_loss<min_val_loss:
         min_val_loss=val_loss
         logger.info("saving model")
         model.save_pretrained(save_path)
+    else:
+        flag=False
     end = time.time()
     hours, rem = divmod(end-start, 3600)
     minutes, seconds = divmod(rem, 60)
 
     logger.info(f'Epoch {epoch+1}: train_loss: {train_loss:.4f} train_acc: {train_acc:.4f} train_prec: {train_prec:.4f} train_rec: {train_rec:.4f}| val_loss: {val_loss:.4f} val_acc: {val_acc:.4f} val_prec: {val_prec:.4f} val_rec: {val_rec:.4f}')
     logger.info("{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes),seconds))
+    if not flag:
+        break
 
 def eval1(model,test_loader,logger):
   with torch.no_grad():
@@ -319,30 +325,55 @@ def eval1(model,test_loader,logger):
 
 #return accuracy,precision,recall,exact_match,micro_f1_score,macro_f1_score
 if __name__ == "__main__":
+    if torch.cuda.is_available():
+        device = "cuda"
+    else:
+        device = "cpu"
+    print("device = ",device)
     logger=get_logger()
     parser = argparse.ArgumentParser()
-    logger.info("creating dataset")
     parser.add_argument("-t", "--tokenizer", help = "tokenizer path")
     parser.add_argument("-m", "--model", help = "model path")
     parser.add_argument("-w", "--weight", help = "Weight of entailment loss")
-    parser.add_argument("-s", "--savepath", help = "Path to save finetuned model")
+    parser.add_argument("-s", "--savepath", help = "Path to save logicedu model")
+    parser.add_argument("-f","--finetune",help="Set this flag if you want to finetune the model on MNLI",default='F')
+    parser.add_argument("-sf", "--savepath2", help="Path to save mnli model", default="mnli")
     args = parser.parse_args()
     print(args)
+    logger.info("initializing model")
+    model = AutoModelForSequenceClassification.from_pretrained(args.model,num_labels=3)
+    model.to(device)
+    if args.finetune=='T':
+        logger.info("initializing mnli dataset")
+        mnli_train = pd.read_csv("../../data/multinli_1.0/multinli_1.0_train.txt", sep='\t',
+                                 skiprows=[24809, 33960, 75910, 100113, 150637, 158833, 173103, 178251, 221950, 286844,
+                                           314109])[['gold_label', 'sentence1', 'sentence2']]
+        mnli_train = mnli_train.dropna()
+        mnli_dev_matched = pd.read_csv("../../data/multinli_1.0/multinli_1.0_dev_matched.txt", sep='\t')[['gold_label','sentence1','sentence2']]
+        mnli_dev_mismatched = pd.read_csv("../../data/multinli_1.0/multinli_1.0_dev_mismatched.txt", sep='\t')[['gold_label','sentence1','sentence2']]
+        mnli_dev = pd.concat([mnli_dev_matched, mnli_dev_mismatched], ignore_index=True, sort=False)
+        mnli_dev = mnli_dev.dropna()
+        mnli_dev = mnli_dev[mnli_dev.gold_label != '-']
+        mnli_ds = MNLIDataset(args.tokenizer, mnli_train, mnli_dev, 'gold_label',fallacy=False)
+        logger.info("finetune on mnli")
+        optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
+        train(model, mnli_ds, optimizer, logger, args.savepath2, ratio=1, epochs=100, positive_weight=1)
+        logger.info("reinit model")
+        model=AutoModelForSequenceClassification.from_pretrained(args.savepath2)
+        model.to(device)
+    optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
+    logger.info("creating dataset")
     fallacy_all=pd.read_csv('../../data/edu_all_updated.csv')[['source_article','updated_label']]
     fallacy_train,fallacy_rem=train_test_split(fallacy_all,test_size=600,random_state=10)
     fallacy_dev,fallacy_test=train_test_split(fallacy_rem,test_size=300,random_state=10)
     fallacy_ds=MNLIDataset(args.tokenizer,fallacy_train,fallacy_dev,'updated_label',fallacy_test,fallacy=True)
-    
-    device="cuda"
-    logger.info("initializing model")
-    model=AutoModelForSequenceClassification.from_pretrained(args.model)
-    model.to(device)
+
     optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
     
     logger.info("starting training")
-    train(model, fallacy_ds, optimizer,logger,args.savepath,ratio=1,epochs=10,positive_weight=int(args.weight))
+    train(model, fallacy_ds, optimizer,logger,args.savepath,ratio=1,epochs=100,positive_weight=int(args.weight))
 
-    model=AutoModelForSequenceClassification.from_pretrained(args.savepath)
+    model=AutoModelForSequenceClassification.from_pretrained(args.savepath,num_labels=3)
     model.to(device)
     logger.info("starting testing")
     _,_,test_loader=fallacy_ds.get_data_loaders()

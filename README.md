@@ -1,5 +1,5 @@
 # Logical Fallacy Detection
-Repo for the paper "[Detecting Logical Fallacies: From Educational Examples to Climate Change News](https://bit.ly/logical-nlp)" (2021) by _Zhijing Jin, Tejas Vaidhya, Xiaoyu Shen, Yiwen Ding, Zhiheng Lyu, Mrinmaya Sachan, Rada Mihalcea, Bernhard Schoelkopf_.
+Repo for the paper "[Detecting Logical Fallacies: From Educational Examples to Climate Change News](https://bit.ly/logical-nlp)" (2021) by _Abhinav Lalwani, Zhijing Jin, Tejas Vaidhya, Xiaoyu Shen, Yiwen Ding, Zhiheng Lyu, Mrinmaya Sachan, Rada Mihalcea, Bernhard Schoelkopf_.
 
 To cite the paper:
 ```bibtex
