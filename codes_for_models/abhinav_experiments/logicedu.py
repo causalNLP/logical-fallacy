@@ -363,7 +363,7 @@ if __name__ == "__main__":
         model.to(device)
     optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
     logger.info("creating dataset")
-    fallacy_all=pd.read_csv('../../data/edu_all_updated.csv')[['source_article','updated_label']]
+    fallacy_all=pd.read_csv('../../data/edu_all.csv')[['source_article','updated_label']]
     fallacy_train,fallacy_rem=train_test_split(fallacy_all,test_size=600,random_state=10)
     fallacy_dev,fallacy_test=train_test_split(fallacy_rem,test_size=300,random_state=10)
     fallacy_ds=MNLIDataset(args.tokenizer,fallacy_train,fallacy_dev,'updated_label',fallacy_test,fallacy=True)
