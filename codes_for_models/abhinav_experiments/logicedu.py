@@ -36,6 +36,7 @@ class MNLIDataset(Dataset):
     self.test_df = test_df
     self.base_path = '/content/'
     self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, do_lower_case=True)
+    print("token ids",self.tokenizer.sep_token_id,self.tokenizer.cls_token_id)
     self.train_data = None
     self.val_data = None
     self.label_col_name=label_col_name
@@ -52,6 +53,7 @@ class MNLIDataset(Dataset):
     for i,row in df.iterrows():
       for label in self.unique_labels:
         entry= [row['source_article']]
+        # print(label)
         if self.map=='base':
             entry.append("This is an example of %s logical fallacy" % label)
         elif self.map=='simplify':
@@ -102,7 +104,8 @@ class MNLIDataset(Dataset):
       premise_id = self.tokenizer.encode(premise, add_special_tokens = False)
       hypothesis_id = self.tokenizer.encode(hypothesis, add_special_tokens = False)
       pair_token_ids = [self.tokenizer.cls_token_id] + premise_id + [self.tokenizer.sep_token_id] + hypothesis_id + [self.tokenizer.sep_token_id]
-      
+      # pair_token_ids = premise_id + hypothesis_id
+      print("max token id=",max(pair_token_ids))
       premise_len = len(premise_id)
       hypothesis_len = len(hypothesis_id)
 
@@ -279,7 +282,7 @@ def train(model, dataset, optimizer,logger,save_path,epochs=5,ratio=0.04,positiv
         labels = y.to(device)
         _, prediction = model(pair_token_ids, 
                              token_type_ids=seg_ids, 
-                             attention_mask=mask_ids, 
+                             attention_mask=mask_ids,
                              labels=labels).values()
         loss=loss_fn(prediction,labels)
         acc,prec,rec = multi_acc(prediction, labels)
@@ -356,6 +359,7 @@ if __name__ == "__main__":
     logger.info("initializing model")
     model = AutoModelForSequenceClassification.from_pretrained(args.model,num_labels=3)
     model.to(device)
+
     if args.finetune=='T':
         logger.info("initializing mnli dataset")
         mnli_train = pd.read_csv("../../data/multinli_1.0/multinli_1.0_train.txt", sep='\t',
@@ -380,7 +384,7 @@ if __name__ == "__main__":
     fallacy_train,fallacy_rem=train_test_split(fallacy_all,test_size=600,random_state=10)
     fallacy_dev,fallacy_test=train_test_split(fallacy_rem,test_size=300,random_state=10)
     fallacy_ds=MNLIDataset(args.tokenizer,fallacy_train,fallacy_dev,'updated_label',args.map,fallacy_test,fallacy=True)
-
+    print("checking length",len(fallacy_ds.tokenizer),model.config.vocab_size)
     optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
     
     logger.info("starting training")
