@@ -27,7 +27,8 @@ def get_unique_labels(df,label_col_name):
 
 class MNLIDataset(Dataset):
 
-  def __init__(self,tokenizer_path, train_df, val_df,label_col_name,test_df=None,fallacy=False,undersample_train=False,undersample_val=False,undersample_test=False,undersample_rate=0.04):
+  def __init__(self,tokenizer_path, train_df, val_df,label_col_name,map,test_df=None,fallacy=False,undersample_train=False,
+               undersample_val=False,undersample_test=False,undersample_rate=0.04):
     self.label_dict = {'entailment': 0, 'contradiction': 1, 'neutral': 2}
     torch.manual_seed(0)
     self.train_df = train_df
@@ -38,6 +39,8 @@ class MNLIDataset(Dataset):
     self.train_data = None
     self.val_data = None
     self.label_col_name=label_col_name
+    self.map=map
+    self.mappings=pd.read_csv("../../data/mappings.csv")
     if fallacy:
       self.unique_labels=get_unique_labels(pd.concat([train_df,val_df,test_df]),self.label_col_name)
       print(self.unique_labels)
@@ -48,9 +51,20 @@ class MNLIDataset(Dataset):
     data=[]
     for i,row in df.iterrows():
       for label in self.unique_labels:
-        entry=[]
-        entry.append(row['source_article'])
-        entry.append("This is an example of %s logical fallacy" %(label))
+        entry= [row['source_article']]
+        if self.map=='base':
+            entry.append("This is an example of %s logical fallacy" % label)
+        elif self.map=='simplify':
+            # print(label)
+            simplified_label=list(self.mappings[self.mappings['Original Name']==label]['Understandable Name'])[0]
+            # print("Simplified %s to %s" %(label,simplified_label))
+            entry.append("This is an example of %s" % simplified_label)
+        elif self.map=='description':
+            description=list(self.mappings[self.mappings['Original Name']==label]['Description'])[0]
+            entry.append("This is an example of %s" % description)
+        elif self.map=='logical-form':
+            form=list(self.mappings[self.mappings['Original Name']==label]['Logical Form'])[0]
+            entry.append("This article matches the following logical form: %s" % form)
         if label==row[self.label_col_name]:
           entry.append("entailment")
         else:
@@ -59,9 +73,7 @@ class MNLIDataset(Dataset):
             continue
           entry.append("contradiction")
         data.append(entry)
-    return pd.DataFrame(data, columns = ['sentence1', 'sentence2','gold_label'])
-          
-    
+      return pd.DataFrame(data, columns=['sentence1', 'sentence2', 'gold_label'])
 
   def init_data(self,fallacy,undersample_train=False,undersample_val=False,undersample_test=False,undersample_ratio=0.02):
     if fallacy:
@@ -156,11 +168,15 @@ def get_logger(level='DEBUG'):
     logger.setLevel(level)
     return logger
 
-def multi_acc(y_pred, y_test):
+def multi_acc(y_pred, y_test,flip=True):
   preds = torch.log_softmax(y_pred, dim=1).argmax(dim=1)
   acc = (preds == y_test).sum().float() / float(y_test.size(0))
-  y_pred=1-preds.cpu()
-  y_test=1-y_test.cpu()
+  if flip:
+      y_pred=1-preds.cpu()
+      y_test=1-y_test.cpu()
+  else:
+      y_pred = preds.cpu()
+      y_test = y_test.cpu()
   TP = 0
   FP = 0
   TN = 0
@@ -197,8 +213,6 @@ def get_metrics(logits,labels,threshold=0.5,sig=True,tensors=True):
     y_true=np.array(labels)
     y_pred=np.array(preds)
   temp = 0
-  print("y_true shape=",y_true.shape)
-  print("y_pred shape=",y_pred.shape)
   for i in range(y_true.shape[0]):
       temp += sum(np.logical_and(y_true[i], y_pred[i])) / sum(np.logical_or(y_true[i], y_pred[i]))
   accuracy=temp / y_true.shape[0]
@@ -259,12 +273,10 @@ def train(model, dataset, optimizer,logger,save_path,epochs=5,ratio=0.04,positiv
     
     with torch.no_grad():
       for batch_idx, (pair_token_ids, mask_ids, seg_ids, y) in enumerate(val_loader):
-        optimizer.zero_grad()
         pair_token_ids = pair_token_ids.to(device)
         mask_ids = mask_ids.to(device)
         seg_ids = seg_ids.to(device)
         labels = y.to(device)
-        
         _, prediction = model(pair_token_ids, 
                              token_type_ids=seg_ids, 
                              attention_mask=mask_ids, 
@@ -297,7 +309,7 @@ def train(model, dataset, optimizer,logger,save_path,epochs=5,ratio=0.04,positiv
     if not flag:
         break
 
-def eval1(model,test_loader,logger):
+def eval1(model,test_loader,logger,flip=True):
   with torch.no_grad():
       all_preds=[]
       all_labels=[]
@@ -329,8 +341,8 @@ if __name__ == "__main__":
         device = "cuda"
     else:
         device = "cpu"
-    print("device = ",device)
-    logger=get_logger()
+    logger = get_logger()
+    logger.info("device = %s",device)
     parser = argparse.ArgumentParser()
     parser.add_argument("-t", "--tokenizer", help = "tokenizer path")
     parser.add_argument("-m", "--model", help = "model path")
@@ -338,6 +350,7 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--savepath", help = "Path to save logicedu model")
     parser.add_argument("-f","--finetune",help="Set this flag if you want to finetune the model on MNLI",default='F')
     parser.add_argument("-sf", "--savepath2", help="Path to save mnli model", default="mnli")
+    parser.add_argument("-mp","--map",help="Map labels to this category")
     args = parser.parse_args()
     print(args)
     logger.info("initializing model")
@@ -366,7 +379,7 @@ if __name__ == "__main__":
     fallacy_all=pd.read_csv('../../data/edu_all.csv')[['source_article','updated_label']]
     fallacy_train,fallacy_rem=train_test_split(fallacy_all,test_size=600,random_state=10)
     fallacy_dev,fallacy_test=train_test_split(fallacy_rem,test_size=300,random_state=10)
-    fallacy_ds=MNLIDataset(args.tokenizer,fallacy_train,fallacy_dev,'updated_label',fallacy_test,fallacy=True)
+    fallacy_ds=MNLIDataset(args.tokenizer,fallacy_train,fallacy_dev,'updated_label',args.map,fallacy_test,fallacy=True)
 
     optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
     
