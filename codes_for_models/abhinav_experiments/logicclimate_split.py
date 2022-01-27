@@ -1,9 +1,14 @@
 import jsonlines
 import pandas as pd
-from sklearn.model_selection import train_test_split
+import stanza
+import bisect
+import random
 
-data = []
-mapping={
+nlp = stanza.Pipeline(lang='en', processors='tokenize')
+data_train = []
+data_val = []
+data_test = []
+mapping = {
     "Fallacy of Relevance (red herring)": "fallacy of relevance",
     "Ad Hominem": "ad hominem",
     "Ad Populum": "ad populum",
@@ -14,49 +19,54 @@ mapping={
     "Fallacy of Extension (straw man)": "fallacy of extension",
     "Fallacy of Relevance (red herring)": "fallacy of relevance",
     "False Causality": "false causality",
-    "False Dilemma" : "false dilemma",
+    "False Dilemma": "false dilemma",
     "Faulty Generalization": "faulty generalization",
     "Intentional": "intentional",
     "Logical Fallacy": "fallacy of logic"
 }
 paths = ['../../data/Jad_Liz_all.jsonl', '../../data/Safiyyah_Brighton_all.jsonl']
+objects = []
 for path in paths:
     with jsonlines.open(path) as reader:
         for obj in reader:
-            # print(obj.keys())
-            for label in obj['label']:
-                # print(label)
-                # print(obj['data'][label[0]:label[1]])
-                i = 0
-                count = 0
-                start = None
-                end = None
-                sentences = obj['data'].split('\n')
-                for sentence in sentences:
-                    if len(sentence) + count > label[0] and start is None:
-                        start = i
-                    if len(sentence) + count >= label[1]:
-                        end = i
-                        break
-                    count += len(sentence) + 1
-                    i += 1
-                while start > 0:
-                    start -= 1
-                    if len(sentences[start]) != 0:
-                        break
-                while end < len(obj['data'].split('\n')) - 1:
-                    end += 1
-                    if len(sentences[end]) != 0:
-                        break
-                hot_area = obj['data'].split('\n')[start:end + 1]
-                ans = '\n'.join(hot_area)
-                if label[2] in mapping.keys():
-                    data.append([obj['source_url'], ans, mapping[label[2]]])
-climate_all = pd.DataFrame(data, columns=['original_url', 'source_article', 'logical_fallacies'])
-climate_all.to_csv('../../data/climate_all.csv')
-print(len(climate_all))
-climate_train,climate_rem=train_test_split(climate_all,test_size=400,random_state=10)
-climate_dev,climate_test=train_test_split(climate_rem,test_size=200,random_state=10)
+            objects.append(obj)
+
+random.shuffle(objects)
+# print(obj.keys())
+for idx, obj in enumerate(objects):
+    doc = nlp(obj['data'])
+    # print(type(obj['data']))
+    i = 0
+    start_indices = []
+    for sentence in doc.sentences:
+        # print(sentence.text)
+        while obj['data'][i] != sentence.text[0]:
+            i += 1
+        start_indices.append(i)
+        i += 1
+    for label in obj['label']:
+        # print(label)
+        # print(obj['data'][label[0]:label[1]])
+        # print('-----')
+        start = max(bisect.bisect_right(start_indices, label[0]) - 2, 0)
+        end = min(bisect.bisect_left(start_indices, label[1]) + 1, len(doc.sentences) - 1)
+        hot_area = doc.sentences[start:end + 1]
+        hot_area = [sentence.text for sentence in hot_area]
+        ans = ' '.join(hot_area)
+        # print(ans)
+        # print('-------------')
+        if label[2] in mapping.keys():
+            if idx < 100:
+                data_train.append([obj['source_url'], ans, mapping[label[2]]])
+            elif idx < 125:
+                data_val.append([obj['source_url'], ans, mapping[label[2]]])
+            else:
+                data_test.append([obj['source_url'], ans, mapping[label[2]]])
+climate_train = pd.DataFrame(data_train, columns=['original_url', 'source_article', 'logical_fallacies'])
+climate_val = pd.DataFrame(data_val, columns=['original_url', 'source_article', 'logical_fallacies'])
+climate_test = pd.DataFrame(data_test, columns=['original_url', 'source_article', 'logical_fallacies'])
+climate_all = pd.concat([climate_train, climate_val, climate_test])
 climate_train.to_csv('../../data/climate_train.csv')
-climate_dev.to_csv('../../data/climate_dev.csv')
+climate_val.to_csv('../../data/climate_dev.csv')
 climate_test.to_csv('../../data/climate_test.csv')
+climate_all.to_csv('../../data/climate_test.csv')
