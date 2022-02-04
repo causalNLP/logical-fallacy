@@ -1,413 +1,413 @@
-,source_article,updated_label
-1256,"""Just like students are given a couple of weeks of preparation before taking exams, doctors should also be given few days or weeks to prepare themselves before an operation or surgery, after all surgery is not as easy task""
-Is an example of....",fallacy of logic
-1455,You don’t have to do this. My grandmother is in the hospital. I need my salary to support her medication. She’s dying.,appeal to emotion
-2199,"I know five people from Kentucky. They are all racists. Therefore, Kentuckians are racist.",faulty generalization
-744,"Pvt. Joe Bowers: What are these electrolytes? Do you even know?
+,Unnamed: 0,Unnamed: 0.1,source_article,updated_label,masked_articles
+0,0,1256,"""Just like students are given a couple of weeks of preparation before taking exams, doctors should also be given few days or weeks to prepare themselves before an operation or surgery, after all surgery is not as easy task""
+Is an example of....",fallacy of logic,""" Just like students are given a couple of MSK<0> of MSK<2> before taking exams , doctors should also be given few days or MSK<0> to MSK<2> themselves before an operation or MSK<1> , after all MSK<1> is not as easy task "" Is an example of .... "
+1,1,1455,You don’t have to do this. My grandmother is in the hospital. I need my salary to support her medication. She’s dying.,appeal to emotion,You do n’t have to do this . My grandmother is in the hospital . I need my salary to support her medication . She ’s dying . 
+2,2,2199,"I know five people from Kentucky. They are all racists. Therefore, Kentuckians are racist.",faulty generalization,"I know five people from Kentucky . They are all MSK<0> . Therefore , Kentuckians are MSK<0> . "
+3,3,744,"Pvt. Joe Bowers: What are these electrolytes? Do you even know?
 Secretary of State: They're... what they use to make Brawndo!
 Pvt. Joe Bowers: But why do they use them to make Brawndo?
 Secretary of Defense: [raises hand after a pause] Because Brawndo's got electrolytes.
-",circular reasoning
-1181,"This is a fallacy of irrelevance that is based solely on someone's or something's history, origin, or source rather than its current meaning",ad hominem
-1216,"Helga: You should not be eating that... it has been scientifically proven that eating fat burgers are no good for your health.
+",circular reasoning,MSK<0> Joe Bowers : What are these MSK<1> ? Do you even know ? MSK<2> of State : They 're ... what they MSK<3> to make MSK<4> ! MSK<0> Joe Bowers : But why do they MSK<3> them to make MSK<4> ? MSK<2> of Defense : [ raises hand after a pause ] Because MSK<4> 's got MSK<1> . 
+4,4,1181,"This is a fallacy of irrelevance that is based solely on someone's or something's history, origin, or source rather than its current meaning",ad hominem,"This is a fallacy of irrelevance that is based solely on someone 's or something 's history , origin , or source rather than its current meaning "
+5,5,1216,"Helga: You should not be eating that... it has been scientifically proven that eating fat burgers are no good for your health.
 
-Hugh: You eat fat burgers all the time so that can’t be true.",ad hominem
-1236,"Bill: “I believe that abortion is morally wrong.”
+Hugh: You eat fat burgers all the time so that can’t be true.",ad hominem,Helga : You should not be MSK<0> that ... it has been scientifically proven that MSK<0> fat burgers are no good for your health . Hugh : You MSK<0> fat burgers all the time so that ca n’t be true . 
+6,6,1236,"Bill: “I believe that abortion is morally wrong.”
 Dave: “Of course you would say that, you’re a priest.”
 Bill: “What about the arguments I gave to support my position?”
-Dave: “Those don’t count. Like I said, you’re a priest, so you have to say that abortion is wrong. Further, you are just a lackey to the Pope, so I can’t believe what you say.”",ad hominem
-315,"If we use one more can of hairspray this month, the ozone layer will not exist, and we will not exist!",faulty generalization
-847,"Argues that because something is popular, it must be right.",ad populum
-1540,We either have to cut taxes or leave a huge debt for our children.,false dilemma
-1144,"""Why would you elect a mayor whose wife has been treated for alcohol addiction?""
-This logical fallacy is called...",ad hominem
-582," The best example of this fallacy is presented by the person who coined this term, Nassim Nicholas Taleb in his 2007 book, The Black Swan.  There are two people",false causality
-454,"""I drank bottled water and now I am sick, so the water must have made me sick.""",false causality
-74,Teenagers are too immature and self-absorbed to understand anything about global issues.,faulty generalization
-2072,"Ricky is watching television when he sees a commercial for foot cream. The commercial announcer says, ""This is the best foot cream on the market because no other foot cream makers have been able to prove otherwise!"" What fallacy has the announcer committed?",intentional
-85,"""No one stops to process...No one appreciates the value"" is an example of",faulty generalization
-808,"Everyone who is really into gaming already owns the latest video game. Don't be the only one left out!
+Dave: “Those don’t count. Like I said, you’re a priest, so you have to say that abortion is wrong. Further, you are just a lackey to the Pope, so I can’t believe what you say.”",ad hominem,"MSK<0> : MSK<0> I MSK<1> that MSK<2> is morally MSK<3> . MSK<0> Dave : MSK<0> Of course you would say that , you ’re a MSK<4> . ” MSK<0> : MSK<0> What about the arguments I gave to support my position ? MSK<0> Dave : MSK<0> Those do n’t count . Like I said , you ’re a MSK<4> , so you have to say that MSK<2> is MSK<3> . Further , you are just a lackey to the Pope , so I ca n’t MSK<1> what you say . MSK<0> "
+7,7,315,"If we use one more can of hairspray this month, the ozone layer will not exist, and we will not exist!",faulty generalization,"If we use one more can of hairspray this month , the ozone layer will not MSK<0> , and we will not MSK<0> ! "
+8,8,847,"Argues that because something is popular, it must be right.",ad populum,"Argues that because something is popular , it must be right . "
+9,9,1540,We either have to cut taxes or leave a huge debt for our children.,false dilemma,We either have to cut taxes or leave a huge debt for our children . 
+10,10,1144,"""Why would you elect a mayor whose wife has been treated for alcohol addiction?""
+This logical fallacy is called...",ad hominem,""" Why would you elect a mayor whose wife has been treated for alcohol addiction ? "" This logical fallacy is called ... "
+11,11,582," The best example of this fallacy is presented by the person who coined this term, Nassim Nicholas Taleb in his 2007 book, The Black Swan.  There are two people",false causality,"The best example of this fallacy is presented by the person who coined this term , Nassim Nicholas Taleb in his 2007 book , The Black Swan . There are two people "
+12,12,454,"""I drank bottled water and now I am sick, so the water must have made me sick.""",false causality,""" I drank bottled MSK<0> and now I am MSK<1> , so the MSK<0> must have made me MSK<1> . "" "
+13,13,74,Teenagers are too immature and self-absorbed to understand anything about global issues.,faulty generalization,Teenagers are too immature and self-absorbed to understand anything about global issues . 
+14,14,2072,"Ricky is watching television when he sees a commercial for foot cream. The commercial announcer says, ""This is the best foot cream on the market because no other foot cream makers have been able to prove otherwise!"" What fallacy has the announcer committed?",intentional,"Ricky is watching television when he sees a MSK<0> for MSK<1> cream . The MSK<0> announcer says , "" This is the best MSK<1> cream on the market because no other MSK<1> cream makers have been able to prove otherwise ! "" What fallacy has the MSK<0> committed ? "
+15,15,85,"""No one stops to process...No one appreciates the value"" is an example of",faulty generalization,""" No one stops to process ... No one appreciates the value "" is an example of "
+16,16,808,"Everyone who is really into gaming already owns the latest video game. Don't be the only one left out!
 
-Which logical fallacy is being used in the passage?",ad populum
-863,"""A 2005 Gallup Poll found that an estimated 25% of Americans over the age of 18 believe in astrology - or that the position of the stars and planets can affect people’s lives. This is roughly 75,000,000 people. Therefore, there must be some truth to astrology!""",ad populum
-1104,"""Drivers in Richmond are terrible. Why does everyone in a big city drive like that?""",ad hominem
-1363,"No people under the age of 66 are senior citizens.
+Which logical fallacy is being used in the passage?",ad populum,Everyone who is really into MSK<0> already owns the latest video MSK<0> . Do n't be the only one left out ! Which logical fallacy is being used in the passage ? 
+17,17,863,"""A 2005 Gallup Poll found that an estimated 25% of Americans over the age of 18 believe in astrology - or that the position of the stars and planets can affect people’s lives. This is roughly 75,000,000 people. Therefore, there must be some truth to astrology!""",ad populum,""" A 2005 Gallup Poll found that an estimated MSK<2> % of Americans over the MSK<2> of MSK<2> believe in MSK<0> - or that the position of the stars and planets can affect MSK<1> ’s lives . This is roughly 75,000,000 MSK<1> . Therefore , there must be some truth to MSK<0> ! "" "
+18,18,1104,"""Drivers in Richmond are terrible. Why does everyone in a big city drive like that?""",ad hominem,""" Drivers in Richmond are terrible . Why does everyone in a big city drive like that ? "" "
+19,19,1363,"No people under the age of 66 are senior citizens.
 No senior citizens are children.
-Therefore, all people under the age of 66 are children.",fallacy of logic
-1850,"""Why worry about pandas going extinct, when we have the homeless in our country to worry about?""",fallacy of relevance
-2438,"The fallacy of equivocation occurs when a key term or phrase in an argument is used in an ambiguous way, with one meaning in one portion of the argument and then another meaning in another portion of the argument.",equivocation
-2018,"Everyone in our family has gone to the University of Tennessee, so you need to apply to UT.",fallacy of credibility
-1265,"Schools are like families; therefore teachers (like parents) should be allowed to discipline their students.
-Which logical fallacy is represented here?",fallacy of logic
-2370,Recent auto accidents in your neighborhood have led you to propose to the city council that the speed limit along Main Street be reduced to calm the traffic flow. Opponents complain that reducing speed limits all over town is counterproductive and an unnecessary burden on drivers.,fallacy of extension
-1654,"Whatever happens by chance should be punished, because whatever happens by chance is a departure from law and all departures from law should be punished.
+Therefore, all people under the age of 66 are children.",fallacy of logic,"No MSK<0> under the MSK<1> of MSK<2> are MSK<3> citizens . No MSK<3> citizens are MSK<4> . Therefore , all MSK<0> under the MSK<1> of MSK<2> are MSK<4> . "
+20,20,1850,"""Why worry about pandas going extinct, when we have the homeless in our country to worry about?""",fallacy of relevance,""" Why MSK<0> about pandas going extinct , when we have the homeless in our country to MSK<0> about ? "" "
+21,21,2438,"The fallacy of equivocation occurs when a key term or phrase in an argument is used in an ambiguous way, with one meaning in one portion of the argument and then another meaning in another portion of the argument.",equivocation,"The fallacy of equivocation occurs when a key term or phrase in an MSK<0> is used in an ambiguous way , with one MSK<1> in one MSK<2> of the MSK<0> and then another MSK<1> in another MSK<2> of the MSK<0> . "
+22,22,2018,"Everyone in our family has gone to the University of Tennessee, so you need to apply to UT.",fallacy of credibility,"Everyone in our family has gone to the University of Tennessee , so you need to apply to UT . "
+23,23,1265,"Schools are like families; therefore teachers (like parents) should be allowed to discipline their students.
+Which logical fallacy is represented here?",fallacy of logic,Schools are MSK<0> families ; therefore teachers ( MSK<0> parents ) should be allowed to discipline their students . Which logical fallacy is represented here ? 
+24,24,2370,Recent auto accidents in your neighborhood have led you to propose to the city council that the speed limit along Main Street be reduced to calm the traffic flow. Opponents complain that reducing speed limits all over town is counterproductive and an unnecessary burden on drivers.,fallacy of extension,Recent auto accidents in your neighborhood have led you to propose to the city council that the MSK<0> limit along Main Street be MSK<0> to calm the traffic flow . Opponents complain that reducing MSK<0> limits all over town is counterproductive and an unnecessary burden on drivers . 
+25,25,1654,"Whatever happens by chance should be punished, because whatever happens by chance is a departure from law and all departures from law should be punished.
 
-Identify the logical fallacy commited in this argument.",equivocation
-2061,"""The art teacher spoke in the trial as a witness in support of testing perfumes on animals, and he persuaded me.""",fallacy of credibility
-565,"P1. A sedentary lifestyle contributes to obesity.
+Identify the logical fallacy commited in this argument.",equivocation,"Whatever MSK<0> by MSK<1> should be MSK<2> , because whatever MSK<0> by MSK<1> is a MSK<3> from MSK<4> and all MSK<3> from MSK<4> should be MSK<2> . Identify the logical fallacy commited in this argument . "
+26,26,2061,"""The art teacher spoke in the trial as a witness in support of testing perfumes on animals, and he persuaded me.""",fallacy of credibility,""" The art teacher spoke in the trial as a witness in support of testing perfumes on animals , and he persuaded me . "" "
+27,27,565,"P1. A sedentary lifestyle contributes to obesity.
 P2. People have become more sedentary in the last few decades.
-C. Therefore, the rise in obesity can be fixed by people getting more exercise.",false causality
-731,Executions are moral because we must have a death penalty to discourage violent crime.,circular reasoning
-2327,"Everyone knows that Japanese DVD players are the best. After all, the outsell American players two-to-one.",ad populum
-539,"Jimmy has a fever, sinus congestion, a cough, and can’t come to school, so he probably has a test later today.",false causality
-1048,"Lily says the sun is fully risen at 5:00am, but how would she know she sleeps in until noon.
+C. Therefore, the rise in obesity can be fixed by people getting more exercise.",false causality,"MSK<2> . A MSK<0> lifestyle contributes to MSK<1> . MSK<2> . People have become more MSK<0> in the last few decades . C. Therefore , the rise in MSK<1> can be fixed by people getting more exercise . "
+28,28,731,Executions are moral because we must have a death penalty to discourage violent crime.,circular reasoning,Executions are moral because we must have a death penalty to discourage violent crime . 
+29,29,2327,"Everyone knows that Japanese DVD players are the best. After all, the outsell American players two-to-one.",ad populum,"Everyone knows that Japanese DVD MSK<0> are the best . After all , the outsell American MSK<0> two -to-one . "
+30,30,539,"Jimmy has a fever, sinus congestion, a cough, and can’t come to school, so he probably has a test later today.",false causality,"Jimmy has a fever , sinus congestion , a cough , and ca n’t come to school , so he probably has a test later today . "
+31,31,1048,"Lily says the sun is fully risen at 5:00am, but how would she know she sleeps in until noon.
 
-(love you lily all jokes all jokes)",ad hominem
-982,"Dr. Fauci says we need to wear masks, but Dr. Fauci is the oldest, meanest doctor around. I’m sure what he says isn’t true at all.",ad hominem
-720,"You should drive on the right side of the road because that is what the law says, and the law is the law.",circular reasoning
-39,"""You shouldn't go to 'Vomito' I went once and the food was awful."" is",faulty generalization
-1342,"Buddy Burger has the greatest food in town.  Buddy Burger was voted #1 by the local paper.  Therefore, Phil, the owner of Buddy Burger, should run for president of the United States.",fallacy of logic
-1149,"Robert Downey Jr. thinks everyone should vote. However, Robert Downey Jr. once went to prison for drug use. So, he's obviously wrong.",ad hominem
-2162,Let's talk about Glaucon. Where did you get the poison you used on him?,intentional
-1528,"""The only solutions I can see to climate change is either mass extinction of humans, or passing this green bill.""",false dilemma
-1365,"No kangaroos are MMA fighters.
+(love you lily all jokes all jokes)",ad hominem,"MSK<0> says the sun is fully risen at 5:00 am , but how would she know she sleeps in until noon . ( love you MSK<0> all MSK<1> all MSK<1> ) "
+32,32,982,"Dr. Fauci says we need to wear masks, but Dr. Fauci is the oldest, meanest doctor around. I’m sure what he says isn’t true at all.",ad hominem,"MSK<0> Fauci says we need to wear masks , but MSK<0> Fauci is the oldest , meanest MSK<0> around . I ’m sure what he says is n’t true at all . "
+33,33,720,"You should drive on the right side of the road because that is what the law says, and the law is the law.",circular reasoning,"You should drive on the right side of the road because that is what the MSK<0> says , and the MSK<0> is the MSK<0> . "
+34,34,39,"""You shouldn't go to 'Vomito' I went once and the food was awful."" is",faulty generalization,""" You should n't go to ' Vomito ' I went once and the food was awful . "" is "
+35,35,1342,"Buddy Burger has the greatest food in town.  Buddy Burger was voted #1 by the local paper.  Therefore, Phil, the owner of Buddy Burger, should run for president of the United States.",fallacy of logic,"MSK<0> Burger has the greatest food in town . MSK<0> Burger was voted # 1 by the local paper . Therefore , Phil , the owner of MSK<0> Burger , should run for president of the United States . "
+36,36,1149,"Robert Downey Jr. thinks everyone should vote. However, Robert Downey Jr. once went to prison for drug use. So, he's obviously wrong.",ad hominem,"MSK<0> Downey Jr. thinks everyone should vote . However , MSK<0> Downey Jr. once went to prison for drug use . So , he 's obviously wrong . "
+37,37,2162,Let's talk about Glaucon. Where did you get the poison you used on him?,intentional,Let 's talk about Glaucon . Where did you get the poison you used on him ? 
+38,38,1528,"""The only solutions I can see to climate change is either mass extinction of humans, or passing this green bill.""",false dilemma,""" The only solutions I can see to climate change is either mass extinction of humans , or passing this green bill . "" "
+39,39,1365,"No kangaroos are MMA fighters.
 Some MMA fighters are not Mormons.
-Therefore, some Mormons are not kangaroos.",fallacy of logic
-1276,People who have to have a cup of coffee every morning before they can function have no less a problem than alcoholics who have to have their alcohol each day to sustain them.,fallacy of logic
-248,"The use of laptops and other devices to replace books in the classroom would eventually lead to the downfall of printing and publishing companies, causing many people to be laid off from their jobs. As such, schools should stick to using printed books as study materials.",faulty generalization
-893,"Everybody know that staying out in the rain can make you sick.
-Which logical fallacy is represented here?",ad populum
-783,"""Historically, up until the late 16th century, most people believed that the Earth was the center of the universe. Today we understand this is not true,"" is an example of what fallacy?",ad populum
-364,"James, the company you work for just filed for bankruptcy! How can I trust you with our money?",faulty generalization
-158,All required university courses are boring.,faulty generalization
-603,God exists. How do you know? Because it says so in the Bible.,circular reasoning
-1592,"""Either we re-elect Mayor Ruiz, or we watch our city fall to pieces"" is an example of",false dilemma
-1079,"Charlie: Fast food is filled with salt, fat, and added sugars.  We need better regulation of the industry.
-Bob: That may be, but you're sure a hypocrite!  I saw you devour a Triple-Baconator, super-sized fries, and 64 ounces of soda yesterday.",ad hominem
-1400,What is the appeal being used through this sad little girl?,appeal to emotion
-1142,"""My opponent raises a really good point, but can we really trust him? He moved to this town three years ago and everyone knows his wife left him.",ad hominem
-898,"Sebastian saw that several of his friends had bought a new fidget spinner. He realized it must be a very cool gadget if they had one, and everyone else probably did, too.
-What fallacy did Sebastian fall into?",ad populum
-2408,"I know I missed assignments, but if you fail me, I will lose my financial aid and have to drop out.",appeal to emotion
-72,"If you get in a car wreck, and the fault of the wreck is a teenage boy at ECR, believing all teenage boys at ECR are bad drivers is an example of:",faulty generalization
-824,"the phrase ""Ninety percent of all people surveyed said that McDonalds is better than Burger King so it must be true."" represents which fallacy?",ad populum
-1699,“The Senator thinks we can solve all our ecological problems by driving a Prius.”,fallacy of extension
-1845,Grizzly bears can't be dangerous! They're too cute.,fallacy of relevance
-2291,"My friend swears the mechanic at that shop overcharged her last week and after looking at her invoice it seems she’s right. So don’t take your business there, as you’ll definitely get ripped off.",faulty generalization
-1260,"Asking students to sit in the same class for 2 hours is like asking them to wander the desert alone, with no water, for a week.",fallacy of logic
-152,"My roommate said her philosophy class was difficult, and the one I’m in is difficult, too. All philosophy classes must be hard.",faulty generalization
-1561,It is an example of,false dilemma
-1440,The Bible is filled with stories of God's magic.,appeal to emotion
-371,"Pizza has ingredients from all the food groups. Therefore, pizza must be healthy.",faulty generalization
-883,McDonald's Hamburgers: over 99 billion served.,ad populum
-1902,"Mom, I know you're upset that I went over my cell limit this month. The important issue here, though, is that I got an A on my algebra exam.",fallacy of relevance
-210,"An environmental group illegally blocked loggers and workers at a nuclear plant. Therefore, environmentalists are radicals who take the law into their own hands.",faulty generalization
-1531,"Look, you are going to have to make up your mind. Either you decide that you can afford this stereo, or you decide you are going to do without music for a while",false dilemma
-2355,Either you love me or you hate me.,false dilemma
-1947,"Service Tech: Your car could use some new tires.
+Therefore, some Mormons are not kangaroos.",fallacy of logic,"No MSK<0> are MSK<1> fighters . Some MSK<1> fighters are not MSK<2> . Therefore , some MSK<2> are not MSK<0> . "
+40,40,1276,People who have to have a cup of coffee every morning before they can function have no less a problem than alcoholics who have to have their alcohol each day to sustain them.,fallacy of logic,People who have to have a cup of coffee every morning before they can function have no less a problem than MSK<0> who have to have their MSK<0> each day to sustain them . 
+41,41,248,"The use of laptops and other devices to replace books in the classroom would eventually lead to the downfall of printing and publishing companies, causing many people to be laid off from their jobs. As such, schools should stick to using printed books as study materials.",faulty generalization,"The MSK<0> of laptops and other devices to replace MSK<0> in the classroom would eventually lead to the downfall of MSK<0> and publishing companies , causing many people to be laid off from their jobs . As such , schools should stick to MSK<0> printed books as study materials . "
+42,42,893,"Everybody know that staying out in the rain can make you sick.
+Which logical fallacy is represented here?",ad populum,Everybody know that staying out in the rain can make you sick . Which logical fallacy is represented here ? 
+43,43,783,"""Historically, up until the late 16th century, most people believed that the Earth was the center of the universe. Today we understand this is not true,"" is an example of what fallacy?",ad populum,""" Historically , up until the late 16th century , most people believed that the Earth was the center of the universe . Today we understand this is not true , "" is an example of what fallacy ? "
+44,44,364,"James, the company you work for just filed for bankruptcy! How can I trust you with our money?",faulty generalization,"James , the company you work for just filed for bankruptcy ! How can I trust you with our money ? "
+45,45,158,All required university courses are boring.,faulty generalization,All required university courses are boring . 
+46,46,603,God exists. How do you know? Because it says so in the Bible.,circular reasoning,God exists . How do you know ? Because it says so in the Bible . 
+47,47,1592,"""Either we re-elect Mayor Ruiz, or we watch our city fall to pieces"" is an example of",false dilemma,""" Either we re-elect Mayor Ruiz , or we watch our city fall to pieces "" is an example of "
+48,48,1079,"Charlie: Fast food is filled with salt, fat, and added sugars.  We need better regulation of the industry.
+Bob: That may be, but you're sure a hypocrite!  I saw you devour a Triple-Baconator, super-sized fries, and 64 ounces of soda yesterday.",ad hominem,"Charlie : Fast food is filled with salt , fat , and added sugars . We need better regulation of the industry . Bob : That may be , but you 're sure a hypocrite ! I saw you devour a Triple-Baconator , super-sized fries , and 64 ounces of soda yesterday . "
+49,49,1400,What is the appeal being used through this sad little girl?,appeal to emotion,What is the appeal being used through this sad little girl ? 
+50,50,1142,"""My opponent raises a really good point, but can we really trust him? He moved to this town three years ago and everyone knows his wife left him.",ad hominem,""" My opponent raises a really good point , but can we really trust him ? He moved to this town three years ago and everyone knows his wife left him . "
+51,51,898,"Sebastian saw that several of his friends had bought a new fidget spinner. He realized it must be a very cool gadget if they had one, and everyone else probably did, too.
+What fallacy did Sebastian fall into?",ad populum,"MSK<0> saw that several of his friends had bought a new fidget spinner . He realized it must be a very cool gadget if they had one , and everyone else probably did , too . What fallacy did MSK<0> fall into ? "
+52,52,2408,"I know I missed assignments, but if you fail me, I will lose my financial aid and have to drop out.",appeal to emotion,"I know I missed assignments , but if you fail me , I will lose my financial aid and have to drop out . "
+53,53,72,"If you get in a car wreck, and the fault of the wreck is a teenage boy at ECR, believing all teenage boys at ECR are bad drivers is an example of:",faulty generalization,"If you get in a car MSK<0> , and the fault of the MSK<0> is a MSK<1> boy at MSK<2> , believing all MSK<1> boys at MSK<2> are bad drivers is an example of : "
+54,54,824,"the phrase ""Ninety percent of all people surveyed said that McDonalds is better than Burger King so it must be true."" represents which fallacy?",ad populum,"the phrase "" Ninety percent of all people surveyed said that MSK<0> is better than MSK<0>  so it must be true . "" represents which fallacy ? "
+55,55,1699,“The Senator thinks we can solve all our ecological problems by driving a Prius.”,fallacy of extension,MSK<0> The Senator thinks we can solve all our ecological problems by driving a Prius . MSK<0> 
+56,56,1845,Grizzly bears can't be dangerous! They're too cute.,fallacy of relevance,Grizzly bears ca n't be dangerous ! They 're too cute . 
+57,57,2291,"My friend swears the mechanic at that shop overcharged her last week and after looking at her invoice it seems she’s right. So don’t take your business there, as you’ll definitely get ripped off.",faulty generalization,"My friend swears the mechanic at that shop overcharged her last week and after looking at her invoice it seems she ’s right . So do n’t take your business there , as you ’ll definitely get ripped off . "
+58,58,1260,"Asking students to sit in the same class for 2 hours is like asking them to wander the desert alone, with no water, for a week.",fallacy of logic,"MSK<0> students to sit in the same class for 2 hours is like MSK<0> them to wander the desert alone , with no water , for a week . "
+59,59,152,"My roommate said her philosophy class was difficult, and the one I’m in is difficult, too. All philosophy classes must be hard.",faulty generalization,"My roommate said her MSK<0> class was MSK<1> , and the one I ’m in is MSK<1> , too . All MSK<0> classes must be hard . "
+60,60,1561,It is an example of,false dilemma,It is an example of 
+61,61,1440,The Bible is filled with stories of God's magic.,appeal to emotion,The Bible is filled with stories of God 's magic . 
+62,62,371,"Pizza has ingredients from all the food groups. Therefore, pizza must be healthy.",faulty generalization,"MSK<0> has ingredients from all the food groups . Therefore , MSK<0> must be healthy . "
+63,63,883,McDonald's Hamburgers: over 99 billion served.,ad populum,McDonald 's Hamburgers : over 99 billion served . 
+64,64,1902,"Mom, I know you're upset that I went over my cell limit this month. The important issue here, though, is that I got an A on my algebra exam.",fallacy of relevance,"Mom , I know you 're upset that I went over my cell limit this month . The important issue here , though , is that I got an A on my algebra exam . "
+65,65,210,"An environmental group illegally blocked loggers and workers at a nuclear plant. Therefore, environmentalists are radicals who take the law into their own hands.",faulty generalization,"An environmental group illegally blocked loggers and workers at a nuclear plant . Therefore , environmentalists are radicals who take the law into their own hands . "
+66,66,1531,"Look, you are going to have to make up your mind. Either you decide that you can afford this stereo, or you decide you are going to do without music for a while",false dilemma,"Look , you are going to have to make up your mind . Either you MSK<0> that you can afford this stereo , or you MSK<0> you are going to do without music for a while "
+67,67,2355,Either you love me or you hate me.,false dilemma,Either you love me or you hate me . 
+68,68,1947,"Service Tech: Your car could use some new tires.
 Bart: You have a financial interest in selling me tires, why should I trust you?
 Service Tech: You brought your car to me to have it checked, sir.
 Bart: I brought my car to the shop where you work.
 Service Tech: So should we forget about the new tires for now?
 Bart: I never suggested that.  Are you trying to use reverse psychology on me, so I will buy the tires?
-",fallacy of relevance
-774,Marcus wants to go to a small community college close to home because all of his friends are there.,ad populum
-608,The thing about the new math teacher (who is an excellent teacher) is that he/she really stands out because he/she has good teaching skills.,circular reasoning
-1268,"Smoking cigarettes is just like ingesting arsenic into your system; both have been shown to be causally related to death. If you wouldn't want to take a spoonful of arsenic, I would think that you wouldn't want to continue smoking.",fallacy of logic
-427,"""The dinosaurs became extinct because they ate vegetables..."" is an example of what?",false causality
-2411,Of course that doctor advocates vaccination—he probably owns stock in a pharmaceutical company.,ad hominem
-920,SM 2: book being popular because it has been on the best-seller list for months,ad populum
-1808,"""Yes, we have safety issues in our factory. But we work really hard to make a good product.""",fallacy of relevance
-1274,Guns are like hammers--they're both tools with metal parts that could be used to kill someone. And yet it would be ridiculous to restrict the purchase of hammers--so restrictions on purchasing guns are equally ridiculous.,fallacy of logic
-638,"""I have a right to free speech so I can say what I want and you shouldn't try to stop me. """,circular reasoning
-330,You didn't remember to take out the trash this morning. It will pile up and the neighbors will complain and the health inspectors will come and take away the kids.,faulty generalization
-953,If you were a true American you would support the rights of people to choose whatever vehicle they want.,ad populum
-2180,"David: Can you believe that the president said, ""fat people are losers""?
+",fallacy of relevance,"MSK<0> Tech : Your MSK<1> could MSK<2> some MSK<3> tires . MSK<4> : You have a financial interest in MSK<6> me MSK<3> , why should I trust you ? MSK<0> Tech : You MSK<5> your MSK<1> to me to have it checked , sir . MSK<4> : I MSK<5> my MSK<1> to the shop where you work . MSK<0> Tech : So should we forget about the MSK<3> tires for now ? MSK<4> : I never suggested that . Are you trying to MSK<2> reverse psychology on me , so I will MSK<6> the MSK<3> ? "
+69,69,774,Marcus wants to go to a small community college close to home because all of his friends are there.,ad populum,Marcus wants to go to a small community college close to home because all of his friends are there . 
+70,70,608,The thing about the new math teacher (who is an excellent teacher) is that he/she really stands out because he/she has good teaching skills.,circular reasoning,The thing about the new math MSK<0> ( who is an excellent MSK<0> ) is that he / she really stands out because he / she has MSK<0>  skills . 
+71,71,1268,"Smoking cigarettes is just like ingesting arsenic into your system; both have been shown to be causally related to death. If you wouldn't want to take a spoonful of arsenic, I would think that you wouldn't want to continue smoking.",fallacy of logic,"MSK<2> cigarettes is just like ingesting MSK<0> into your system ; both have been shown to be causally related to death . If you would n't MSK<1> to take a spoonful of MSK<0> , I would think that you would n't MSK<1> to continue MSK<2> . "
+72,72,427,"""The dinosaurs became extinct because they ate vegetables..."" is an example of what?",false causality,""" The dinosaurs became extinct because they ate vegetables ... "" is an example of what ? "
+73,73,2411,Of course that doctor advocates vaccination—he probably owns stock in a pharmaceutical company.,ad hominem,Of course that doctor advocates vaccination — he probably owns stock in a pharmaceutical company . 
+74,74,920,SM 2: book being popular because it has been on the best-seller list for months,ad populum,SM 2 : book being popular because it has been on the best-seller list for months 
+75,75,1808,"""Yes, we have safety issues in our factory. But we work really hard to make a good product.""",fallacy of relevance,""" Yes , we have safety issues in our factory . But we work really hard to make a good product . "" "
+76,76,1274,Guns are like hammers--they're both tools with metal parts that could be used to kill someone. And yet it would be ridiculous to restrict the purchase of hammers--so restrictions on purchasing guns are equally ridiculous.,fallacy of logic,MSK<0> are like MSK<1> -- they 're both tools with metal parts that could be used to kill someone . And yet it would be MSK<2> to MSK<3> the MSK<0> of MSK<1> -- so MSK<3> on purchasing MSK<0> are equally MSK<2> . 
+77,77,638,"""I have a right to free speech so I can say what I want and you shouldn't try to stop me. """,circular reasoning,""" I have a right to free speech so I can say what I want and you should n't try to stop me . "" "
+78,78,330,You didn't remember to take out the trash this morning. It will pile up and the neighbors will complain and the health inspectors will come and take away the kids.,faulty generalization,You did n't remember to take out the trash this morning . It will pile up and the neighbors will complain and the health inspectors will come and take away the kids . 
+79,79,953,If you were a true American you would support the rights of people to choose whatever vehicle they want.,ad populum,If you were a true American you would support the rights of people to choose whatever vehicle they want . 
+80,80,2180,"David: Can you believe that the president said, ""fat people are losers""?
 Sam: Where did you hear this?
 David: I read it in a headline on BrightBert News.
 Sam: He actually said, ""People who say, 'fat people are losers' are not only cruel, but they are also wrong as well as being irrational.""
-",intentional
-10,"If you eat a good diet, you will never have a heart attack.",faulty generalization
-928,"""With 80% of consumers choosing our product, isn't obvious that you should, too?""
-This logical fallacy is called...",ad populum
-1824,"When your mom gets your phone bill and you have gone over the data limit, you begin to distract her by talking about how well you did on a test today knowing she has offered to extend your data limit if you make good grades. This is an example of which logical fallacy?",fallacy of relevance
-426,"Some students failed a test last week and they all had cell phones.  Having cell phones, therefore, made them fail.",false causality
-899,"All professional athletes use Apple watches to track their training, so our team needs to purchase Apple watches for everyone.",ad populum
-2090,"""The university committee for student discipline investigated all engineering tests for the past five years, and they found no evidence of cheating. We thus declare that no cheating has taken place during those five years.""",intentional
-1298,People who are psychotic act in a bizarre manner. This person acts in a bizarre manner. Therefore: This person is psychotic.,fallacy of logic
-1835,"Reporter: “It’s been two years since your policies were implemented, and so far they have failed to reduce unemployment rates.”
+",intentional,"MSK<0> : Can you believe that the president said , "" MSK<1> people are MSK<2> "" ? MSK<3> : Where did you hear this ? MSK<0> : I read it in a headline on BrightBert News . MSK<3> : He actually said , "" People who say , ' MSK<1> people are MSK<2> ' are not only cruel , but they are also wrong as well as being irrational . "" "
+81,81,10,"If you eat a good diet, you will never have a heart attack.",faulty generalization,"If you eat a good diet , you will never have a heart attack . "
+82,82,928,"""With 80% of consumers choosing our product, isn't obvious that you should, too?""
+This logical fallacy is called...",ad populum,""" With 80 % of consumers choosing our product , is n't obvious that you should , too ? "" This logical fallacy is called ... "
+83,83,1824,"When your mom gets your phone bill and you have gone over the data limit, you begin to distract her by talking about how well you did on a test today knowing she has offered to extend your data limit if you make good grades. This is an example of which logical fallacy?",fallacy of relevance,"When your mom gets your phone bill and you have gone over the MSK<0> limit , you begin to distract her by talking about how well you did on a test today knowing she has offered to extend your MSK<0> limit if you make good grades . This is an example of which logical fallacy ? "
+84,84,426,"Some students failed a test last week and they all had cell phones.  Having cell phones, therefore, made them fail.",false causality,"Some students MSK<0> a test last week and they all had MSK<1> phones . Having MSK<1> phones , therefore , made them MSK<0> . "
+85,85,899,"All professional athletes use Apple watches to track their training, so our team needs to purchase Apple watches for everyone.",ad populum,"All professional athletes use MSK<0> watches to track their training , so our team needs to purchase MSK<0> watches for everyone . "
+86,86,2090,"""The university committee for student discipline investigated all engineering tests for the past five years, and they found no evidence of cheating. We thus declare that no cheating has taken place during those five years.""",intentional,""" The university committee for student discipline investigated all engineering tests for the past five MSK<0> , and they found no evidence of MSK<1> . We thus declare that no MSK<1> has taken place during those five MSK<0> . "" "
+87,87,1298,People who are psychotic act in a bizarre manner. This person acts in a bizarre manner. Therefore: This person is psychotic.,fallacy of logic,MSK<0> who are psychotic MSK<0> in a MSK<1> manner . This MSK<0> acts in a MSK<1> manner . Therefore : This MSK<0> is MSK<0> . 
+88,88,1835,"Reporter: “It’s been two years since your policies were implemented, and so far they have failed to reduce unemployment rates.”
 
-Politician: “I have been working hard ever since I came into office, and I’m happy to say that I met with many business leaders throughout the country, who all say that they are glad to see that our hard work is paying off.”",fallacy of relevance
-2226,"Representative Gutierrez of Illinois, arguing in Congress on July 11, 1996, replying to Republicans arguing in favor of the ""Defense of Marriage Act"", a bill stipulating that 'marriage' be defined as being between a man and a woman only, excluding homosexual marriages: ""I now realize that my friends on the other side of the aisle aren't the least bit serious when they talk about how important it is for the federal government not to interfere in the lives of our people. I understand that they are just kidding - just teasing us - when they stress the importance of taking power out of Washington and giving it to local officials. And now I know that their biggest joke of all is that old line about family values - all that talk about encouraging people to care about and be committed to each other.""",ad hominem
-760,"Well, every one else jumped off the roof, why can't I?",ad populum
-952,"Trump cites (biased) poll results showing that people think he’s a strong leader to prove a point that he is a strong leader.
+Politician: “I have been working hard ever since I came into office, and I’m happy to say that I met with many business leaders throughout the country, who all say that they are glad to see that our hard work is paying off.”",fallacy of relevance,"Reporter : MSK<0> It ’s been two years since your policies were implemented , and so far they have failed to reduce unemployment rates . MSK<0> Politician : MSK<0> I have been MSK<1> hard ever since I came into office , and I ’m happy to say that I met with many business leaders throughout the country , who all say that they are glad to see that our hard MSK<1> is paying off . MSK<0> "
+89,89,2226,"Representative Gutierrez of Illinois, arguing in Congress on July 11, 1996, replying to Republicans arguing in favor of the ""Defense of Marriage Act"", a bill stipulating that 'marriage' be defined as being between a man and a woman only, excluding homosexual marriages: ""I now realize that my friends on the other side of the aisle aren't the least bit serious when they talk about how important it is for the federal government not to interfere in the lives of our people. I understand that they are just kidding - just teasing us - when they stress the importance of taking power out of Washington and giving it to local officials. And now I know that their biggest joke of all is that old line about family values - all that talk about encouraging people to care about and be committed to each other.""",ad hominem,"Representative Gutierrez of Illinois , MSK<0> in Congress on July 11 , 1996 , replying to Republicans MSK<0> in favor of the "" Defense of MSK<1> Act "" , a bill stipulating that ' MSK<1> ' be defined as being between a man and a woman only , excluding homosexual MSK<1> : "" I now realize that my friends on the other side of the aisle are n't the least bit serious when they MSK<2> about how MSK<4> it is for the federal government not to interfere in the lives of our MSK<3> . I understand that they are just kidding - just teasing us - when they stress the MSK<4> of taking power out of Washington and giving it to local officials . And now I know that their biggest joke of all is that old line about family values - all that MSK<2> about encouraging MSK<3> to care about and be committed to each other . "" "
+90,90,760,"Well, every one else jumped off the roof, why can't I?",ad populum,"Well , every one else jumped off the roof , why ca n't I ? "
+91,91,952,"Trump cites (biased) poll results showing that people think he’s a strong leader to prove a point that he is a strong leader.
 
-ABC News/Washington Post Poll (wrong big on election) said almost all stand by their vote on me & 53% said strong leader.",ad populum
-2417,"This crash will likely damage the reputation of Malaysia Airlines, which will hurt the tourism industry of Malaysia and ruin their economy.",faulty generalization
-1055,"Green Peace's strategies aren't effective because they are all dirty, lazy hippies.",ad hominem
-153,"In both of the murder mysteries I have read, the District Attorney was the culprit. All mystery writers like to make lawyers out to be villains.",faulty generalization
-2330,"Mayor Jones’ anti-DUI campaign should not be taken seriously. After all, the mayor himself was cited for driving under the influence in college",ad hominem
-1853,A man who has cheated on his spouse is confronted by a friend who tells him that it is wrong. The man begins to talk about right versus wrong and who decides.,fallacy of relevance
-1797,"Bill and Jill are arguing about cleaning out their closets:
+ABC News/Washington Post Poll (wrong big on election) said almost all stand by their vote on me & 53% said strong leader.",ad populum,Trump cites ( biased ) MSK<0> results showing that people think he ’s a MSK<1> leader to prove a point that he is a MSK<1> leader . ABC News / Washington Post MSK<0> ( wrong big on election ) said almost all stand by their vote on me & 53 % said MSK<1> leader . 
+92,92,2417,"This crash will likely damage the reputation of Malaysia Airlines, which will hurt the tourism industry of Malaysia and ruin their economy.",faulty generalization,"This crash will likely damage the reputation of MSK<0> Airlines , which will hurt the tourism industry of MSK<0> and ruin their economy . "
+93,93,1055,"Green Peace's strategies aren't effective because they are all dirty, lazy hippies.",ad hominem,"Green Peace 's strategies are n't effective because they are all dirty , lazy hippies . "
+94,94,153,"In both of the murder mysteries I have read, the District Attorney was the culprit. All mystery writers like to make lawyers out to be villains.",faulty generalization,"In both of the murder MSK<0> I have read , the District MSK<1> was the culprit . All MSK<0> writers like to make MSK<1> out to be villains . "
+95,95,2330,"Mayor Jones’ anti-DUI campaign should not be taken seriously. After all, the mayor himself was cited for driving under the influence in college",ad hominem,"MSK<0> Jones ’ anti-DUI campaign should not be taken seriously . After all , the MSK<0> himself was cited for driving under the influence in college "
+96,96,1853,A man who has cheated on his spouse is confronted by a friend who tells him that it is wrong. The man begins to talk about right versus wrong and who decides.,fallacy of relevance,A MSK<0> who has cheated on his spouse is confronted by a friend who tells him that it is MSK<1> . The MSK<0> begins to talk about right versus MSK<1> and who decides . 
+97,97,1797,"Bill and Jill are arguing about cleaning out their closets:
 Jill: ""We should clean out the closets. They are getting a bit messy.""
 Bill: ""Why, we just went through those closets last year. Do we have to clean them out everyday?""
-Jill: ""I never said anything about cleaning them out every day. You just want too keep all your junk forever, which is just ridiculous.""",fallacy of extension
-241,"Jeff's mom is concerned when she finds out that he skipped class one day. She tells him that she is concerned that since he skipped one class, he will start skipping more frequently. Then he will drop out altogether, never graduate or get into college, and end up unemployed and living at home for the rest of his life. What type of fallacy has Jeff's mom committed?",faulty generalization
-589,"Red had come up six times in a row on the roulette wheel, so Greg knew that it was close to certain that black would be next up. Suffering an economic form of natural selection with this thinking, he soon lost all of his savings.",false causality
-287,"""Once you leave the house, you cannot go back. You will not receive any financial support so you need to stop going to school. Your credit card will be cut so you need to work. You will live on your own.""",faulty generalization
-2387,"Person 1: If you are a Marvel fan then you love Avengers: Endgame.
+Jill: ""I never said anything about cleaning them out every day. You just want too keep all your junk forever, which is just ridiculous.""",fallacy of extension,"MSK<0> and MSK<1> are arguing about MSK<2> out their MSK<3> : MSK<1> : "" We should MSK<2> out the MSK<3> . They are getting a bit messy . "" MSK<0> : "" Why , we just went through those MSK<3> last year . Do we have to MSK<2> them out everyday ? "" MSK<1> : "" I never said anything about MSK<2> them out every day . You just want too keep all your junk forever , which is just ridiculous . "" "
+98,98,241,"Jeff's mom is concerned when she finds out that he skipped class one day. She tells him that she is concerned that since he skipped one class, he will start skipping more frequently. Then he will drop out altogether, never graduate or get into college, and end up unemployed and living at home for the rest of his life. What type of fallacy has Jeff's mom committed?",faulty generalization,"MSK<0> 's MSK<1> is MSK<2> when she finds out that he MSK<3> class one day . She tells him that she is MSK<2> that since he MSK<3> one MSK<3> , he will start MSK<3> more frequently . Then he will drop out altogether , never graduate or get into college , and end up unemployed and living at home for the rest of his life . What type of fallacy has MSK<0> 's MSK<1> committed ? "
+99,99,589,"Red had come up six times in a row on the roulette wheel, so Greg knew that it was close to certain that black would be next up. Suffering an economic form of natural selection with this thinking, he soon lost all of his savings.",false causality,"Red had come up six times in a row on the roulette wheel , so Greg knew that it was close to certain that black would be next up . Suffering an economic form of natural selection with this thinking , he soon lost all of his savings . "
+100,100,287,"""Once you leave the house, you cannot go back. You will not receive any financial support so you need to stop going to school. Your credit card will be cut so you need to work. You will live on your own.""",faulty generalization,""" Once you leave the house , you cannot go back . You will not receive any financial support so you MSK<0> to stop going to school . Your credit card will be cut so you MSK<0> to work . You will live on your own . "" "
+101,101,2387,"Person 1: If you are a Marvel fan then you love Avengers: Endgame.
 Person 2: I am a Marvel fan and I did not love Avengers: Endgame.
-Person 1: Well you aren’t a TRUE Marvel fan.”",intentional
-666,This has to work so it will work.,circular reasoning
-566,"P1. Smoking has been empirically proven to cause lung cancer.
-C. Therefore, if we eradicate smoking, we will eradicate lung cancer.",false causality
-1626,"""Either we have the full football season or we scrap it altogether and have zero football"" IS an example of what fallacy?",false dilemma
-1739,Robot 2 (Blue) has been refuting all of Robot 1's (Orange) arguments. Robot 1 launches the above counterargument. What is this fallacy?,fallacy of extension
-1837,"Sure, that charity group is under investigation for misusing funds, but everyone deserves a healthy meal.",fallacy of relevance
-104,"A shopkeeper suspects you of stealing and asks you to empty your pockets. The first thing you take out is an empty gum wrapper and they immediately shout, “I knew it!” What fallacy has the shopkeeper committed?",faulty generalization
-2297,The United States is the wealthiest nation in the world. So every American is wealthy.,faulty generalization
-507,Jack threw up because he ate Hot Cheetos.,false causality
-2167,Did John ever give up his bad habits?,intentional
-484,I passed my math test after going out to the movies the night before. I should go to the movies the night before every math test!,false causality
-1928,"""It's important for you to take this psychology course. Sign up today. Don't wait.""",fallacy of relevance
-1009,"""My opponent suggests that lowering taxes will be a good idea, this is coming from a woman to eats a pint of Ben and Jerry's each night!""",ad hominem
-553,"Before women got the vote, there were no nuclear weapons",false causality
-492,"a connection between two ideas that doesn't always mean that one causes the other (correlation vs. causation)
+Person 1: Well you aren’t a TRUE Marvel fan.”",intentional,MSK<0> 1 : If you are a MSK<1> fan then you MSK<2> Avengers : MSK<3> . MSK<0> 2 : I am a MSK<1> fan and I did not MSK<2> Avengers : MSK<3> . MSK<0> 1 : Well you are n’t a TRUE MSK<1> fan . ” 
+102,102,666,This has to work so it will work.,circular reasoning,This has to MSK<0> so it will MSK<0> . 
+103,103,566,"P1. Smoking has been empirically proven to cause lung cancer.
+C. Therefore, if we eradicate smoking, we will eradicate lung cancer.",false causality,"P1 . MSK<0> has been empirically proven to cause MSK<0> cancer . C. Therefore , if we MSK<0> smoking , we will eradicate MSK<0> cancer . "
+104,104,1626,"""Either we have the full football season or we scrap it altogether and have zero football"" IS an example of what fallacy?",false dilemma,""" Either we have the full MSK<0> season or we scrap it altogether and have zero MSK<0> "" IS an example of what fallacy ? "
+105,105,1739,Robot 2 (Blue) has been refuting all of Robot 1's (Orange) arguments. Robot 1 launches the above counterargument. What is this fallacy?,fallacy of extension,MSK<0> 2 ( Blue ) has been refuting all of MSK<0> 1's ( Orange ) arguments . MSK<0> 1 launches the above counterargument . What is this fallacy ? 
+106,106,1837,"Sure, that charity group is under investigation for misusing funds, but everyone deserves a healthy meal.",fallacy of relevance,"Sure , that charity group is under investigation for misusing funds , but everyone deserves a healthy meal . "
+107,107,104,"A shopkeeper suspects you of stealing and asks you to empty your pockets. The first thing you take out is an empty gum wrapper and they immediately shout, “I knew it!” What fallacy has the shopkeeper committed?",faulty generalization,"A MSK<0> suspects you of stealing and asks you to empty your pockets . The first thing you take out is an empty gum wrapper and they immediately shout , MSK<1> I knew it ! MSK<1> What fallacy has the MSK<0> committed ? "
+108,108,2297,The United States is the wealthiest nation in the world. So every American is wealthy.,faulty generalization,The United States is the MSK<0> nation in the world . So every American is MSK<0> . 
+109,109,507,Jack threw up because he ate Hot Cheetos.,false causality,Jack threw up because he ate Hot Cheetos . 
+110,110,2167,Did John ever give up his bad habits?,intentional,Did John ever give up his bad habits ? 
+111,111,484,I passed my math test after going out to the movies the night before. I should go to the movies the night before every math test!,false causality,I passed my MSK<0> test after going out to the MSK<1> the MSK<2> before . I should go to the MSK<1> the MSK<2> before every MSK<0> test ! 
+112,112,1928,"""It's important for you to take this psychology course. Sign up today. Don't wait.""",fallacy of relevance,""" It 's important for you to take this psychology course . Sign up today . Do n't wait . "" "
+113,113,1009,"""My opponent suggests that lowering taxes will be a good idea, this is coming from a woman to eats a pint of Ben and Jerry's each night!""",ad hominem,""" My opponent suggests that lowering taxes will be a good idea , this is coming from a woman to eats a pint of Ben and Jerry 's each night ! "" "
+114,114,553,"Before women got the vote, there were no nuclear weapons",false causality,"Before women got the vote , there were no nuclear weapons "
+115,115,492,"a connection between two ideas that doesn't always mean that one causes the other (correlation vs. causation)
 
-una conexión entre dos ideas que no siempre significa que una causa la otra (correlación vs. causación)",false causality
-1179,"My best friend says you’re a liar, so I’m not going to talk to you.",ad hominem
-1186,Maria drives a car. She must be wealthy.,ad hominem
-471,"1. All the schools in the area had to kept closed for most part of the week.
-2. Many parents have withdrawn their children from the local schools.",false causality
-1427,What type of persuasive writing is used to influence readers’ feelings (pathos)?,appeal to emotion
-1788,We should prohibit all cadets from assisting on emergency services missions. Some cadets are so immature they won’t ever stop goofing around.,fallacy of extension
-1830,"Teacher: Why don’t you have your homework today?
+una conexión entre dos ideas que no siempre significa que una causa la otra (correlación vs. causación)",false causality,a connection between two MSK<0> that does n't always mean that one causes the other ( correlation MSK<0> causation ) una conexión entre dos MSK<0> que no siempre significa que MSK<0> causa la otra ( correlación vs. MSK<0> ) 
+116,116,1179,"My best friend says you’re a liar, so I’m not going to talk to you.",ad hominem,"My best friend says you ’re a liar , so I ’m not going to talk to you . "
+117,117,1186,Maria drives a car. She must be wealthy.,ad hominem,Maria drives a car . She must be wealthy . 
+118,118,471,"1. All the schools in the area had to kept closed for most part of the week.
+2. Many parents have withdrawn their children from the local schools.",false causality,MSK<1> . All the MSK<0> in the area had to kept closed for most part of the week . MSK<1> . Many parents have withdrawn their children from the local MSK<0> . 
+119,119,1427,What type of persuasive writing is used to influence readers’ feelings (pathos)?,appeal to emotion,What type of persuasive writing is used to influence readers ’ feelings ( pathos ) ? 
+120,120,1788,We should prohibit all cadets from assisting on emergency services missions. Some cadets are so immature they won’t ever stop goofing around.,fallacy of extension,We should prohibit all MSK<0> from assisting on emergency services missions . Some MSK<0> are so immature they wo n’t ever stop goofing around . 
+121,121,1830,"Teacher: Why don’t you have your homework today?
 
-Student: Well, I did my homework. I was actually really interested in all that info about the quadratic formula. Would you like to hear the song that I wrote to memorize it?",fallacy of relevance
-176,"Pastor Pete: People are turning to God everywhere! 9 out of 10 people I interviewed said that they had a personal relationship with Jesus Christ.
+Student: Well, I did my homework. I was actually really interested in all that info about the quadratic formula. Would you like to hear the song that I wrote to memorize it?",fallacy of relevance,"Teacher : Why do n’t you have your MSK<0> today ? Student : Well , I did my MSK<0> . I was actually really interested in all that info about the quadratic formula . Would you like to hear the song that I wrote to memorize it ? "
+122,122,176,"Pastor Pete: People are turning to God everywhere! 9 out of 10 people I interviewed said that they had a personal relationship with Jesus Christ.
 
 Fred: Where did you find these people you interviewed?
-Pastor Pete: In my church.",faulty generalization
-955,"If you are a true American, you will ask your congressman to vote against NAFTA.",ad populum
-764,"""Everyone is doing it, you should be too!"" is an example of which fallacy?",ad populum
-370,"A is part of B. A has property X. Therefore, B has property X. What fallacy is described in this logical form?",faulty generalization
-1784,Mabel wants to get rid of the student newspaper. Next she will probably want to ban free speech! She won't want us to speak at all! She will make it a law that you cannot speak in public.,fallacy of extension
-1025,"A Congressman calls a Whitehouse Spokesperson a ""giant idiot""",ad hominem
-1115,"""You are not a credible resource person. You haven't finished college.""",ad hominem
-828,A commercial shows a group of friends all hanging out wearing clothes from a popular clothing company. This is an example of,ad populum
-2345,"I cannot get a job because the public education system failed me;  I have to steal to  survive.  It is society's fault, not mine.",appeal to emotion
-475,"“President Jones raised taxes, and then the rate of violent crime went up. Jones is responsible for the rise in crime.""",false causality
-2005,"How do I know the adult film industry is the third largest industry in the United States? Derek Shlongmiester, the adult film star of over 50 years, said it was. That's how I know.",fallacy of credibility
-54,Alissa has class with a football player who is a class clown. He disrupts the class and is failing. Alissa decides all football players are not serious students.,faulty generalization
-616,Fast food is bad for you because is junk.,circular reasoning
-1673,"Elba: I can’t believe the art critic said my artwork is awful!
+Pastor Pete: In my church.",faulty generalization,MSK<0> Pete : People are turning to God everywhere ! MSK<1> out of 10 MSK<1> I MSK<2> said that they had a personal relationship with Jesus Christ . Fred : Where did you find these MSK<1> you MSK<2> ? MSK<0> Pete : In my church . 
+123,123,955,"If you are a true American, you will ask your congressman to vote against NAFTA.",ad populum,"If you are a true American , you will ask your congressman to vote against NAFTA . "
+124,124,764,"""Everyone is doing it, you should be too!"" is an example of which fallacy?",ad populum,""" Everyone is doing it , you should be too ! "" is an example of which fallacy ? "
+125,125,370,"A is part of B. A has property X. Therefore, B has property X. What fallacy is described in this logical form?",faulty generalization,"A is part of MSK<0> . A has MSK<1> X. Therefore , MSK<0> has MSK<1> X . What fallacy is described in this logical form ? "
+126,126,1784,Mabel wants to get rid of the student newspaper. Next she will probably want to ban free speech! She won't want us to speak at all! She will make it a law that you cannot speak in public.,fallacy of extension,Mabel MSK<0> to get rid of the student newspaper . Next she will probably MSK<0> to ban free MSK<1> ! She wo n't MSK<0> us to MSK<1> at all ! She will make it a law that you cannot MSK<1> in public . 
+127,127,1025,"A Congressman calls a Whitehouse Spokesperson a ""giant idiot""",ad hominem,"A Congressman calls a Whitehouse Spokesperson a "" giant idiot "" "
+128,128,1115,"""You are not a credible resource person. You haven't finished college.""",ad hominem,""" You are not a credible resource person . You have n't finished college . "" "
+129,129,828,A commercial shows a group of friends all hanging out wearing clothes from a popular clothing company. This is an example of,ad populum,A commercial shows a group of friends all hanging out wearing MSK<0> from a popular MSK<0> company . This is an example of 
+130,130,2345,"I cannot get a job because the public education system failed me;  I have to steal to  survive.  It is society's fault, not mine.",appeal to emotion,"I cannot get a job because the public education system failed me ; I have to steal to survive . It is society 's fault , not mine . "
+131,131,475,"“President Jones raised taxes, and then the rate of violent crime went up. Jones is responsible for the rise in crime.""",false causality,"“ President MSK<0> raised taxes , and then the rate of violent MSK<1> went up . MSK<0> is responsible for the rise in MSK<1> . "" "
+132,132,2005,"How do I know the adult film industry is the third largest industry in the United States? Derek Shlongmiester, the adult film star of over 50 years, said it was. That's how I know.",fallacy of credibility,"How do I MSK<0> the MSK<1> film industry is the third largest MSK<1> in the United States ? Derek Shlongmiester , the MSK<1> film star of over 50 years , said it was . That 's how I MSK<0> . "
+133,133,54,Alissa has class with a football player who is a class clown. He disrupts the class and is failing. Alissa decides all football players are not serious students.,faulty generalization,MSK<0> has MSK<1> with a MSK<2> player who is a MSK<1> clown . He disrupts the MSK<1> and is failing . MSK<0> decides all MSK<2> players are not serious students . 
+134,134,616,Fast food is bad for you because is junk.,circular reasoning,Fast food is bad for you because is junk . 
+135,135,1673,"Elba: I can’t believe the art critic said my artwork is awful!
 Rowena: He must have meant it in the old sense of the word -- that your artwork inspired awe!
 Elba: Yes!  That makes sense now!
-",equivocation
-2050,"""We're going to protest and not get in trouble because Mr. Iglesias said it's okay.""",fallacy of credibility
-282,"If I don't take this AP class, then I won't do well on the exam.  If I don't do well on the AP exam, then I can't get into a good college.  If I can't get into a good college, then I'll never get a good job.  If I can't get a good job, then I'm going to have to live in my parents' basement forever.  Guess I'll sign up for the AP class.",faulty generalization
-2205,"Every time I wear this necklace, I pass my exams. Therefore, wearing this necklace causes me to pass my exams.",false causality
-2410,"Everyone is getting tattoos in college, so you might as well do it too.",ad populum
-1892,"There is no need for additional taxes for education. Every year we throw more money into education, and all they do is hire more management and build more buildings. None of the money actually reaches the classroom or is really used for education.",fallacy of relevance
-1031,"Mrs. Peters is nominated for teacher of the year, which is voted on by her fellow faculty members. A colleague says that she would never vote for her because she is too young.",ad hominem
-1160,Don't believe what Kim says about global warming. Kim dropped out of college!,ad hominem
-2432,You're complaining because you have to walk to school? I used to have to give my parents my entire paycheck.,fallacy of relevance
-966,This coin has landed heads-up nine times in a row. So it will probably land tails-up next time it is tossed.,ad populum
-1951,"Son: I am so excited!  I got an “A” on my physics exam!
+",equivocation,MSK<0> : I ca n’t believe the MSK<1> critic said my MSK<1> is awful ! Rowena : He must have meant it in the old MSK<2> of the word -- that your MSK<1> inspired awe ! MSK<0> : Yes ! That makes MSK<2> now ! 
+136,136,2050,"""We're going to protest and not get in trouble because Mr. Iglesias said it's okay.""",fallacy of credibility,""" We 're going to protest and not get in trouble because Mr. Iglesias said it 's okay . "" "
+137,137,282,"If I don't take this AP class, then I won't do well on the exam.  If I don't do well on the AP exam, then I can't get into a good college.  If I can't get into a good college, then I'll never get a good job.  If I can't get a good job, then I'm going to have to live in my parents' basement forever.  Guess I'll sign up for the AP class.",faulty generalization,"If I do n't take this MSK<0> class , then I wo n't do well on the MSK<0> . If I do n't do well on the MSK<0> exam , then I ca n't get into a MSK<1> college . If I ca n't get into a MSK<1> college , then I 'll never get a MSK<1> job . If I ca n't get a MSK<1> job , then I 'm going to have to live in my parents ' basement forever . Guess I 'll sign up for the MSK<0> class . "
+138,138,2205,"Every time I wear this necklace, I pass my exams. Therefore, wearing this necklace causes me to pass my exams.",false causality,"Every time I MSK<0> this MSK<1> , I MSK<2> my MSK<3> . Therefore , MSK<0> this MSK<1> causes me to MSK<2> my MSK<3> . "
+139,139,2410,"Everyone is getting tattoos in college, so you might as well do it too.",ad populum,"Everyone is getting tattoos in college , so you might as well do it too . "
+140,140,1892,"There is no need for additional taxes for education. Every year we throw more money into education, and all they do is hire more management and build more buildings. None of the money actually reaches the classroom or is really used for education.",fallacy of relevance,"There is no need for additional taxes for MSK<0> . Every year we throw more MSK<1> into MSK<0> , and all they do is hire more management and build more buildings . None of the MSK<1> actually reaches the classroom or is really used for MSK<0> . "
+141,141,1031,"Mrs. Peters is nominated for teacher of the year, which is voted on by her fellow faculty members. A colleague says that she would never vote for her because she is too young.",ad hominem,"Mrs. Peters is nominated for teacher of the year , which is MSK<0> on by her fellow faculty members . A colleague says that she would never MSK<0> for her because she is too young . "
+142,142,1160,Don't believe what Kim says about global warming. Kim dropped out of college!,ad hominem,Do n't believe what MSK<0> says about global warming . MSK<0> dropped out of college ! 
+143,143,2432,You're complaining because you have to walk to school? I used to have to give my parents my entire paycheck.,fallacy of relevance,You 're complaining because you have to walk to school ? I used to have to give my parents my entire paycheck . 
+144,144,966,This coin has landed heads-up nine times in a row. So it will probably land tails-up next time it is tossed.,ad populum,This coin has MSK<0> heads - up nine MSK<1> in a row . So it will probably MSK<0> tails - up next MSK<1> it is tossed . 
+145,145,1951,"Son: I am so excited!  I got an “A” on my physics exam!
 Dad:  Why not an “A+”?  This means that you answered something incorrectly.  That is not acceptable!
-",fallacy of relevance
-691,"""The Cardinals are the best football team because they're better than all the other teams. They're better than all the other teams because they're the best.""",circular reasoning
-1209,How can you tell me I should exercise to lose weight? All you do is sit behind a desk all day. I've never seen you do a lick of exercise.,ad hominem
-1600,"There are two kinds of people in this world: those who like penguins, and those who are terrible monsters.",false dilemma
-4,"""Four out of five dentists recommend Happy Glossy toothpaste. Therefore, it must be great.""",faulty generalization
-1091,A mother says that she does not trust her pediatrician because he has never been a mother.,ad hominem
-359,"She has always associated with shady people, so she must not be trustworthy.",faulty generalization
-543,"Our garage sale made lots of money before Joan showed up. Obviously, she scared off all the customers.",false causality
-2235,"Speaker 1: No fault divorce is really harmful to the family and the larger society.
-Speaker 2: Well, you must not really think that since you’re divorced yourself.",ad hominem
-962,"Mark: Do you believe in virgin births?
+",fallacy of relevance,Son : I am so excited ! I got an MSK<0> A MSK<0> on my physics exam ! Dad : Why not an MSK<0> A + MSK<0> ? This means that you answered something incorrectly . That is not acceptable ! 
+146,146,691,"""The Cardinals are the best football team because they're better than all the other teams. They're better than all the other teams because they're the best.""",circular reasoning,""" The Cardinals are the MSK<0> football team because they 're MSK<0> than all the other MSK<0> . They 're MSK<0> than all the other MSK<0> because they 're the MSK<0> . "" "
+147,147,1209,How can you tell me I should exercise to lose weight? All you do is sit behind a desk all day. I've never seen you do a lick of exercise.,ad hominem,How can you tell me I should MSK<0> to lose weight ? All you do is sit behind a desk all day . I 've never seen you do a lick of MSK<0> . 
+148,148,1600,"There are two kinds of people in this world: those who like penguins, and those who are terrible monsters.",false dilemma,"There are two kinds of people in this world : those who like penguins , and those who are terrible monsters . "
+149,149,4,"""Four out of five dentists recommend Happy Glossy toothpaste. Therefore, it must be great.""",faulty generalization,""" Four out of five dentists recommend Happy Glossy toothpaste . Therefore , it must be great . "" "
+150,150,1091,A mother says that she does not trust her pediatrician because he has never been a mother.,ad hominem,A MSK<0> says that she does not trust her pediatrician because he has never been a MSK<0> . 
+151,151,359,"She has always associated with shady people, so she must not be trustworthy.",faulty generalization,"She has always associated with shady people , so she must not be trustworthy . "
+152,152,543,"Our garage sale made lots of money before Joan showed up. Obviously, she scared off all the customers.",false causality,"Our garage sale made lots of money before Joan showed up . Obviously , she scared off all the customers . "
+153,153,2235,"Speaker 1: No fault divorce is really harmful to the family and the larger society.
+Speaker 2: Well, you must not really think that since you’re divorced yourself.",ad hominem,"MSK<0> 1 : No fault MSK<1> is really harmful to the family and the larger society . MSK<0> 2 : Well , you must not really think that since you ’re MSK<1> yourself . "
+154,154,962,"Mark: Do you believe in virgin births?
 Sue: You mean that babies are born virgins?
 Mark: I mean birth without fertilization.
 Sue: No.
 Mark: How could you not believe in virgin births? Roughly two billion people believe in them, don’t you think you should reconsider your position?
-",ad populum
-1794,"After Will said that we should put more money into health and education, Warren responded by saying that he was surprised that Will hates our country so much that he wants to leave it defenceless by cutting military spending.",fallacy of extension
-892,"I didn't want to the only one not listening to music while I completed my Achieve article, so I listened to music too.",ad populum
-1722,"If we take away farmers' ability to grow genetically engineered crops, if we eliminate that option, people will go hungry, in fact, people will starve. Unlike my opponent, I choose to use the technology available to us and save lives.",fallacy of extension
-1579,"I thought you were a good person, but you were not at church today.",false dilemma
-1328,"""We both like music, so we should get married.""",fallacy of logic
-216,"Four out of five dentists recommend Happy Glossy Smiley toothpaste brand.  Therefore, it must be great.",faulty generalization
-2163,What drugs were you on?,intentional
-2238,“Guns are like hammers—they’re both tools with metal parts that could be used to kill someone. And yet it would be ridiculous to restrict the purchase of hammers—so restrictions on purchasing guns are equally ridiculous.”,fallacy of logic
-375,"A car makes less pollution than a bus. Therefore, cars are less of a pollution problem than buses",faulty generalization
-203,"Sam is riding her bike in her home town in Maine, minding her own business. A station wagon comes up behind her and the driver starts beeping his horn and then tries to force her off the road. As he goes by, the driver yells ""get on the sidewalk where you belong!"" Sam sees that the car has Ohio plates and concludes that all Ohio drivers are jerks.",faulty generalization
-1564,"I’m raising funds to help cure XYZ disease. If you don’t donate, then you’re part of the problem.",false dilemma
-264,"If we let the government implant tracking devices in criminals, it's not going to stop there! They're going to want to track us at work, our school children, and then eventually everyone!",faulty generalization
-1948,"Jay: Dude, where are my car keys?
+",ad populum,"MSK<0> : Do you MSK<1> in MSK<2> births ? MSK<3> : You MSK<2> that babies are born MSK<2> ? MSK<0> : I mean MSK<2> without fertilization . MSK<3> : No . MSK<0> : How could you not MSK<1> in MSK<2> births ? Roughly two billion people MSK<1> in them , do n’t you think you should reconsider your position ? "
+155,155,1794,"After Will said that we should put more money into health and education, Warren responded by saying that he was surprised that Will hates our country so much that he wants to leave it defenceless by cutting military spending.",fallacy of extension,"After Will said that we should put more money into health and education , Warren responded by saying that he was surprised that Will hates our country so much that he wants to leave it defenceless by cutting military spending . "
+156,156,892,"I didn't want to the only one not listening to music while I completed my Achieve article, so I listened to music too.",ad populum,"I did n't want to the only one not MSK<0> to MSK<1> while I completed my Achieve article , so I MSK<0> to MSK<1> too . "
+157,157,1722,"If we take away farmers' ability to grow genetically engineered crops, if we eliminate that option, people will go hungry, in fact, people will starve. Unlike my opponent, I choose to use the technology available to us and save lives.",fallacy of extension,"If we take away farmers ' ability to grow genetically engineered crops , if we eliminate that option , MSK<0> will go hungry , in fact , MSK<0> will starve . Unlike my opponent , I choose to use the technology available to us and save lives . "
+158,158,1579,"I thought you were a good person, but you were not at church today.",false dilemma,"I thought you were a good person , but you were not at church today . "
+159,159,1328,"""We both like music, so we should get married.""",fallacy of logic,""" We both like music , so we should get married . "" "
+160,160,216,"Four out of five dentists recommend Happy Glossy Smiley toothpaste brand.  Therefore, it must be great.",faulty generalization,"Four out of five dentists recommend Happy Glossy Smiley toothpaste brand . Therefore , it must be great . "
+161,161,2163,What drugs were you on?,intentional,What drugs were you on ? 
+162,162,2238,“Guns are like hammers—they’re both tools with metal parts that could be used to kill someone. And yet it would be ridiculous to restrict the purchase of hammers—so restrictions on purchasing guns are equally ridiculous.”,fallacy of logic,MSK<0> Guns are like MSK<1> — they ’re both tools with metal parts that could be used to kill someone . And yet it would be MSK<2> to MSK<3> the MSK<0> of MSK<1> — so MSK<3> on purchasing MSK<0> are equally MSK<2> . MSK<0> 
+163,163,375,"A car makes less pollution than a bus. Therefore, cars are less of a pollution problem than buses",faulty generalization,"A MSK<0> makes less MSK<1> than a MSK<2> . Therefore , MSK<0> are less of a MSK<1> problem than MSK<2> "
+164,164,203,"Sam is riding her bike in her home town in Maine, minding her own business. A station wagon comes up behind her and the driver starts beeping his horn and then tries to force her off the road. As he goes by, the driver yells ""get on the sidewalk where you belong!"" Sam sees that the car has Ohio plates and concludes that all Ohio drivers are jerks.",faulty generalization,"MSK<0> is riding her bike in her home town in Maine , minding her own business . A station wagon comes up behind her and the MSK<1> starts beeping his horn and then tries to force her off the road . As he goes by , the MSK<1> yells "" get on the sidewalk where you belong ! "" MSK<0> sees that the car has MSK<1> plates and concludes that all Ohio MSK<1> are jerks . "
+165,165,1564,"I’m raising funds to help cure XYZ disease. If you don’t donate, then you’re part of the problem.",false dilemma,"I ’m raising funds to help cure XYZ disease . If you do n’t donate , then you ’re part of the problem . "
+166,166,264,"If we let the government implant tracking devices in criminals, it's not going to stop there! They're going to want to track us at work, our school children, and then eventually everyone!",faulty generalization,"If we let the government implant MSK<0> devices in criminals , it 's not going to stop there ! They 're going to want to MSK<0> us at work , our school children , and then eventually everyone ! "
+167,167,1948,"Jay: Dude, where are my car keys?
 Silent Bob: (says nothing)
 Jay: I KNEW you took them!
-",fallacy of relevance
-648,Starbucks is the best because it's expensive.,circular reasoning
-115,"I saw two women get in a car accident. Therefore, all women are bad drivers",faulty generalization
-840,"Matthew: Everyone believes that teachers get paid enough for the job they do. Therefore, it must be true.",ad populum
-2150,"If your neighbor robs a bank, should you go to jail? is an example of.....",intentional
-1907,"Jon: ""Go easy on the scotch; you've had three shots already now."" Jeff: ""Oh sure, I'll put down my scotch when you put down that tequila. Lay off, man.""",fallacy of relevance
-384,"Broccoli has significantly less fat than the leading candy bar! Plus, it's nowhere near as hot as Hot Cheetos!",faulty generalization
-2088,"Although we have proven that the moon is not made of spare ribs, we have not proven that its core cannot be filled with them; therefore, the moon’s core is filled with spare ribs.
+",fallacy of relevance,"MSK<0> : Dude , where are my car keys ? Silent Bob : ( says nothing ) MSK<0> : I KNEW you took them ! "
+168,168,648,Starbucks is the best because it's expensive.,circular reasoning,Starbucks is the best because it 's expensive . 
+169,169,115,"I saw two women get in a car accident. Therefore, all women are bad drivers",faulty generalization,"I saw two MSK<0> get in a car accident . Therefore , all MSK<0> are bad drivers "
+170,170,840,"Matthew: Everyone believes that teachers get paid enough for the job they do. Therefore, it must be true.",ad populum,"Matthew : Everyone believes that teachers get paid enough for the job they do . Therefore , it must be true . "
+171,171,2150,"If your neighbor robs a bank, should you go to jail? is an example of.....",intentional,"If your neighbor robs a bank , should you go to jail ? is an example of ..... "
+172,172,1907,"Jon: ""Go easy on the scotch; you've had three shots already now."" Jeff: ""Oh sure, I'll put down my scotch when you put down that tequila. Lay off, man.""",fallacy of relevance,"Jon : "" Go easy on the MSK<0> ; you 've had three shots already now . "" Jeff : "" Oh sure , I 'll put down my MSK<0> when you put down that tequila . Lay off , man . "" "
+173,173,384,"Broccoli has significantly less fat than the leading candy bar! Plus, it's nowhere near as hot as Hot Cheetos!",faulty generalization,"Broccoli has significantly less fat than the leading candy bar ! Plus , it 's nowhere near as MSK<0> as MSK<0> Cheetos ! "
+174,174,2088,"Although we have proven that the moon is not made of spare ribs, we have not proven that its core cannot be filled with them; therefore, the moon’s core is filled with spare ribs.
 
 X is true because you cannot prove that X is false.
-X is false because you cannot prove that X is true.",intentional
-637,"Violent video games cause teens to be violent, because violent teens play violent video games.",circular reasoning
-964,"A 2005 Gallup Poll found that an estimated 25% of Americans over the age of 18 believe in astrology—or that the position of the stars and planets can affect people's lives.  That is roughly 75,000,000 people.  Therefore, there must be some truth to astrology!",ad populum
-1971,"I saw Ashton Kutcher in a commercial for male skin care. He's looking good for his age, so I'm willing to try the product. He must know what he's talking about.",fallacy of credibility
-778,Trying the latest social media challenge is a good example of what logical fallacy?,ad populum
-729,"Murder is morally wrong. Therefore, abortion is morally wrong.",circular reasoning
-463,The party was going great! Then Gerald showed up and little by little people started collecting their coats and heading home. Gerald ruined the party.,false causality
-1860,"The Supreme Court right now is deciding whether it is right to execute insane people who have committed murder. I think it is all right to execute insane people. If we ban executions of insane people, then everybody on death row will suddenly decide they are insane and purposely fail sanity tests. It would result in chaos.",fallacy of relevance
-25,"""That new home looks great! Let's buy it!""",faulty generalization
-142,"After I listened to the first song of my favorite musician’s new vinyl record, I knew I’d hate the entire record, so I converted it into a Frisbee.",faulty generalization
-2133,"John: Members of the UbaTuba White Men's Club are upstanding citizens of the community.
+X is false because you cannot prove that X is true.",intentional,"Although we have MSK<0> that the MSK<1> is not made of MSK<2> ribs , we have not MSK<0> that its MSK<3> cannot be MSK<4> with them ; therefore , the MSK<1> ’s MSK<3> is MSK<4> with MSK<2> ribs . MSK<5> is MSK<6> because you cannot MSK<0> that MSK<5> is MSK<7> . MSK<5> is MSK<7> because you cannot MSK<0> that MSK<5> is MSK<6> . "
+175,175,637,"Violent video games cause teens to be violent, because violent teens play violent video games.",circular reasoning,"MSK<0> video games cause teens to be MSK<0> , because MSK<0> teens play violent video games . "
+176,176,964,"A 2005 Gallup Poll found that an estimated 25% of Americans over the age of 18 believe in astrology—or that the position of the stars and planets can affect people's lives.  That is roughly 75,000,000 people.  Therefore, there must be some truth to astrology!",ad populum,"A 2005 Gallup Poll found that an estimated MSK<2> % of Americans over the MSK<2> of MSK<2> believe in MSK<0> — or that the position of the stars and planets can affect MSK<1> 's lives . That is roughly 75,000,000 MSK<1> . Therefore , there must be some truth to MSK<0> ! "
+177,177,1971,"I saw Ashton Kutcher in a commercial for male skin care. He's looking good for his age, so I'm willing to try the product. He must know what he's talking about.",fallacy of credibility,"I saw Ashton Kutcher in a commercial for male skin care . He 's looking good for his age , so I 'm willing to try the product . He must know what he 's talking about . "
+178,178,778,Trying the latest social media challenge is a good example of what logical fallacy?,ad populum,Trying the latest social media challenge is a good example of what logical fallacy ? 
+179,179,729,"Murder is morally wrong. Therefore, abortion is morally wrong.",circular reasoning,"Murder is MSK<0> wrong . Therefore , abortion is MSK<0> wrong . "
+180,180,463,The party was going great! Then Gerald showed up and little by little people started collecting their coats and heading home. Gerald ruined the party.,false causality,The MSK<0> was going great ! Then MSK<1> showed up and MSK<2> by MSK<2> people started collecting their coats and heading home . MSK<1> ruined the MSK<0> . 
+181,181,1860,"The Supreme Court right now is deciding whether it is right to execute insane people who have committed murder. I think it is all right to execute insane people. If we ban executions of insane people, then everybody on death row will suddenly decide they are insane and purposely fail sanity tests. It would result in chaos.",fallacy of relevance,"The Supreme Court MSK<0> now is MSK<1> whether it is MSK<0> to MSK<2> insane people who have committed murder . I think it is all MSK<0> to MSK<2> insane people . If we ban MSK<2> of MSK<2> people , then everybody on death row will suddenly MSK<1> they are MSK<2> and purposely fail sanity tests . It would result in chaos . "
+182,182,25,"""That new home looks great! Let's buy it!""",faulty generalization,""" That new home looks great ! Let 's buy it ! "" "
+183,183,142,"After I listened to the first song of my favorite musician’s new vinyl record, I knew I’d hate the entire record, so I converted it into a Frisbee.",faulty generalization,"After I listened to the first song of my favorite musician ’s new vinyl MSK<0> , I knew I ’d hate the entire MSK<0> , so I converted it into a Frisbee . "
+184,184,2133,"John: Members of the UbaTuba White Men's Club are upstanding citizens of the community.
 Marvin: Then why are there so many of these members in jail?
 John: They were never true UbaTuba White Men's Club members.
 Marvin: What’s a true UbaTuba White Men's Club member?
 John: Those who don't go to jail.
-",intentional
-857,"Tries to persuade the reader to do, think or buy something because it is popular or because ""everyone"" is doing it.",ad populum
-1871,Why worry about taking attendance when there are so many starving children in the world?,fallacy of relevance
-1581,Purchase our product or no one is going to think you’re attractive.,false dilemma
-1760,Senator Lewis says we should not fund the missile attack program. I disagree. I don't understand why he wants to leave us defenseless like that.,fallacy of extension
-818,"This is an emotional appeal that speaks the concept that many people agree or disagree, so you should, too",ad populum
-842,Everyone being referred to as comrade.,ad populum
-2220,"Slavery is accepted by just about everyone in our society, so it’s ethical to keep slaves.",ad populum
-1909,"You tell me it's unpatriotic to cheat on federal income tax reports. Well, you should know. You've never once listed your huge bonuses.",fallacy of relevance
-2015,"I shop at Natural Happy Sunshine Store (NHSS), which is much better than your grocery store because at NHSS everything is natural including the 38-year-old store manager’s long gray hair and saggy breasts.",fallacy of credibility
-469,"I took a vitamin this morning and now I’m sick, so the vitamin must have made me ill.",false causality
-853,Get Verizon--1 billion people can't be wrong.,ad populum
-299,"""If I raise you, I must raise everyone, and then the company goes bankrupt.""",faulty generalization
-212,Atheists are morally bankrupt.,faulty generalization
-1407,Last year I wanted to quit school because my friends treated me like an outcast and talked about me to my friends. I felt betrayed and sad all of the time but now I think I have a place at my new middle school.,appeal to emotion
-1807,"In order to really look at the problem of global warming, we must first consider how the homeless suffer when it is cold.",fallacy of relevance
-1337,Why should we worry about the negative depiction of women in music videos when thousands of women are dying of AIDS each year?,fallacy of logic
-1156,Donald Trump mocked Romney for walking like a penguin. He also repeatedly called Jeb Bush low-energy.,ad hominem
-211,French people are great at kissing. Julie is French. Get me a date!,faulty generalization
-342,"First we handed out I-pads, now we use Quizizz, next we'll have robot subs!",faulty generalization
-505,There was a thunderstorm with rain therefore I did not finish my homework.,false causality
-1408,The sinister fisherman's suspicious smile frightened the innocent children,appeal to emotion
-756,I guess I should buy my 12-year-old daughter an iPhone. Everyone at her new school has one and I want her to fit in with the other kids.,ad populum
-907,"""Everyone else believes it, so it must be true.""",ad populum
-1033,"Charlie: Fast food is filled with salt, fat, and added sugars. We need better regulation of the industry.
+",intentional,MSK<0> : MSK<1> of the MSK<1> White Men's Club are upstanding citizens of the community . MSK<2> : Then why are there so many of these MSK<1> in MSK<3> ? MSK<0> : They were never true UbaTuba White Men's Club MSK<1> . MSK<2> : What ’s a true MSK<1> White Men's Club member ? MSK<0> : Those who do n't go to MSK<3> . 
+185,185,857,"Tries to persuade the reader to do, think or buy something because it is popular or because ""everyone"" is doing it.",ad populum,"Tries to persuade the reader to do , think or buy something because it is popular or because "" everyone "" is doing it . "
+186,186,1871,Why worry about taking attendance when there are so many starving children in the world?,fallacy of relevance,Why worry about taking attendance when there are so many starving children in the world ? 
+187,187,1581,Purchase our product or no one is going to think you’re attractive.,false dilemma,Purchase our product or no one is going to think you ’re attractive . 
+188,188,1760,Senator Lewis says we should not fund the missile attack program. I disagree. I don't understand why he wants to leave us defenseless like that.,fallacy of extension,Senator Lewis says we should not fund the missile attack program . I disagree . I do n't understand why he wants to leave us defenseless like that . 
+189,189,818,"This is an emotional appeal that speaks the concept that many people agree or disagree, so you should, too",ad populum,"This is an emotional appeal that speaks the concept that many people MSK<0> or MSK<0> , so you should , too "
+190,190,842,Everyone being referred to as comrade.,ad populum,Everyone being referred to as comrade . 
+191,191,2220,"Slavery is accepted by just about everyone in our society, so it’s ethical to keep slaves.",ad populum,"MSK<0> is accepted by just about everyone in our society , so it ’s ethical to keep MSK<0> . "
+192,192,1909,"You tell me it's unpatriotic to cheat on federal income tax reports. Well, you should know. You've never once listed your huge bonuses.",fallacy of relevance,"You tell me it 's unpatriotic to cheat on federal income tax reports . Well , you should know . You 've never once listed your huge bonuses . "
+193,193,2015,"I shop at Natural Happy Sunshine Store (NHSS), which is much better than your grocery store because at NHSS everything is natural including the 38-year-old store manager’s long gray hair and saggy breasts.",fallacy of credibility,"I MSK<0> at MSK<0> Happy Sunshine Store ( MSK<1> ) , which is much better than your grocery MSK<0> because at MSK<1> everything is MSK<0> including the 38 - year - old MSK<0> manager ’s long gray hair and saggy breasts . "
+194,194,469,"I took a vitamin this morning and now I’m sick, so the vitamin must have made me ill.",false causality,"I took a MSK<0> this morning and now I ’m sick , so the MSK<0> must have made me ill . "
+195,195,853,Get Verizon--1 billion people can't be wrong.,ad populum,Get Verizon -- 1 billion people ca n't be wrong . 
+196,196,299,"""If I raise you, I must raise everyone, and then the company goes bankrupt.""",faulty generalization,""" If I MSK<0> you , I must MSK<0> everyone , and then the company goes bankrupt . "" "
+197,197,212,Atheists are morally bankrupt.,faulty generalization,Atheists are morally bankrupt . 
+198,198,1407,Last year I wanted to quit school because my friends treated me like an outcast and talked about me to my friends. I felt betrayed and sad all of the time but now I think I have a place at my new middle school.,appeal to emotion,Last year I wanted to quit MSK<0> because my MSK<1> treated me like an outcast and talked about me to my MSK<1> . I felt betrayed and sad all of the time but now I think I have a place at my new middle MSK<0> . 
+199,199,1807,"In order to really look at the problem of global warming, we must first consider how the homeless suffer when it is cold.",fallacy of relevance,"In order to really look at the problem of global warming , we must first consider how the homeless suffer when it is cold . "
+200,200,1337,Why should we worry about the negative depiction of women in music videos when thousands of women are dying of AIDS each year?,fallacy of logic,Why should we worry about the negative depiction of MSK<0> in music videos when thousands of MSK<0> are dying of AIDS each year ? 
+201,201,1156,Donald Trump mocked Romney for walking like a penguin. He also repeatedly called Jeb Bush low-energy.,ad hominem,Donald MSK<0> mocked Romney for walking like a penguin . He also repeatedly called Jeb MSK<0> low-energy . 
+202,202,211,French people are great at kissing. Julie is French. Get me a date!,faulty generalization,MSK<0> people are great at kissing . Julie is MSK<0> . Get me a date ! 
+203,203,342,"First we handed out I-pads, now we use Quizizz, next we'll have robot subs!",faulty generalization,"First we handed out I -pads , now we use Quizizz , next we 'll have robot subs ! "
+204,204,505,There was a thunderstorm with rain therefore I did not finish my homework.,false causality,There was a thunderstorm with rain therefore I did not finish my homework . 
+205,205,1408,The sinister fisherman's suspicious smile frightened the innocent children,appeal to emotion,The sinister fisherman 's suspicious smile frightened the innocent children 
+206,206,756,I guess I should buy my 12-year-old daughter an iPhone. Everyone at her new school has one and I want her to fit in with the other kids.,ad populum,I guess I should buy my 12 - year- old daughter an iPhone . Everyone at her new school has one and I want her to fit in with the other kids . 
+207,207,907,"""Everyone else believes it, so it must be true.""",ad populum,""" Everyone else believes it , so it must be true . "" "
+208,208,1033,"Charlie: Fast food is filled with salt, fat, and added sugars. We need better regulation of the industry.
 
-Bob: That may be, but you’re such a hypocrite! I saw you devour a Triple-Baconator, super-sized fries, and 64 ounces of soda yesterday.",ad hominem
-1014,", motive, or other attribute of the person making the argument.",ad hominem
-1500,"Speaker 1: I'll never talk.
-Speaker 2: We have ways of making you talk.",appeal to emotion
-880,"Last week, the Cowboys played the Texans in Houston. Mrs. Gibson was excited to go to the game because she is a huge Cowboys fan. Because everyone in Houston cheers for the Texans, Mrs. Gibson decided to cheer for the Texans too.",ad populum
-779,Everyone is doing it.  You should too.,ad populum
-948,Join the crowd and don’t get left behind!,ad populum
-1425,"""There I was in the midst of thousands, and yet a perfect stranger; without home and without friends, in the midst of thousands of my own brethren—children of a common Father, and yet I dared not to unfold to any one of them my sad condition."" Check each literary term found in this quote:",appeal to emotion
-343,"We cannot unlock our child from the closet because if we do, she will want to roam the house.  If we let her roam the house, she will want to roam the neighborhood.  If she roams the neighborhood, she will get picked up by a stranger in a van, who will sell her in a sex slavery ring in some other country.  Therefore, we should keep her locked up in the closet.",faulty generalization
-195,"Even though it's only the first day, I can tell this is going to be a boring course.",faulty generalization
-366,"Eugene is silly in class. Harry is his friend, so Harry must be silly, too.",faulty generalization
-1061,"""How would you know anything about technology? You're too old!""",ad hominem
-837,"""Everybody is late coming back from lunch, so it shouldn't matter if I'm late.""",ad populum
-2431,"Lots of people bought this album, so it must be good.",ad populum
-2403,My child was diagnosed with autism after receiving vaccinations. That is proof that vaccines are to blame.,false causality
-90,"My parents are democrats, and they are good people. Therefore, all democrats must be good people.",faulty generalization
-2089,"""You can't prove that mermaids actually don't exist and therefore it's reasonable to say that they do"" IS an example of this fallacy.",intentional
-1353,"All Greek gods are mythical.
+Bob: That may be, but you’re such a hypocrite! I saw you devour a Triple-Baconator, super-sized fries, and 64 ounces of soda yesterday.",ad hominem,"Charlie : Fast food is filled with salt , fat , and added sugars . We need better regulation of the industry . Bob : That may be , but you ’re such a hypocrite ! I saw you devour a Triple-Baconator , super-sized fries , and 64 ounces of soda yesterday . "
+209,209,1014,", motive, or other attribute of the person making the argument.",ad hominem,", motive , or other attribute of the person making the argument . "
+210,210,1500,"Speaker 1: I'll never talk.
+Speaker 2: We have ways of making you talk.",appeal to emotion,MSK<0> 1 : I 'll never MSK<1> . MSK<0> 2 : We have ways of making you MSK<1> . 
+211,211,880,"Last week, the Cowboys played the Texans in Houston. Mrs. Gibson was excited to go to the game because she is a huge Cowboys fan. Because everyone in Houston cheers for the Texans, Mrs. Gibson decided to cheer for the Texans too.",ad populum,"Last week , the MSK<0> played the MSK<1> in MSK<2> . MSK<3> Gibson was excited to go to the game because she is a huge MSK<0> fan . Because everyone in MSK<2> cheers for the MSK<1> , MSK<3> Gibson decided to MSK<2> for the MSK<1> too . "
+212,212,779,Everyone is doing it.  You should too.,ad populum,Everyone is doing it . You should too . 
+213,213,948,Join the crowd and don’t get left behind!,ad populum,Join the crowd and do n’t get left behind ! 
+214,214,1425,"""There I was in the midst of thousands, and yet a perfect stranger; without home and without friends, in the midst of thousands of my own brethren—children of a common Father, and yet I dared not to unfold to any one of them my sad condition."" Check each literary term found in this quote:",appeal to emotion,""" There I was in the MSK<0> of MSK<1> , and yet a perfect stranger ; without home and without friends , in the MSK<0> of MSK<1> of my own brethren — children of a common Father , and yet I dared not to unfold to any one of them my sad condition . "" Check each literary term found in this quote : "
+215,215,343,"We cannot unlock our child from the closet because if we do, she will want to roam the house.  If we let her roam the house, she will want to roam the neighborhood.  If she roams the neighborhood, she will get picked up by a stranger in a van, who will sell her in a sex slavery ring in some other country.  Therefore, we should keep her locked up in the closet.",faulty generalization,"We cannot unlock our child from the MSK<0> because if we do , she will MSK<1> to MSK<2> the MSK<3> . If we let her MSK<2> the MSK<3> , she will MSK<1> to MSK<2> the MSK<4> . If she MSK<2> the MSK<4> , she will get picked up by a stranger in a van , who will sell her in a sex slavery ring in some other country . Therefore , we should keep her locked up in the MSK<0> . "
+216,216,195,"Even though it's only the first day, I can tell this is going to be a boring course.",faulty generalization,"Even though it 's only the first day , I can tell this is going to be a boring course . "
+217,217,366,"Eugene is silly in class. Harry is his friend, so Harry must be silly, too.",faulty generalization,"Eugene is MSK<0> in class . MSK<1> is his friend , so MSK<1> must be MSK<0> , too . "
+218,218,1061,"""How would you know anything about technology? You're too old!""",ad hominem,""" How would you know anything about technology ? You 're too old ! "" "
+219,219,837,"""Everybody is late coming back from lunch, so it shouldn't matter if I'm late.""",ad populum,""" Everybody is MSK<0> coming back from lunch , so it should n't matter if I 'm MSK<0> . "" "
+220,220,2431,"Lots of people bought this album, so it must be good.",ad populum,"Lots of people bought this album , so it must be good . "
+221,221,2403,My child was diagnosed with autism after receiving vaccinations. That is proof that vaccines are to blame.,false causality,My child was diagnosed with autism after receiving MSK<0> . That is proof that MSK<0> are to blame . 
+222,222,90,"My parents are democrats, and they are good people. Therefore, all democrats must be good people.",faulty generalization,"My parents are MSK<0> , and they are MSK<1> people . Therefore , all MSK<0> must be MSK<1> people . "
+223,223,2089,"""You can't prove that mermaids actually don't exist and therefore it's reasonable to say that they do"" IS an example of this fallacy.",intentional,""" You ca n't prove that mermaids actually do n't exist and therefore it 's reasonable to say that they do "" IS an example of this fallacy . "
+224,224,1353,"All Greek gods are mythical.
 All modern day gods are real.
-Therefore, all Greek gods are real.",fallacy of logic
-1157,The senator voted for the tax increase. It's not hard to understand why when you consider that he is a millionaire and has never had to worry about money.,ad hominem
-879,"Susie bought a flip-phone, so all of her friends bought flip-phones.",ad populum
-947,"Now that the Chiefs are going to the Super Bowl, everybody is suddenly a fan.",ad populum
-1809,"Sure, we haven't given raises to our employees in more than ten years. However, we do pride ourselves on providing customer service in over seven different languages.",fallacy of relevance
-992,"Nicholas - ""An apple is a vegetable."" Alexis - ""Don't listen to Nicholas; he is failing AP Language""",ad hominem
-365,"Laura is the class president. She believes that the class should sponsor a dance as a fundraiser. Then she learns that a group of girls that she doesn't like also support the idea of a dance as a fundraiser. So, Laura changes her mind and decides that the class should plan a race instead.",faulty generalization
-1305,"I can’t stop eating these chocolates.  I really love chocolate, or I seriously lack willpower.  I know I really love chocolate; therefore, I cannot lack willpower.",fallacy of logic
-363,Did you really vote for Donald as class treasurer? Didn't you hear that his uncle was imprisoned for embezzling $1.5 million?,faulty generalization
-1558,"All of my friends are coming to my birthday party. If Micah doesn't, she might as well tell me that she doesn't like me.",false dilemma
-1364,"No donkeys are fish.
+Therefore, all Greek gods are real.",fallacy of logic,"All MSK<0> gods are mythical . All modern day MSK<0> are MSK<1> . Therefore , all MSK<0> gods are MSK<1> . "
+225,225,1157,The senator voted for the tax increase. It's not hard to understand why when you consider that he is a millionaire and has never had to worry about money.,ad hominem,The senator voted for the tax increase . It 's not hard to understand why when you consider that he is a millionaire and has never had to worry about money . 
+226,226,879,"Susie bought a flip-phone, so all of her friends bought flip-phones.",ad populum,"Susie MSK<0> a MSK<0> , so all of her friends MSK<0> flip-phones . "
+227,227,947,"Now that the Chiefs are going to the Super Bowl, everybody is suddenly a fan.",ad populum,"Now that the Chiefs are going to the Super Bowl , everybody is suddenly a fan . "
+228,228,1809,"Sure, we haven't given raises to our employees in more than ten years. However, we do pride ourselves on providing customer service in over seven different languages.",fallacy of relevance,"Sure , we have n't given raises to our employees in more than ten years . However , we do pride ourselves on providing customer service in over seven different languages . "
+229,229,992,"Nicholas - ""An apple is a vegetable."" Alexis - ""Don't listen to Nicholas; he is failing AP Language""",ad hominem,"MSK<0> - "" An apple is a vegetable . "" Alexis - "" Do n't listen to MSK<0> ; he is failing AP Language "" "
+230,230,365,"Laura is the class president. She believes that the class should sponsor a dance as a fundraiser. Then she learns that a group of girls that she doesn't like also support the idea of a dance as a fundraiser. So, Laura changes her mind and decides that the class should plan a race instead.",faulty generalization,"MSK<0> is the MSK<1> president . She believes that the MSK<1> should sponsor a MSK<2> as a MSK<3> . Then she learns that a group of girls that she does n't like also support the idea of a MSK<2> as a MSK<3> . So , MSK<0> changes her mind and decides that the MSK<1> should plan a race instead . "
+231,231,1305,"I can’t stop eating these chocolates.  I really love chocolate, or I seriously lack willpower.  I know I really love chocolate; therefore, I cannot lack willpower.",fallacy of logic,"I ca n’t stop eating these MSK<0> . I really love MSK<0> , or I seriously MSK<1> willpower . I know I really MSK<0> chocolate ; therefore , I cannot MSK<1> willpower . "
+232,232,363,Did you really vote for Donald as class treasurer? Didn't you hear that his uncle was imprisoned for embezzling $1.5 million?,faulty generalization,Did you really vote for Donald as class treasurer ? Did n't you hear that his uncle was imprisoned for embezzling $ 1.5 million ? 
+233,233,1558,"All of my friends are coming to my birthday party. If Micah doesn't, she might as well tell me that she doesn't like me.",false dilemma,"All of my friends are coming to my birthday party . If Micah does n't , she might as well tell me that she does n't like me . "
+234,234,1364,"No donkeys are fish.
 Some asses are donkeys.
-Therefore, some asses are fish.",fallacy of logic
-2212,I’ve never had the flu because I take my vitamins everyday.,false causality
-1519,We either ban hairspray or the world will end.,false dilemma
-1761,A speaker chooses a deliberately poor or oversimplified example in order to ridicule and refute an idea,fallacy of extension
-869,"Everyone I know is making fruit smoothies for quick, portable meals, so smoothies must be really good for you.",ad populum
-270,"If we allow a housing development to be built on Sunny Lake, a resort will come next, and soon we won’t have any wilderness left!",faulty generalization
-1715,"A: “Many stores are telling their employees to say Happy Holidays instead of Merry Christmas.”
+Therefore, some asses are fish.",fallacy of logic,"No MSK<0> are MSK<1> . Some MSK<2> are MSK<0> . Therefore , some MSK<2> are MSK<1> . "
+235,235,2212,I’ve never had the flu because I take my vitamins everyday.,false causality,I ’ve never had the flu because I take my vitamins everyday . 
+236,236,1519,We either ban hairspray or the world will end.,false dilemma,We either ban hairspray or the world will end . 
+237,237,1761,A speaker chooses a deliberately poor or oversimplified example in order to ridicule and refute an idea,fallacy of extension,A speaker chooses a deliberately poor or oversimplified example in order to ridicule and refute an idea 
+238,238,869,"Everyone I know is making fruit smoothies for quick, portable meals, so smoothies must be really good for you.",ad populum,"Everyone I know is making fruit MSK<0> for quick , portable meals , so MSK<0> must be really good for you . "
+239,239,270,"If we allow a housing development to be built on Sunny Lake, a resort will come next, and soon we won’t have any wilderness left!",faulty generalization,"If we allow a housing development to be built on Sunny Lake , a resort will come next , and soon we wo n’t have any wilderness left ! "
+240,240,1715,"A: “Many stores are telling their employees to say Happy Holidays instead of Merry Christmas.”
 
-B: “This is crazy! Why are they trying to get rid of Christmas?!”",fallacy of extension
-35,"The government is convinced that it was a bomb that brought down the aircraft. “Our countrymen believe it was a bomb,” said the president. “A survey done a few days after the crash indicates that almost seventy percent of the people believe it was a terrorist’s bomb.”",faulty generalization
-97,"Trying to finish a marathon is impossible, I know because I tried it once.",faulty generalization
-1710,"Teacher: You are receiving a zero because you didn't do your homework.
+B: “This is crazy! Why are they trying to get rid of Christmas?!”",fallacy of extension,A : MSK<0> Many stores are telling their employees to say Happy MSK<1> instead of Merry MSK<1> . MSK<0> B : MSK<0> This is crazy ! Why are they trying to get rid of MSK<1> ? ! MSK<0> 
+241,241,35,"The government is convinced that it was a bomb that brought down the aircraft. “Our countrymen believe it was a bomb,” said the president. “A survey done a few days after the crash indicates that almost seventy percent of the people believe it was a terrorist’s bomb.”",faulty generalization,"The government is convinced that it was a MSK<0> that brought down the aircraft . MSK<1> Our countrymen MSK<2> it was a MSK<0> , MSK<1> said the president . MSK<1> A survey done a few days after the crash indicates that almost seventy percent of the people MSK<2> it was a terrorist ’s MSK<0> . MSK<1> "
+242,242,97,"Trying to finish a marathon is impossible, I know because I tried it once.",faulty generalization,"MSK<0> to finish a marathon is impossible , I know because I MSK<0> it once . "
+243,243,1710,"Teacher: You are receiving a zero because you didn't do your homework.
 
-Students: Are you serious? You gave me a zero because you hate me????",fallacy of extension
-133,"That German, Fred, stole my wallet. All Germans are thieves.",faulty generalization
-1046,"person 1 : ""We should argue with logic facts""
-person 2: ""You should grow a brain before you open your mouth""",ad hominem
-1881,We should present Cadet Curry with our squadron’s cadet of the year award. He’s the most active and highest-performing cadet we have. REPLY: But Cadet Arnold has been in CAP longer.,fallacy of relevance
-2311,"The more things change, the more they remain the same.",faulty generalization
-2207,"Utah passed a strict gun-control law, and crime there decreased. Therefore, gun-control laws decrease crime.",false causality
-614,"Bill: I think capital punishment is wrong.
+Students: Are you serious? You gave me a zero because you hate me????",fallacy of extension,Teacher : You are receiving a MSK<0> because you did n't do your homework . Students : Are you serious ? You gave me a MSK<0> because you hate me ???? 
+244,244,133,"That German, Fred, stole my wallet. All Germans are thieves.",faulty generalization,"That MSK<0> , Fred , stole my wallet . All MSK<0> are thieves . "
+245,245,1046,"person 1 : ""We should argue with logic facts""
+person 2: ""You should grow a brain before you open your mouth""",ad hominem,"MSK<0> 1 : "" We should argue with logic facts "" MSK<0> 2 : "" You should grow a brain before you open your mouth "" "
+246,246,1881,We should present Cadet Curry with our squadron’s cadet of the year award. He’s the most active and highest-performing cadet we have. REPLY: But Cadet Arnold has been in CAP longer.,fallacy of relevance,We should present MSK<0> Curry with our squadron ’s MSK<0> of the year award . He ’s the most active and highest - performing MSK<0> we have . REPLY : But MSK<0> Arnold has been in CAP longer . 
+247,247,2311,"The more things change, the more they remain the same.",faulty generalization,"The more things change , the more they remain the same . "
+248,248,2207,"Utah passed a strict gun-control law, and crime there decreased. Therefore, gun-control laws decrease crime.",false causality,"Utah passed a strict MSK<0> law , and MSK<0> there MSK<0> . Therefore , MSK<0> laws decrease crime . "
+249,249,614,"Bill: I think capital punishment is wrong.
 Adam: No it isn't. If it was wrong, it wouldn't be legal.
-Of which fallacy is this an example?  http://www.funtrivia.com",circular reasoning
-2427,"Premise: All black bears are omnivores.
+Of which fallacy is this an example?  http://www.funtrivia.com",circular reasoning,"Bill : I think capital punishment is MSK<0> . Adam : No it is n't . If it was MSK<0> , it would n't be legal . Of which fallacy is this an example ? http://www.funtrivia.com "
+250,250,2427,"Premise: All black bears are omnivores.
 
 Premise: All raccoons are omnivores.
 
-Conclusion: All raccoons are black bears.",fallacy of logic
-349,"Running in the halls at school is against the rules. Therefore, the indoor track team should be written up.",faulty generalization
-1628,"I thought you were a good person, but you weren’t at church today.",false dilemma
-28,"I saw a student texting in my class yesterday; all my students must be texting, so cell phones should be banned.",faulty generalization
-573,"“The temperature has dropped this morning, and I also have a headache. Therefore, the cold weather must be causing my headache. “",false causality
-1378,A commercial about abandoned animals needing a shelter of a forever home. They ask for a small donation to help these struggling animals.,appeal to emotion
-1589,"""You can be a good politician and play dirty or you can drop out.""",false dilemma
-1040,"""I don't know how Professor Resnick can be such a hard grader.  He's always late for class. """,ad hominem
-2000,“The purpose of the Cadet Program is to prepare youth for Air Force Basic Military Training.” REPLY: “This is true because I heard it from the Wing Commander.”,fallacy of credibility
-2109,"4 out of 5 dentists recommend this toothpaste! (only 5 were asked. Out of 1000 asked, only 20% recommend it)",intentional
-1645,"It is said that we have a good understanding of our universe. Therefore, we know exactly how it began and when.",equivocation
-318,"We can’t freeze the academic year because then students won’t graduate on time. Next thing you know most people will be unemployed and will resort to crime. The crime rate will skyrocket and society will collapse.
-No podemos congelar el año académico porque entonces los estudiantes no se graduarán a tiempo. Lo siguiente que sabes es que la mayoría de la gente estará desempleada y recurrirá al crimen. La tasa de criminalidad se disparará y la sociedad colapsará.",faulty generalization
-234,"If we allow our 14 year-old to have her first date tonight, what's next? A wedding, kids?",faulty generalization
-2302,"If we put limits on the right to bear arms, soon all of our Constitutionally-given  rights will be taken away.",faulty generalization
-719,A is true because A is true.,circular reasoning
-2288,Have you stopped beating your wife?,intentional
-5,No one in your family surfs? But I thought you said you lived in California before this.,faulty generalization
-1938,"Holly said that vaccinations caused autism in children, but her scientifically well-read friend Caleb said that this claim had been debunked and proven false. Their friend Alice offered a compromise that vaccinations must cause some autism, just not all autism.",fallacy of relevance
-222,Teacher: If I let you go to the bathroom pretty soon everybody will want to go to the bathroom. This is an example of,faulty generalization
-2067,"Your friend says, ""You can't prove that space aliens don't exist, so they must be real"". This is an example of which logical fallacy?",intentional
-1746,This is when you characterize someone with one extreme trait in order to more effectively tear them down.,fallacy of extension
-886,40 million people can't be wrong! Buy the new iPhone XIV today!,ad populum
-2321,Smoking pot is against the law because it's wrong; I know it's wrong because it is against the law.,circular reasoning
-1515,"I believe that when we die, we are all given new, young, perfect bodies, and we spend eternity with those whom we love. I can’t imagine the point of life if it all just ends when we die!",appeal to emotion
-1532,"Student: You didn't teach us this; we never learned this.
+Conclusion: All raccoons are black bears.",fallacy of logic,MSK<0> : All MSK<1> bears are MSK<2> . MSK<0> : All MSK<3> are MSK<2> . Conclusion : All MSK<3> are MSK<1> bears . 
+251,251,349,"Running in the halls at school is against the rules. Therefore, the indoor track team should be written up.",faulty generalization,"Running in the halls at school is against the rules . Therefore , the indoor track team should be written up . "
+252,252,1628,"I thought you were a good person, but you weren’t at church today.",false dilemma,"I thought you were a good person , but you were n’t at church today . "
+253,253,28,"I saw a student texting in my class yesterday; all my students must be texting, so cell phones should be banned.",faulty generalization,"I saw a MSK<0> texting in my class yesterday ; all my MSK<0> must be MSK<0> , so cell phones should be banned . "
+254,254,573,"“The temperature has dropped this morning, and I also have a headache. Therefore, the cold weather must be causing my headache. “",false causality,"MSK<0> The temperature has dropped this morning , and I also have a MSK<1> . Therefore , the cold weather must be causing my MSK<1> . MSK<0> "
+255,255,1378,A commercial about abandoned animals needing a shelter of a forever home. They ask for a small donation to help these struggling animals.,appeal to emotion,A commercial about abandoned MSK<0> needing a shelter of a forever home . They ask for a small donation to help these struggling MSK<0> . 
+256,256,1589,"""You can be a good politician and play dirty or you can drop out.""",false dilemma,""" You can be a good politician and play dirty or you can drop out . "" "
+257,257,1040,"""I don't know how Professor Resnick can be such a hard grader.  He's always late for class. """,ad hominem,""" I do n't know how Professor Resnick can be such a hard grader . He 's always late for class . "" "
+258,258,2000,“The purpose of the Cadet Program is to prepare youth for Air Force Basic Military Training.” REPLY: “This is true because I heard it from the Wing Commander.”,fallacy of credibility,MSK<0> The purpose of the Cadet Program is to prepare youth for Air Force Basic Military Training . MSK<0> REPLY : MSK<0> This is true because I heard it from the Wing Commander . MSK<0> 
+259,259,2109,"4 out of 5 dentists recommend this toothpaste! (only 5 were asked. Out of 1000 asked, only 20% recommend it)",intentional,"MSK<0> out of MSK<0> dentists recommend this toothpaste ! ( only MSK<0> were MSK<1> . Out of 1000 MSK<1> , only 20 % MSK<0> it ) "
+260,260,1645,"It is said that we have a good understanding of our universe. Therefore, we know exactly how it began and when.",equivocation,"It is said that we have a good understanding of our universe . Therefore , we know exactly how it began and when . "
+261,261,318,"We can’t freeze the academic year because then students won’t graduate on time. Next thing you know most people will be unemployed and will resort to crime. The crime rate will skyrocket and society will collapse.
+No podemos congelar el año académico porque entonces los estudiantes no se graduarán a tiempo. Lo siguiente que sabes es que la mayoría de la gente estará desempleada y recurrirá al crimen. La tasa de criminalidad se disparará y la sociedad colapsará.",faulty generalization,We ca n’t freeze the MSK<0> year because then students wo n’t graduate on time . Next thing you know most people will be unemployed and will resort to MSK<0> . The MSK<0> rate will skyrocket and society will collapse . No podemos congelar el año académico porque entonces MSK<0> estudiantes no MSK<0> graduarán a tiempo . Lo siguiente que sabes es que MSK<0> mayoría de la gente estará desempleada y recurrirá al crimen . La tasa de MSK<0> se disparará y la sociedad colapsará . 
+262,262,234,"If we allow our 14 year-old to have her first date tonight, what's next? A wedding, kids?",faulty generalization,"If we allow our 14 year-old to have her first date tonight , what 's next ? A wedding , kids ? "
+263,263,2302,"If we put limits on the right to bear arms, soon all of our Constitutionally-given  rights will be taken away.",faulty generalization,"If we put limits on the right to bear arms , soon all of our Constitutionally - given rights will be taken away . "
+264,264,719,A is true because A is true.,circular reasoning,A is MSK<0> because A is MSK<0> . 
+265,265,2288,Have you stopped beating your wife?,intentional,Have you stopped beating your wife ? 
+266,266,5,No one in your family surfs? But I thought you said you lived in California before this.,faulty generalization,No one in your family surfs ? But I thought you said you lived in California before this . 
+267,267,1938,"Holly said that vaccinations caused autism in children, but her scientifically well-read friend Caleb said that this claim had been debunked and proven false. Their friend Alice offered a compromise that vaccinations must cause some autism, just not all autism.",fallacy of relevance,"Holly said that MSK<0> caused autism in children , but her scientifically well - read MSK<1> Caleb said that this claim had been debunked and proven false . Their MSK<1> Alice offered a compromise that MSK<0> must MSK<0> some MSK<0> , just not all MSK<0> . "
+268,268,222,Teacher: If I let you go to the bathroom pretty soon everybody will want to go to the bathroom. This is an example of,faulty generalization,Teacher : If I let you go to the MSK<0> pretty soon everybody will want to go to the MSK<0> . This is an example of 
+269,269,2067,"Your friend says, ""You can't prove that space aliens don't exist, so they must be real"". This is an example of which logical fallacy?",intentional,"Your friend says , "" You ca n't prove that space aliens do n't exist , so they must be real "" . This is an example of which logical fallacy ? "
+270,270,1746,This is when you characterize someone with one extreme trait in order to more effectively tear them down.,fallacy of extension,This is when you characterize someone with one extreme trait in order to more effectively tear them down . 
+271,271,886,40 million people can't be wrong! Buy the new iPhone XIV today!,ad populum,40 million people ca n't be wrong ! Buy the new iPhone XIV today ! 
+272,272,2321,Smoking pot is against the law because it's wrong; I know it's wrong because it is against the law.,circular reasoning,Smoking pot is against the MSK<0> because it 's MSK<1> ; I know it 's MSK<1> because it is against the MSK<0> . 
+273,273,1515,"I believe that when we die, we are all given new, young, perfect bodies, and we spend eternity with those whom we love. I can’t imagine the point of life if it all just ends when we die!",appeal to emotion,"I believe that when we MSK<0> , we are all given new , young , perfect bodies , and we spend eternity with those whom we love . I ca n’t imagine the point of life if it all just ends when we MSK<0> ! "
+274,274,1532,"Student: You didn't teach us this; we never learned this.
 
-Teacher: So, you're either lazy or unwilling to learn is that right?",false dilemma
-1376,"Which fallacy is the following example? ""By rejecting God, you are rejecting goodness, kindness, and love itself.""",appeal to emotion
-1467,"Ginger: Your dog just ran into our house and ransacked our kitchen!
+Teacher: So, you're either lazy or unwilling to learn is that right?",false dilemma,"Student : You did n't MSK<1> us this ; we never MSK<0> this . MSK<1> : So , you 're either lazy or unwilling to MSK<0> is that right ? "
+275,275,1376,"Which fallacy is the following example? ""By rejecting God, you are rejecting goodness, kindness, and love itself.""",appeal to emotion,"Which fallacy is the following example ? "" By MSK<0> God , you are MSK<0> goodness , kindness , and love itself . "" "
+276,276,1467,"Ginger: Your dog just ran into our house and ransacked our kitchen!
 Mary: He would never do that, look at how adorable he is with those puppy eyes!
-",appeal to emotion
-1772,SM 6: North invading South during Civil War,fallacy of extension
-199,"This new test seemed so promising, but the 3 studies that supported its validity turned out to have critical methodological flaws, so the test is probably not valid.",faulty generalization
-556,"earthquakes in the Andes were correlated with the closest approaches of the planet Uranus. Therefore, Uranus must have caused them.",false causality
-2447,attaching an argument to a person of false or appeared authority in order to give credence to their argument,appeal to credibility
-924,"Form: Idea X is popular.
-Therefore, X is correct.",ad populum
-724,"It says in the Bible that God exists. Since the Bible is God's word, and God never speaks falsely, then everything in the Bible must be true. So, God must exist.",circular reasoning
-1827,I shouldn't have to pay for my parking ticket. There are far more dangerous offenses people commit. They should have to pay.,fallacy of relevance
-163,"My sister loves shopping, so all girls must love to shop too.",faulty generalization
-2262,"Speaker 1: I’m against the war.
-Speaker 2: You must hate our troops.",false dilemma
-1542,Vote for me or live through four more years of higher taxes.,false dilemma
-2439,"The fallacy of equivocation occurs when a key term or phrase in an argument is used in an ambiguous way, with one meaning in one portion of the argument and then another meaning in another portion of the argument.",equivocation
-108,Two members of my team have become more engaged employees after taking public speaking classes. That proves we should have mandatory public speaking classes for the whole company to improve employee engagement.,faulty generalization
-306,"Justin claimed that passing federal laws to control the amount of violence in music is the first step in a process that will eventually result in absolute government control of the media and total censorship over all forms of artistic expression.
-Of what fallacy is this an example?",faulty generalization
-1622,"I'm raising money to help cure XYZ disease. If you do not donate, you are part of the problem.",false dilemma
-922,SM 7: No global warming happening,ad populum
-663,Paranormal activity is real because I have experienced what can only be described as paranormal activity.,circular reasoning
-695,"""Once a year, a miracle causes this large rock to float about ten centimeters off the ground since supernatural powers want us to remember the martyrs who died in that spot.""",circular reasoning
-1235,"""Do not listen to Luisa, she will only tell you lies about the recent activities given in our EAPP class.""",ad hominem
-2128,"Jojo: All New Yorkers are tough
+",appeal to emotion,"Ginger : Your MSK<0> just ran into our house and ransacked our kitchen ! Mary : He would never do that , look at how adorable he is with those MSK<0> eyes ! "
+277,277,1772,SM 6: North invading South during Civil War,fallacy of extension,SM 6 : North invading South during Civil War 
+278,278,199,"This new test seemed so promising, but the 3 studies that supported its validity turned out to have critical methodological flaws, so the test is probably not valid.",faulty generalization,"This new MSK<0> seemed so promising , but the 3 studies that supported its MSK<1> turned out to have critical methodological flaws , so the MSK<0> is probably not MSK<1> . "
+279,279,556,"earthquakes in the Andes were correlated with the closest approaches of the planet Uranus. Therefore, Uranus must have caused them.",false causality,"earthquakes in the Andes were correlated with the closest approaches of the planet MSK<0> . Therefore , MSK<0> must have caused them . "
+280,280,2447,attaching an argument to a person of false or appeared authority in order to give credence to their argument,fallacy of credibility,attaching an MSK<0> to a person of false or appeared authority in order to give credence to their MSK<0> 
+281,281,924,"Form: Idea X is popular.
+Therefore, X is correct.",ad populum,"Form : Idea MSK<0> is popular . Therefore , MSK<0> is correct . "
+282,282,724,"It says in the Bible that God exists. Since the Bible is God's word, and God never speaks falsely, then everything in the Bible must be true. So, God must exist.",circular reasoning,"It says in the MSK<0> that MSK<1> exists . Since the MSK<0> is MSK<1> 's word , and MSK<1> never speaks falsely , then everything in the MSK<0> must be true . So , MSK<1> must MSK<1> . "
+283,283,1827,I shouldn't have to pay for my parking ticket. There are far more dangerous offenses people commit. They should have to pay.,fallacy of relevance,I should n't have to MSK<0> for my parking ticket . There are far more dangerous offenses people commit . They should have to MSK<0> . 
+284,284,163,"My sister loves shopping, so all girls must love to shop too.",faulty generalization,"My sister MSK<0> shopping , so all girls must MSK<0> to MSK<0> too . "
+285,285,2262,"Speaker 1: I’m against the war.
+Speaker 2: You must hate our troops.",false dilemma,MSK<0> 1 : I ’m against the war . MSK<0> 2 : You must hate our troops . 
+286,286,1542,Vote for me or live through four more years of higher taxes.,false dilemma,Vote for me or live through four more years of higher taxes . 
+287,287,2439,"The fallacy of equivocation occurs when a key term or phrase in an argument is used in an ambiguous way, with one meaning in one portion of the argument and then another meaning in another portion of the argument.",equivocation,"The fallacy of equivocation occurs when a key term or phrase in an MSK<0> is used in an ambiguous way , with one MSK<1> in one MSK<2> of the MSK<0> and then another MSK<1> in another MSK<2> of the MSK<0> . "
+288,288,108,Two members of my team have become more engaged employees after taking public speaking classes. That proves we should have mandatory public speaking classes for the whole company to improve employee engagement.,faulty generalization,Two members of my team have become more engaged MSK<0> after taking MSK<1> speaking classes . That proves we should have mandatory MSK<1> speaking classes for the whole company to improve MSK<0> engagement . 
+289,289,306,"Justin claimed that passing federal laws to control the amount of violence in music is the first step in a process that will eventually result in absolute government control of the media and total censorship over all forms of artistic expression.
+Of what fallacy is this an example?",faulty generalization,Justin claimed that passing federal laws to MSK<0> the amount of violence in music is the first step in a process that will eventually result in absolute government MSK<0> of the media and total censorship over all forms of artistic expression . Of what fallacy is this an example ? 
+290,290,1622,"I'm raising money to help cure XYZ disease. If you do not donate, you are part of the problem.",false dilemma,"I 'm raising money to help cure XYZ disease . If you do not donate , you are part of the problem . "
+291,291,922,SM 7: No global warming happening,ad populum,SM 7 : No global warming happening 
+292,292,663,Paranormal activity is real because I have experienced what can only be described as paranormal activity.,circular reasoning,MSK<0> activity is real because I have experienced what can only be described as MSK<0> activity . 
+293,293,695,"""Once a year, a miracle causes this large rock to float about ten centimeters off the ground since supernatural powers want us to remember the martyrs who died in that spot.""",circular reasoning,""" Once a year , a miracle causes this large rock to float about ten centimeters off the ground since supernatural powers want us to remember the martyrs who died in that spot . "" "
+294,294,1235,"""Do not listen to Luisa, she will only tell you lies about the recent activities given in our EAPP class.""",ad hominem,""" Do not listen to Luisa , she will only tell you lies about the recent activities given in our EAPP class . "" "
+295,295,2128,"Jojo: All New Yorkers are tough
 Charli: I get shoved in a locker every day and cry when I see bunnies
 Jojo: Well, REAL New Yorkers are tough
 Charli: What does toughness have to do with Geography?
 Jojo: Todos los neoyorquinos son duros
 Charli: Me empujan en un casillero todos los días y lloro cuando veo conejitos.
 Jojo: Bueno, los verdaderos neoyorquinos son duros.
-Charli: ¿Qué tiene que ver la dureza con la geografía?",intentional
-2115,The Windmill debate- Snowball promises that the Windmill will mean less work and better living conditions. Napoleon says that it's just unnecessary and will be more work.,intentional
-990,"Charlie: Fast food is filled with salt, fat, and added sugars. We need better regulation of the industry.
-Bob: That my be, but you're such a hypocrite! I saw you devour a Triple-Baconator, super-sized fries, and 64oz of soda yesterday!",ad hominem
-1177,"Boris is not qualified to make suggestions about our penal system. As an ex-convict, he would always take the criminals’ side.",ad hominem
-1053,"President Bush argues that we should open up the Arctic National Wildlife Refuge for oil drilling. But Bush just wants to reward his rich cronies in the oil industry, so we can't take his arguments seriously.",ad hominem
+Charli: ¿Qué tiene que ver la dureza con la geografía?",intentional,"MSK<0> : All MSK<1> Yorkers are MSK<2> Charli : I get shoved in a locker every day and cry when I see bunnies MSK<0> : Well , REAL MSK<1> Yorkers are MSK<2> Charli : What does toughness have to do with Geography ? MSK<0> : Todos los neoyorquinos son duros MSK<2> : Me empujan en un casillero MSK<2> los días y lloro cuando veo conejitos . MSK<0> : Bueno , MSK<2> verdaderos neoyorquinos son duros . MSK<2> : ¿ Qué tiene que ver la MSK<2> con la geografía ? "
+296,296,2115,The Windmill debate- Snowball promises that the Windmill will mean less work and better living conditions. Napoleon says that it's just unnecessary and will be more work.,intentional,The MSK<0> debate- Snowball promises that the MSK<0> will mean less MSK<1> and better living conditions . Napoleon says that it 's just unnecessary and will be more MSK<1> . 
+297,297,990,"Charlie: Fast food is filled with salt, fat, and added sugars. We need better regulation of the industry.
+Bob: That my be, but you're such a hypocrite! I saw you devour a Triple-Baconator, super-sized fries, and 64oz of soda yesterday!",ad hominem,"Charlie : Fast food is filled with salt , fat , and added sugars . We need better regulation of the industry . Bob : That my be , but you 're such a hypocrite ! I saw you devour a Triple-Baconator , super-sized fries , and 64 oz of soda yesterday ! "
+298,298,1177,"Boris is not qualified to make suggestions about our penal system. As an ex-convict, he would always take the criminals’ side.",ad hominem,"Boris is not qualified to make suggestions about our penal system . As an ex-convict , he would always take the criminals ’ side . "
+299,299,1053,"President Bush argues that we should open up the Arctic National Wildlife Refuge for oil drilling. But Bush just wants to reward his rich cronies in the oil industry, so we can't take his arguments seriously.",ad hominem,"President MSK<0> argues that we should open up the Arctic National Wildlife Refuge for MSK<1> drilling . But MSK<0> just wants to reward his rich cronies in the MSK<1> industry , so we ca n't take his MSK<0> seriously . "

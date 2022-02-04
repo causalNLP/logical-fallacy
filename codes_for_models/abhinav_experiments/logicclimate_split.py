@@ -45,16 +45,11 @@ for idx, obj in enumerate(objects):
         start_indices.append(i)
         i += 1
     for label in obj['label']:
-        # print(label)
-        # print(obj['data'][label[0]:label[1]])
-        # print('-----')
         start = max(bisect.bisect_right(start_indices, label[0]) - 2, 0)
         end = min(bisect.bisect_left(start_indices, label[1]) + 1, len(doc.sentences) - 1)
         hot_area = doc.sentences[start:end + 1]
         hot_area = [sentence.text for sentence in hot_area]
         ans = ' '.join(hot_area)
-        # print(ans)
-        # print('-------------')
         if label[2] in mapping.keys():
             if idx < 100:
                 data_train.append([obj['source_url'], ans, mapping[label[2]]])
@@ -69,4 +64,4 @@ climate_all = pd.concat([climate_train, climate_val, climate_test])
 climate_train.to_csv('../../data/climate_train.csv')
 climate_val.to_csv('../../data/climate_dev.csv')
 climate_test.to_csv('../../data/climate_test.csv')
-climate_all.to_csv('../../data/climate_test.csv')
+climate_all.to_csv('../../data/climate_all.csv')
