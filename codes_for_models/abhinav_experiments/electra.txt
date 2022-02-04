@@ -1,0 +1,43 @@
+Sender: LSF System <lsfadmin@eu-a65-02>
+Subject: Job 200967696: <python logicedu.py -t saved_models/electra-base-mnli -m saved_models/electra-base-mnli -w 1> in cluster <euler> Exited
+
+Job <python logicedu.py -t saved_models/electra-base-mnli -m saved_models/electra-base-mnli -w 1> was submitted from host <eu-login-16> by user <tvaidhya> in cluster <euler> at Wed Jan 19 12:57:52 2022
+Job was executed on host(s) <eu-a65-02>, in queue <gpupr.4h>, as user <tvaidhya> in cluster <euler> at Wed Jan 19 12:58:03 2022
+</cluster/home/tvaidhya> was used as the home directory.
+</cluster/home/tvaidhya/logical-fallacy/codes_for_models/abhinav_experiments> was used as the working directory.
+Started at Wed Jan 19 12:58:03 2022
+Terminated at Wed Jan 19 12:58:06 2022
+Results reported at Wed Jan 19 12:58:06 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python logicedu.py -t saved_models/electra-base-mnli -m saved_models/electra-base-mnli -w 1
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.29 sec.
+    Max Memory :                                 150 MB
+    Average Memory :                             76.00 MB
+    Total Requested Memory :                     10000.00 MB
+    Delta Memory :                               9850.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   28 sec.
+    Turnaround time :                            14 sec.
+
+The output (if any) follows:
+
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap>", line 1002, in _find_and_load
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/cluster/home/tvaidhya/logical-fallacy/codes_for_models/abhinav_experiments/logicedu.py", line 1, in <module>
+    import cv2
+ImportError: numpy.core.multiarray failed to import

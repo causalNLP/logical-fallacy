@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#logs
+*.log
+*.txt
+*lsf.*
+
 # C extensions
 *.so
 
@@ -175,8 +180,12 @@ fabric.properties
 .DS_Store
 */.DS_Store
 .idea
+*__MACOSX*
 
 # ignore large files
-saved_models/electra/
-saved_models/deberta/
+*saved_models*
+*saved_datasets*
+data/multinli*
 
+#api keys
+data/api_openai.txt

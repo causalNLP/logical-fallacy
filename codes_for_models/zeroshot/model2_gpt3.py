@@ -1,12 +1,20 @@
 from efficiency.log import show_var
-
+from sklearn.model_selection import train_test_split
+import pandas as pd
+import sys
+sys.path.insert(1, '../abhinav_experiments')
+from logicedu import get_logger,get_unique_labels,get_metrics
+from tqdm import tqdm
+import random
+from sklearn.preprocessing import MultiLabelBinarizer
+import openai
+import time
 
 class GPT3:
     def __init__(self):
         self.setup_gpt3()
 
     def setup_gpt3(self):
-        import openai
 
         # get OpenAI access key
         from efficiency.log import fread
@@ -82,7 +90,6 @@ class GPT3:
                     n=1,
                     stop="\n",
                 )
-
                 received = False
                 for _ in range(10):
                     if received: break
@@ -254,6 +261,69 @@ class GPT3:
         '''
         return response
 
+    def classify_zero_shot2(self,data_path):
+        fallacy_all=pd.read_csv(data_path)[['source_article','updated_label']]
+        _,fallacy_rem=train_test_split(fallacy_all,test_size=600,random_state=10)
+        _,fallacy_test=train_test_split(fallacy_rem,test_size=300,random_state=10)
+        all_labels=get_unique_labels(fallacy_all,'updated_label')
+        prompt_template = 'Please classify a piece of text into the following categories of logical fallacies: ' \
+                              '{labels_str}.\n\nText: {sentence}\nLabel:'
+        max_tokens = 10
+        labels=[]
+        preds=[]
+        mlb = MultiLabelBinarizer()
+        mlb.fit([all_labels])
+        for _,row in tqdm(fallacy_test.iterrows()):
+          random.shuffle(all_labels)
+          labels_str = ', '.join(all_labels)  # Post hoc, Slippery slope, Circular argument, Unknown type
+          sent=row['source_article']
+          sent_for_prompt = sent
+          if len(sent.split()) > 900:
+              sent_for_prompt = ' '.join(sent.split()[:900]).rsplit('.', 1)[0] + '.'
+          prompt = prompt_template.format(
+              labels_str=labels_str,
+              sentence=sent_for_prompt, )
+          kwargs = dict(
+              engine="davinci",
+              prompt=prompt,
+              max_tokens=max_tokens,
+              temperature=0,
+              n=1,
+              stop="\n",
+          )
+          # print("Prompt is ",prompt)
+          received = False
+          for _ in range(10):
+              if received: break
+              try:
+                  response = openai.Completion.create(**kwargs)
+                  pred = response['choices'][0]['text'].strip().rstrip('.').lower()
+                  # print("openai responded ",pred," actual is",row['updated_label'])
+                  if pred in all_labels:
+                      received = True
+                  else:
+                      kwargs['temperature'] += 0.1
+              except:
+                  import sys
+                  error = sys.exc_info()[0]
+                  if error == openai.error.InvalidRequestError:  # something is wrong: e.g. prompt too long
+                      print(f"InvalidRequestError\nPrompt passed in:\n\n{prompt}\n\n")
+                      # assert False
+                  elif error == openai.error.RateLimitError:
+                    time.sleep(10)
+                  print("API error:", error)
+          if received:
+            preds_mh = mlb.transform([[pred]])
+          else:
+            preds_mh = [[0]*len(all_labels)]
+          labels_mh = mlb.transform([[row['updated_label']]])
+          print(pred,preds_mh)
+          print(row['updated_label'],labels_mh)
+          labels.append(labels_mh[0])
+          preds.append(preds_mh[0])
+        scores=get_metrics(preds,labels,sig=False,tensors=False)
+        print("micro f1: %f macro f1:%f precision: %f recall: %f exact match %f" %(scores[4],scores[5],scores[1],scores[2],scores[3]))
+
 
 def main():
     from efficiency.function import set_seed
@@ -269,11 +339,9 @@ def main():
     gpt3.classification_zero_shot(data, data_type=data_type)
     # gpt3.classification_few_shot()
 
-from zeroshot.model1_transfer_from_nli import Constants
-
-C = Constants()
 if __name__ == '__main__':
     from model1_transfer_from_nli import Constants
 
     C = Constants()
-    main()
+    gpt3=GPT3()
+    gpt3.classify_zero_shot2('../../data/edu_all_updated.csv')
