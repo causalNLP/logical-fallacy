@@ -155,6 +155,7 @@ def update_csv_with_masked_content(path, article_col_name, model, client):
     df = pd.read_csv(path)
     masked_articles = [mask_out_content(article, model, client) for article in df[article_col_name]]
     df['masked_articles'] = masked_articles
+    logger.info("completed conversion saving file to %s",path)
     df.to_csv(path)
 
 
