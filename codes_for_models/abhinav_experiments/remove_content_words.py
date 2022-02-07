@@ -79,8 +79,8 @@ def get_component_index(phrase_count, phrase_size_count, connected_components):
     return None, is_start
 
 
-def mask_out_content(text, model):
-    text = get_coref(text)
+def mask_out_content(text, model, client):
+    text = get_coref(text, client)
     doc = nlp(text)
     phrases = []
     curr = []
@@ -151,17 +151,15 @@ def mask_out_content(text, model):
     return ans
 
 
-def update_csv_with_masked_content(path, article_col_name, model):
+def update_csv_with_masked_content(path, article_col_name, model, client):
     df = pd.read_csv(path)
-    masked_articles = [mask_out_content(article, model) for article in df[article_col_name]]
+    masked_articles = [mask_out_content(article, model, client) for article in df[article_col_name]]
     df['masked_articles'] = masked_articles
     df.to_csv(path)
 
 
-def get_coref(text):
-    with CoreNLPClient(
-            annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref']) as client:
-        ann = client.annotate(text)
+def get_coref(text, client):
+    ann = client.annotate(text)
     chains = []
     for entry in ann.corefChain:
         chain = []
@@ -193,6 +191,8 @@ if __name__ == '__main__':
     parser.add_argument("-m", "--model", help="sentence transformer model")
     args = parser.parse_args()
     model = SentenceTransformer(args.model)
-    update_csv_with_masked_content(args.path, args.article_col_name, model)
+    client = CoreNLPClient(
+        annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref'])
+    update_csv_with_masked_content(args.path, args.article_col_name, model, client)
     # print(word_bank)
     # pickle.dump(word_bank, open("../../data/word_bank.pkl", "wb"))
