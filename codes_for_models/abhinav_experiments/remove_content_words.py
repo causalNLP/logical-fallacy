@@ -1,5 +1,5 @@
 import argparse
-from logicedu import get_logger
+from logicedu import get_logger, add
 import stanza
 import spacy
 import string
@@ -7,13 +7,16 @@ from sentence_transformers import SentenceTransformer
 from scipy.spatial import distance
 import pandas as pd
 import pickle
+from stanza.server import CoreNLPClient
 
 
 class Node:
     def __init__(self):
-        self.visited = False
         self.edges = []
-        self.marked_range = None
+        self.marked_range = []
+
+    def insert(self, range):
+        self.marked_range.append(range)
 
 
 class Edge:
@@ -44,33 +47,40 @@ def insert(phrase, edges, nodes):
     nodes[j].edges.append(edge2)
 
 
+def overlap(new_range, marked_range):
+    for range in marked_range:
+        if (range[1] > new_range[0] >= range[0]) or (range[0] < new_range[1] <= range[1]):
+            return True
+    return False
+
+
 def visit(i, range, component, nodes):
-    if nodes[i].visited:
+    if overlap(range, nodes[i].marked_range):
         return
-    nodes[i].visited = True
-    nodes[i].marked_range = range
-    component.append(i)
+    nodes[i].insert(range)
+    component.append((i, range))
     for edge in nodes[i].edges:
-        visit(edge.output_index, edge.output_range, component, nodes)
+        if edge.input_range == range:
+            visit(edge.output_index, edge.output_range, component, nodes)
 
 
 def get_connected_component(edge, component, nodes):
     visit(edge.input_index, edge.input_range, component, nodes)
 
 
-def get_component_index(phrase_count, connected_components):
+def get_component_index(phrase_count, phrase_size_count, connected_components):
+    is_start = False
     for i in range(len(connected_components)):
-        if phrase_count in connected_components[i]:
-            return i
-    return None
-
-
-nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma')
-en = spacy.load('en_core_web_sm')
-sw_spacy = en.Defaults.stop_words
+        for node in connected_components[i]:
+            if phrase_count == node[0] and node[1][0] <= phrase_size_count < node[1][1]:
+                if phrase_size_count == node[1][0]:
+                    is_start = True
+                return i, is_start
+    return None, is_start
 
 
 def mask_out_content(text, model):
+    text = get_coref(text)
     doc = nlp(text)
     phrases = []
     curr = []
@@ -83,6 +93,7 @@ def mask_out_content(text, model):
                 curr = []
     if len(curr) > 0:
         phrases.append(curr)
+    # print(phrases)
     subphrases = []
     for i in range(len(phrases)):
         for j in range(1, len(phrases[i]) + 1):
@@ -96,6 +107,7 @@ def mask_out_content(text, model):
             if dist > 0.7 and subphrases[j][1][0] > subphrases[i][1][0]:
                 similar_phrases.append((dist, subphrases[i][0:2], subphrases[j][0:2]))
     similar_phrases.sort(key=lambda x: x[0], reverse=True)
+    # print(similar_phrases)
     edges = []
     nodes = []
     for i in range(len(phrases)):
@@ -108,6 +120,7 @@ def mask_out_content(text, model):
         get_connected_component(edge, component, nodes)
         if len(component) > 1:
             connected_components.append(component)
+    # print(connected_components)
     ans = ""
     phrase_size_count = 0
     phrase_count = 0
@@ -121,20 +134,17 @@ def mask_out_content(text, model):
                     phrase_count += 1
                 phrase_size_count = 0
             else:
-                if phrase_size_count == 0:
-                    idx = get_component_index(phrase_count, connected_components)
-                if idx is None or phrase_size_count < nodes[phrase_count].marked_range[0] or phrase_size_count >= \
-                        nodes[phrase_count].marked_range[
-                            1]:
+                idx, is_start = get_component_index(phrase_count, phrase_size_count, connected_components)
+                if idx is None:
                     ans += word.text
-                elif phrase_size_count == nodes[phrase_count].marked_range[0]:
+                elif is_start:
                     ans += "MSK<%d>" % idx
-                if idx is not None and nodes[phrase_count].marked_range[0] <= phrase_size_count < \
-                        nodes[phrase_count].marked_range[1]:
-                    masked_content += word.text
-                    if nodes[phrase_count] == nodes[phrase_count].marked_range[1] - 1:
-                        word_bank.append(masked_content)
-                        masked_content = ""
+                # if idx is not None and nodes[phrase_count].marked_range[0] <= phrase_size_count < \
+                #         nodes[phrase_count].marked_range[1]:
+                #     masked_content += word.text
+                #     if nodes[phrase_count] == nodes[phrase_count].marked_range[1] - 1:
+                #         word_bank.append(masked_content)
+                #         masked_content = ""
                 phrase_size_count += 1
             ans += " "
     logger.warn("%s updated to %s", text, ans)
@@ -143,13 +153,39 @@ def mask_out_content(text, model):
 
 def update_csv_with_masked_content(path, article_col_name, model):
     df = pd.read_csv(path)
-    masked_articles = [mask_out_content(article, model) for article in df[article_col_name][0:100]]
-    # df['masked_articles'] = masked_articles
-    # df.to_csv(path)
+    masked_articles = [mask_out_content(article, model) for article in df[article_col_name]]
+    df['masked_articles'] = masked_articles
+    df.to_csv(path)
+
+
+def get_coref(text):
+    with CoreNLPClient(
+            annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref']) as client:
+        ann = client.annotate(text)
+    chains = []
+    for entry in ann.corefChain:
+        chain = []
+        for mention in entry.mention:
+            chain.append((mention.sentenceIndex, (mention.beginIndex, mention.endIndex)))
+        chains.append(chain)
+    doc = nlp(text)
+    ans = ""
+    for i, sent in enumerate(doc.sentences):
+        for j, word in enumerate(sent.words):
+            idx, is_start = get_component_index(i, j, chains)
+            if idx is None:
+                ans += word.text
+            elif is_start:
+                ans += "coref%d" % idx
+            ans += " "
+    return ans
 
 
 if __name__ == '__main__':
-    word_bank = []
+    # word_bank = []
+    nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma', use_gpu=True)
+    en = spacy.load('en_core_web_sm')
+    sw_spacy = en.Defaults.stop_words
     parser = argparse.ArgumentParser()
     logger = get_logger(level='WARN')
     parser.add_argument("-p", "--path", help="path for input csv file")
@@ -158,5 +194,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     model = SentenceTransformer(args.model)
     update_csv_with_masked_content(args.path, args.article_col_name, model)
-    print(word_bank)
-    pickle.dump(word_bank, open("../../data/word_bank.pkl", "wb"))
+    # print(word_bank)
+    # pickle.dump(word_bank, open("../../data/word_bank.pkl", "wb"))

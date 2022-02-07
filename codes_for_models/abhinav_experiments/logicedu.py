@@ -13,6 +13,9 @@ import sklearn.metrics
 import logging
 import argparse
 from random import sample
+from library import eval_classwise, eval_and_store, convert_to_multilabel
+
+torch.manual_seed(0)
 
 
 def add(char, num):
@@ -22,15 +25,20 @@ def add(char, num):
     return char
 
 
-def get_unique_labels(df, label_col_name):
-    candidate_labels = df[label_col_name].unique()
+def get_unique_labels(df, label_col_name, multilabel=False):
     labels_set = set()
-    for label in candidate_labels:
-        labels = label.split(';')
-        if len(labels) > 1:
-            print(labels)
-        labels = [x.strip() for x in labels]
-        labels_set.update(labels)
+    if multilabel:
+        for labels in df[label_col_name]:
+            for label in labels:
+                labels_set.add(label)
+    else:
+        candidate_labels = df[label_col_name].unique()
+        for label in candidate_labels:
+            labels = label.split(';')
+            if len(labels) > 1:
+                print(labels)
+            labels = [x.strip() for x in labels]
+            labels_set.update(labels)
     candidate_labels = list(labels_set)
     return candidate_labels
 
@@ -48,7 +56,7 @@ def replace_masked_tokens(input, replace_fn=replace_char):
     while True:
         output = input.replace("MSK<%d>" % i, replace_fn(i))
         if input == output:
-            output = input.replace("<MSK%d>" % i, replace_fn(i))
+            output = input.replace("<MSK%d>" % i, replace_fn(i - 1))
         if input == output and i > 0:
             break
         i += 1
@@ -59,8 +67,8 @@ def replace_masked_tokens(input, replace_fn=replace_char):
 class MNLIDataset:
 
     def __init__(self, tokenizer_path, train_df, val_df, label_col_name, map='base', test_df=None, fallacy=False,
-                 undersample_train=False,
-                 undersample_val=False, undersample_test=False, undersample_rate=0.04, train_strat=1, test_strat=1):
+                 undersample_train=False, undersample_val=False, undersample_test=False, undersample_rate=0.04,
+                 train_strat=1, test_strat=1, multilabel=False):
         # strat is used in convert_to_mnli function
         self.label_dict = {'entailment': 0, 'contradiction': 1, 'neutral': 2}
         torch.manual_seed(0)
@@ -68,15 +76,18 @@ class MNLIDataset:
         self.val_df = val_df
         self.test_df = test_df
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_path, do_lower_case=True)
-        special_tokens_dict = {'additional_special_tokens': ["[A]", "[B]", "[C]", "[D]", "[E]"]}
+        special_tokens_dict = {
+            'additional_special_tokens': ["[A]", "[B]", "[C]", "[D]", "[E]", "[F]", "[G]", "[H]", "[I]"]}
         self.tokenizer.add_special_tokens(special_tokens_dict)
         self.train_data = None
         self.val_data = None
         self.label_col_name = label_col_name
         self.map = map
         self.mappings = pd.read_csv("../../data/mappings.csv")
+        self.multilabel = multilabel
         if fallacy:
-            self.unique_labels = get_unique_labels(pd.concat([train_df, val_df, test_df]), self.label_col_name)
+            self.unique_labels = get_unique_labels(pd.concat([train_df, val_df, test_df]), self.label_col_name,
+                                                   multilabel)
             print(self.unique_labels)
         self.init_data(fallacy, undersample_train, undersample_val, undersample_test,
                        undersample_ratio=undersample_rate, train_strat=train_strat, test_strat=test_strat)
@@ -107,7 +118,8 @@ class MNLIDataset:
                     form = replace_masked_tokens(list(self.mappings[self.mappings['Original Name'] == label]
                                                       ['Masked Logical Form'])[0])
                     entry.append("This article matches the following logical form: %s" % form)
-                if label == row[self.label_col_name]:
+                if (self.multilabel is False and label == row[self.label_col_name]) or (
+                        self.multilabel is True and label in row[self.label_col_name]):
                     entry.append("entailment")
                 else:
                     p = random.random()
@@ -283,7 +295,7 @@ def get_metrics(logits, labels, threshold=0.5, sig=True, tensors=True):
     return accuracy, precision, recall, exact_match, micro_f1_score, macro_f1_score
 
 
-def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=0.04, positive_weight=12):
+def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=0.04, positive_weight=12, debug=False):
     train_loader, val_loader, _ = dataset.get_data_loaders()
     min_val_loss = float('inf')
     loss_fn = nn.CrossEntropyLoss(weight=torch.tensor([positive_weight, 1, 1]).float())
@@ -305,7 +317,9 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
             mask_ids = mask_ids.to(device)
             seg_ids = seg_ids.to(device)
             labels = y.to(device)
-
+            if debug:
+                print(pair_token_ids.shape, seg_ids.shape, mask_ids.shape)
+                break
             _, prediction = model(pair_token_ids,
                                   token_type_ids=seg_ids,
                                   attention_mask=mask_ids,
@@ -320,7 +334,8 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
             total_train_acc += acc.float()
             total_train_prec += prec
             total_train_rec += rec
-
+        if debug:
+            break
         train_acc = total_train_acc / len(train_loader)
         train_loss = total_train_loss / len(train_loader)
         train_prec = total_train_prec / len(train_loader)
@@ -420,6 +435,11 @@ if __name__ == "__main__":
     parser.add_argument("-rs", "--replace_strat", help="Function used to replace masked words", default='char')
     parser.add_argument("-rc", "--replace_count", help="Number of times to replace masked words", default=1)
     parser.add_argument("-np", "--multinli_path", help="Path for multinli directory", default="")
+    parser.add_argument("-do", "--downsample", help="Downsample Training Set", default='F')
+    parser.add_argument("-c", "--classwise_savepath", help="Path to store classwise results")
+    parser.add_argument("-sr", "--result_path", help="Path to store results on dev set")
+    parser.add_argument("-nt", "--do_not_train", help="Set this to T if you do not wish to train the model",
+                        default='F')
     args = parser.parse_args()
     # word_bank = pickle.load('../../data/word_bank.pkl')
     logger.info(args)
@@ -450,25 +470,38 @@ if __name__ == "__main__":
     optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
     logger.info("creating dataset")
     fallacy_train = pd.read_csv('../../data/edu_train.csv')
+    if args.downsample == 'T':
+        fallacy_train = fallacy_train[:747]
     fallacy_dev = pd.read_csv('../../data/edu_dev.csv')
     fallacy_test = pd.read_csv('../../data/edu_test.csv')
     fallacy_ds = MNLIDataset(args.tokenizer, fallacy_train, fallacy_dev, 'updated_label', args.map, fallacy_test,
                              fallacy=True, train_strat=int(args.train_strat), test_strat=int(args.dev_strat))
     model.resize_token_embeddings(len(fallacy_ds.tokenizer))
-    # fallacy_ds.train_df.to_csv('processed_train_df.csv')
-    # fallacy_ds.val_df.to_csv('processed_val_df.csv')
+    fallacy_ds.train_df.to_csv('processed_train_df.csv')
+    fallacy_ds.val_df.to_csv('processed_val_df.csv')
     # print(fallacy_ds.tokenizer.tokenize("[A] causes [B]"))
     # print("checking length", len(fallacy_ds.tokenizer), model.config.vocab_size)
-    optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
+    if args.do_not_train == 'F':
+        optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
+        logger.info("starting training")
+        train(model, fallacy_ds, optimizer, logger, args.savepath, device, ratio=1, epochs=10,
+              positive_weight=int(args.weight))
 
-    logger.info("starting training")
-    train(model, fallacy_ds, optimizer, logger, args.savepath, device, ratio=1, epochs=10,
-          positive_weight=int(args.weight))
-
-    model = AutoModelForSequenceClassification.from_pretrained(args.savepath, num_labels=3)
-    model.to(device)
+        model = AutoModelForSequenceClassification.from_pretrained(args.savepath, num_labels=3)
+        model.to(device)
     logger.info("starting testing")
     _, _, test_loader = fallacy_ds.get_data_loaders()
     scores = eval1(model, test_loader, logger, device)
     logger.info("micro f1: %f macro f1:%f precision: %f recall: %f exact match %f", scores[4], scores[5], scores[1],
                 scores[2], scores[3])
+    if args.classwise_savepath is not None:
+        classwise_scores = eval_classwise(model, test_loader, logger, fallacy_ds.unique_labels, device)
+        df = pd.DataFrame.from_records(classwise_scores, columns=['Fallacy Name', 'Precision', 'Recall', 'F1',
+                                                                  'Number of Positive Labels for this Class in Test Set'
+                                                                  ])
+        df.to_csv(args.classwise_savepath)
+    if args.result_path is not None:
+        logger.info("Generating results on Dev Set")
+        df = eval_and_store(fallacy_ds, model, logger, device)
+        df = convert_to_multilabel(df)
+        df.to_csv(args.result_path)
