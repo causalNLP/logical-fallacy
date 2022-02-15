@@ -1,6 +1,38 @@
 import torch
 import pandas as pd
 from sklearn.metrics import precision_score, recall_score, f1_score
+import re
+
+
+def add(char, num):
+    i = ord(char[0])
+    i += num
+    char = chr(i)
+    return char
+
+
+def replace_char(i):
+    return "[" + add('A', i) + "]"
+
+
+def replace_masked_tokens(input, replace_fn=replace_char):
+    j = 0
+    for i in range(10):
+        output = input.replace("MSK<%d>" % i, replace_fn(j))
+        if input == output:
+            output = input.replace("<MSK%d>" % i, replace_fn(j))
+        if input == output:
+            corefs = get_corefs(input)
+            if corefs:
+                output = input.replace(list(corefs)[0], replace_fn(j))
+        if input != output:
+            j += 1
+        input = output
+    return output
+
+
+def get_corefs(text):
+    return set(re.findall(r'coref.', text))
 
 
 def eval_classwise(model, test_loader, logger, unique_labels, device):
@@ -38,13 +70,24 @@ def eval_classwise(model, test_loader, logger, unique_labels, device):
         return results
 
 
-def get_label(hypothesis, ds):
+def get_label(hypothesis, ds, map='base', debug=False):
+    if debug:
+        print("hypo = ", hypothesis)
     for label in ds.unique_labels:
-        if label in hypothesis:
+        if map == 'base' and label in hypothesis:
             return label
+        elif map == 'masked-logical-form':
+            form = replace_masked_tokens(list(ds.mappings[ds.mappings['Original Name'] == label]
+                                              ['Masked Logical Form'])[0])
+            if debug:
+                print("checking %s" % form)
+            if form in hypothesis:
+                return label
+    if debug:
+        print(hypothesis)
 
 
-def convert_to_multilabel(df):
+def convert_to_multilabel(df, debug=False):
     data = []
     for text in df['text'].unique():
         selected_df = df[df['text'] == text]
@@ -55,6 +98,9 @@ def convert_to_multilabel(df):
                 gt_labels.append(row['label'])
             if row['prediction'] == 'entailment':
                 pred_labels.append(row['label'])
+        # if debug:
+        # print(gt_labels)
+        # print(pred_labels)
         intersection = len(set(gt_labels) & set(pred_labels))
         if intersection == 0:
             result = "incorrect"
@@ -66,11 +112,13 @@ def convert_to_multilabel(df):
     return pd.DataFrame(data, columns=['text', 'ground_truth_labels', 'model_predicted_labels', 'result'])
 
 
-def eval_and_store(ds, model, logger, device):
+def eval_and_store(ds, model, logger, device, map, debug=False):
     data = []
     for i, row in ds.val_df.iterrows():
         # if i % 10 == 0:
         #     logger.debug(i)
+        if debug and i == 1:
+            break
         premise = row['sentence1']
         hypothesis = row['sentence2']
         label = row['gold_label']
@@ -96,5 +144,5 @@ def eval_and_store(ds, model, logger, device):
             prediction = "entailment"
         else:
             prediction = "contradiction"
-        data.append([premise, get_label(hypothesis, ds), label, prediction, result])
+        data.append([premise, get_label(hypothesis, ds, map, debug=debug), label, prediction, result])
     return pd.DataFrame(data, columns=['text', 'label', 'ground_truth', 'prediction', 'result'])

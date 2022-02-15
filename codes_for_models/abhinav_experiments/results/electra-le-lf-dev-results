@@ -1,0 +1,412 @@
+,text,ground_truth_labels,model_predicted_labels,result
+0,"""Just like students are given a couple of weeks of preparation before taking exams, doctors should also be given few days or weeks to prepare themselves before an operation or surgery, after all surgery is not as easy task""
+Is an example of....",[None],"[None, None]",partial match
+1,You don’t have to do this. My grandmother is in the hospital. I need my salary to support her medication. She’s dying.,[None],"[None, None, None, None]",partial match
+2,"I know five people from Kentucky. They are all racists. Therefore, Kentuckians are racist.",[None],"[None, None]",partial match
+3,"Pvt. Joe Bowers: What are these electrolytes? Do you even know?
+Secretary of State: They're... what they use to make Brawndo!
+Pvt. Joe Bowers: But why do they use them to make Brawndo?
+Secretary of Defense: [raises hand after a pause] Because Brawndo's got electrolytes.
+",[None],"[None, None, None]",partial match
+4,"This is a fallacy of irrelevance that is based solely on someone's or something's history, origin, or source rather than its current meaning",[None],"[None, None, None]",partial match
+5,"Helga: You should not be eating that... it has been scientifically proven that eating fat burgers are no good for your health.
+
+Hugh: You eat fat burgers all the time so that can’t be true.",[None],"[None, None, None]",partial match
+6,"Bill: “I believe that abortion is morally wrong.”
+Dave: “Of course you would say that, you’re a priest.”
+Bill: “What about the arguments I gave to support my position?”
+Dave: “Those don’t count. Like I said, you’re a priest, so you have to say that abortion is wrong. Further, you are just a lackey to the Pope, so I can’t believe what you say.”",[None],"[None, None, None]",partial match
+7,"If we use one more can of hairspray this month, the ozone layer will not exist, and we will not exist!",[None],"[None, None, None, None, None]",partial match
+8,"Argues that because something is popular, it must be right.",[None],[None],exact match
+9,We either have to cut taxes or leave a huge debt for our children.,[None],[None],exact match
+10,"""Why would you elect a mayor whose wife has been treated for alcohol addiction?""
+This logical fallacy is called...",[None],[None],exact match
+11," The best example of this fallacy is presented by the person who coined this term, Nassim Nicholas Taleb in his 2007 book, The Black Swan.  There are two people",[None],[None],exact match
+12,"""I drank bottled water and now I am sick, so the water must have made me sick.""",[None],"[None, None, None]",partial match
+13,Teenagers are too immature and self-absorbed to understand anything about global issues.,[None],[None],exact match
+14,"Ricky is watching television when he sees a commercial for foot cream. The commercial announcer says, ""This is the best foot cream on the market because no other foot cream makers have been able to prove otherwise!"" What fallacy has the announcer committed?",[None],"[None, None, None]",partial match
+15,"""No one stops to process...No one appreciates the value"" is an example of",[None],"[None, None]",partial match
+16,"Everyone who is really into gaming already owns the latest video game. Don't be the only one left out!
+
+Which logical fallacy is being used in the passage?",[None],"[None, None]",partial match
+17,"""A 2005 Gallup Poll found that an estimated 25% of Americans over the age of 18 believe in astrology - or that the position of the stars and planets can affect people’s lives. This is roughly 75,000,000 people. Therefore, there must be some truth to astrology!""",[None],"[None, None]",partial match
+18,"""Drivers in Richmond are terrible. Why does everyone in a big city drive like that?""",[None],[None],exact match
+19,"No people under the age of 66 are senior citizens.
+No senior citizens are children.
+Therefore, all people under the age of 66 are children.",[None],"[None, None]",partial match
+20,"""Why worry about pandas going extinct, when we have the homeless in our country to worry about?""",[None],"[None, None, None]",partial match
+21,"The fallacy of equivocation occurs when a key term or phrase in an argument is used in an ambiguous way, with one meaning in one portion of the argument and then another meaning in another portion of the argument.","[None, None]","[None, None, None, None]",partial match
+22,"Everyone in our family has gone to the University of Tennessee, so you need to apply to UT.",[None],"[None, None]",partial match
+23,"Schools are like families; therefore teachers (like parents) should be allowed to discipline their students.
+Which logical fallacy is represented here?",[None],"[None, None, None]",partial match
+24,Recent auto accidents in your neighborhood have led you to propose to the city council that the speed limit along Main Street be reduced to calm the traffic flow. Opponents complain that reducing speed limits all over town is counterproductive and an unnecessary burden on drivers.,[None],"[None, None, None, None]",partial match
+25,"Whatever happens by chance should be punished, because whatever happens by chance is a departure from law and all departures from law should be punished.
+
+Identify the logical fallacy commited in this argument.",[None],"[None, None, None]",partial match
+26,"""The art teacher spoke in the trial as a witness in support of testing perfumes on animals, and he persuaded me.""",[None],"[None, None, None]",partial match
+27,"P1. A sedentary lifestyle contributes to obesity.
+P2. People have become more sedentary in the last few decades.
+C. Therefore, the rise in obesity can be fixed by people getting more exercise.",[None],"[None, None, None]",partial match
+28,Executions are moral because we must have a death penalty to discourage violent crime.,[None],"[None, None, None, None, None]",partial match
+29,"Everyone knows that Japanese DVD players are the best. After all, the outsell American players two-to-one.",[None],"[None, None, None]",partial match
+30,"Jimmy has a fever, sinus congestion, a cough, and can’t come to school, so he probably has a test later today.",[None],"[None, None]",partial match
+31,"Lily says the sun is fully risen at 5:00am, but how would she know she sleeps in until noon.
+
+(love you lily all jokes all jokes)",[None],"[None, None]",partial match
+32,"Dr. Fauci says we need to wear masks, but Dr. Fauci is the oldest, meanest doctor around. I’m sure what he says isn’t true at all.",[None],"[None, None]",partial match
+33,"You should drive on the right side of the road because that is what the law says, and the law is the law.",[None],"[None, None, None]",partial match
+34,"""You shouldn't go to 'Vomito' I went once and the food was awful."" is",[None],"[None, None, None, None]",partial match
+35,"Buddy Burger has the greatest food in town.  Buddy Burger was voted #1 by the local paper.  Therefore, Phil, the owner of Buddy Burger, should run for president of the United States.",[None],"[None, None, None, None, None]",partial match
+36,"Robert Downey Jr. thinks everyone should vote. However, Robert Downey Jr. once went to prison for drug use. So, he's obviously wrong.",[None],"[None, None]",partial match
+37,Let's talk about Glaucon. Where did you get the poison you used on him?,[None],"[None, None, None]",partial match
+38,"""The only solutions I can see to climate change is either mass extinction of humans, or passing this green bill.""",[None],[None],exact match
+39,"No kangaroos are MMA fighters.
+Some MMA fighters are not Mormons.
+Therefore, some Mormons are not kangaroos.",[None],"[None, None]",partial match
+40,People who have to have a cup of coffee every morning before they can function have no less a problem than alcoholics who have to have their alcohol each day to sustain them.,[None],"[None, None, None]",partial match
+41,"The use of laptops and other devices to replace books in the classroom would eventually lead to the downfall of printing and publishing companies, causing many people to be laid off from their jobs. As such, schools should stick to using printed books as study materials.",[None],"[None, None, None]",partial match
+42,"Everybody know that staying out in the rain can make you sick.
+Which logical fallacy is represented here?",[None],"[None, None, None]",partial match
+43,"""Historically, up until the late 16th century, most people believed that the Earth was the center of the universe. Today we understand this is not true,"" is an example of what fallacy?",[None],"[None, None]",partial match
+44,"James, the company you work for just filed for bankruptcy! How can I trust you with our money?",[None],[None],exact match
+45,All required university courses are boring.,[None],"[None, None]",partial match
+46,God exists. How do you know? Because it says so in the Bible.,[None],"[None, None, None]",partial match
+47,"""Either we re-elect Mayor Ruiz, or we watch our city fall to pieces"" is an example of",[None],[None],exact match
+48,"Charlie: Fast food is filled with salt, fat, and added sugars.  We need better regulation of the industry.
+Bob: That may be, but you're sure a hypocrite!  I saw you devour a Triple-Baconator, super-sized fries, and 64 ounces of soda yesterday.",[None],"[None, None]",partial match
+49,What is the appeal being used through this sad little girl?,[None],"[None, None, None]",partial match
+50,"""My opponent raises a really good point, but can we really trust him? He moved to this town three years ago and everyone knows his wife left him.",[None],[None],exact match
+51,"Sebastian saw that several of his friends had bought a new fidget spinner. He realized it must be a very cool gadget if they had one, and everyone else probably did, too.
+What fallacy did Sebastian fall into?",[None],"[None, None]",partial match
+52,"I know I missed assignments, but if you fail me, I will lose my financial aid and have to drop out.",[None],"[None, None, None]",partial match
+53,"If you get in a car wreck, and the fault of the wreck is a teenage boy at ECR, believing all teenage boys at ECR are bad drivers is an example of:",[None],"[None, None, None]",partial match
+54,"the phrase ""Ninety percent of all people surveyed said that McDonalds is better than Burger King so it must be true."" represents which fallacy?",[None],"[None, None]",partial match
+55,“The Senator thinks we can solve all our ecological problems by driving a Prius.”,[None],"[None, None, None, None]",partial match
+56,Grizzly bears can't be dangerous! They're too cute.,[None],"[None, None, None]",partial match
+57,"My friend swears the mechanic at that shop overcharged her last week and after looking at her invoice it seems she’s right. So don’t take your business there, as you’ll definitely get ripped off.",[None],"[None, None, None, None, None, None]",partial match
+58,"Asking students to sit in the same class for 2 hours is like asking them to wander the desert alone, with no water, for a week.",[None],"[None, None, None, None, None]",partial match
+59,"My roommate said her philosophy class was difficult, and the one I’m in is difficult, too. All philosophy classes must be hard.",[None],"[None, None]",partial match
+60,It is an example of,[None],"[None, None, None]",partial match
+61,The Bible is filled with stories of God's magic.,[None],"[None, None]",partial match
+62,"Pizza has ingredients from all the food groups. Therefore, pizza must be healthy.",[None],"[None, None]",partial match
+63,McDonald's Hamburgers: over 99 billion served.,[None],"[None, None]",partial match
+64,"Mom, I know you're upset that I went over my cell limit this month. The important issue here, though, is that I got an A on my algebra exam.",[None],"[None, None, None, None]",partial match
+65,"An environmental group illegally blocked loggers and workers at a nuclear plant. Therefore, environmentalists are radicals who take the law into their own hands.",[None],"[None, None, None]",partial match
+66,"Look, you are going to have to make up your mind. Either you decide that you can afford this stereo, or you decide you are going to do without music for a while",[None],[None],exact match
+67,Either you love me or you hate me.,[None],[None],exact match
+68,"Service Tech: Your car could use some new tires.
+Bart: You have a financial interest in selling me tires, why should I trust you?
+Service Tech: You brought your car to me to have it checked, sir.
+Bart: I brought my car to the shop where you work.
+Service Tech: So should we forget about the new tires for now?
+Bart: I never suggested that.  Are you trying to use reverse psychology on me, so I will buy the tires?
+",[None],"[None, None, None]",partial match
+69,Marcus wants to go to a small community college close to home because all of his friends are there.,[None],"[None, None]",partial match
+70,The thing about the new math teacher (who is an excellent teacher) is that he/she really stands out because he/she has good teaching skills.,[None],[None],exact match
+71,"Smoking cigarettes is just like ingesting arsenic into your system; both have been shown to be causally related to death. If you wouldn't want to take a spoonful of arsenic, I would think that you wouldn't want to continue smoking.",[None],"[None, None, None, None]",partial match
+72,"""The dinosaurs became extinct because they ate vegetables..."" is an example of what?",[None],"[None, None, None, None]",partial match
+73,Of course that doctor advocates vaccination—he probably owns stock in a pharmaceutical company.,[None],"[None, None]",partial match
+74,SM 2: book being popular because it has been on the best-seller list for months,[None],"[None, None]",partial match
+75,"""Yes, we have safety issues in our factory. But we work really hard to make a good product.""",[None],"[None, None]",partial match
+76,Guns are like hammers--they're both tools with metal parts that could be used to kill someone. And yet it would be ridiculous to restrict the purchase of hammers--so restrictions on purchasing guns are equally ridiculous.,[None],[None],exact match
+77,"""I have a right to free speech so I can say what I want and you shouldn't try to stop me. """,[None],"[None, None, None]",partial match
+78,You didn't remember to take out the trash this morning. It will pile up and the neighbors will complain and the health inspectors will come and take away the kids.,[None],"[None, None, None, None, None]",partial match
+79,If you were a true American you would support the rights of people to choose whatever vehicle they want.,[None],[None],exact match
+80,"David: Can you believe that the president said, ""fat people are losers""?
+Sam: Where did you hear this?
+David: I read it in a headline on BrightBert News.
+Sam: He actually said, ""People who say, 'fat people are losers' are not only cruel, but they are also wrong as well as being irrational.""
+",[None],"[None, None, None, None]",partial match
+81,"If you eat a good diet, you will never have a heart attack.",[None],"[None, None, None, None, None, None]",partial match
+82,"""With 80% of consumers choosing our product, isn't obvious that you should, too?""
+This logical fallacy is called...",[None],"[None, None]",partial match
+83,"When your mom gets your phone bill and you have gone over the data limit, you begin to distract her by talking about how well you did on a test today knowing she has offered to extend your data limit if you make good grades. This is an example of which logical fallacy?",[None],"[None, None, None]",partial match
+84,"Some students failed a test last week and they all had cell phones.  Having cell phones, therefore, made them fail.",[None],"[None, None, None]",partial match
+85,"All professional athletes use Apple watches to track their training, so our team needs to purchase Apple watches for everyone.",[None],"[None, None, None, None]",partial match
+86,"""The university committee for student discipline investigated all engineering tests for the past five years, and they found no evidence of cheating. We thus declare that no cheating has taken place during those five years.""",[None],[None],exact match
+87,People who are psychotic act in a bizarre manner. This person acts in a bizarre manner. Therefore: This person is psychotic.,[None],"[None, None]",partial match
+88,"Reporter: “It’s been two years since your policies were implemented, and so far they have failed to reduce unemployment rates.”
+
+Politician: “I have been working hard ever since I came into office, and I’m happy to say that I met with many business leaders throughout the country, who all say that they are glad to see that our hard work is paying off.”",[None],"[None, None]",partial match
+89,"Representative Gutierrez of Illinois, arguing in Congress on July 11, 1996, replying to Republicans arguing in favor of the ""Defense of Marriage Act"", a bill stipulating that 'marriage' be defined as being between a man and a woman only, excluding homosexual marriages: ""I now realize that my friends on the other side of the aisle aren't the least bit serious when they talk about how important it is for the federal government not to interfere in the lives of our people. I understand that they are just kidding - just teasing us - when they stress the importance of taking power out of Washington and giving it to local officials. And now I know that their biggest joke of all is that old line about family values - all that talk about encouraging people to care about and be committed to each other.""",[None],"[None, None, None, None, None, None, None]",partial match
+90,"Well, every one else jumped off the roof, why can't I?",[None],"[None, None, None]",partial match
+91,"Trump cites (biased) poll results showing that people think he’s a strong leader to prove a point that he is a strong leader.
+
+ABC News/Washington Post Poll (wrong big on election) said almost all stand by their vote on me & 53% said strong leader.",[None],[None],exact match
+92,"This crash will likely damage the reputation of Malaysia Airlines, which will hurt the tourism industry of Malaysia and ruin their economy.",[None],"[None, None, None]",partial match
+93,"Green Peace's strategies aren't effective because they are all dirty, lazy hippies.",[None],[None],exact match
+94,"In both of the murder mysteries I have read, the District Attorney was the culprit. All mystery writers like to make lawyers out to be villains.",[None],"[None, None, None]",partial match
+95,"Mayor Jones’ anti-DUI campaign should not be taken seriously. After all, the mayor himself was cited for driving under the influence in college",[None],"[None, None, None]",partial match
+96,A man who has cheated on his spouse is confronted by a friend who tells him that it is wrong. The man begins to talk about right versus wrong and who decides.,[None],"[None, None, None, None, None]",partial match
+97,"Bill and Jill are arguing about cleaning out their closets:
+Jill: ""We should clean out the closets. They are getting a bit messy.""
+Bill: ""Why, we just went through those closets last year. Do we have to clean them out everyday?""
+Jill: ""I never said anything about cleaning them out every day. You just want too keep all your junk forever, which is just ridiculous.""",[None],"[None, None, None]",partial match
+98,"Jeff's mom is concerned when she finds out that he skipped class one day. She tells him that she is concerned that since he skipped one class, he will start skipping more frequently. Then he will drop out altogether, never graduate or get into college, and end up unemployed and living at home for the rest of his life. What type of fallacy has Jeff's mom committed?",[None],"[None, None, None, None, None]",partial match
+99,"Red had come up six times in a row on the roulette wheel, so Greg knew that it was close to certain that black would be next up. Suffering an economic form of natural selection with this thinking, he soon lost all of his savings.",[None],"[None, None, None]",partial match
+100,"""Once you leave the house, you cannot go back. You will not receive any financial support so you need to stop going to school. Your credit card will be cut so you need to work. You will live on your own.""",[None],"[None, None, None]",partial match
+101,"Person 1: If you are a Marvel fan then you love Avengers: Endgame.
+Person 2: I am a Marvel fan and I did not love Avengers: Endgame.
+Person 1: Well you aren’t a TRUE Marvel fan.”",[None],"[None, None]",partial match
+102,This has to work so it will work.,[None],"[None, None, None, None]",partial match
+103,"P1. Smoking has been empirically proven to cause lung cancer.
+C. Therefore, if we eradicate smoking, we will eradicate lung cancer.",[None],"[None, None, None, None, None]",partial match
+104,"""Either we have the full football season or we scrap it altogether and have zero football"" IS an example of what fallacy?",[None],[None],exact match
+105,Robot 2 (Blue) has been refuting all of Robot 1's (Orange) arguments. Robot 1 launches the above counterargument. What is this fallacy?,[None],"[None, None, None]",partial match
+106,"Sure, that charity group is under investigation for misusing funds, but everyone deserves a healthy meal.",[None],"[None, None, None, None, None]",partial match
+107,"A shopkeeper suspects you of stealing and asks you to empty your pockets. The first thing you take out is an empty gum wrapper and they immediately shout, “I knew it!” What fallacy has the shopkeeper committed?",[None],"[None, None, None, None, None, None]",partial match
+108,The United States is the wealthiest nation in the world. So every American is wealthy.,[None],"[None, None]",partial match
+109,Jack threw up because he ate Hot Cheetos.,[None],"[None, None, None]",partial match
+110,Did John ever give up his bad habits?,[None],[None],exact match
+111,I passed my math test after going out to the movies the night before. I should go to the movies the night before every math test!,[None],"[None, None, None, None]",partial match
+112,"""It's important for you to take this psychology course. Sign up today. Don't wait.""",[None],"[None, None, None]",partial match
+113,"""My opponent suggests that lowering taxes will be a good idea, this is coming from a woman to eats a pint of Ben and Jerry's each night!""",[None],"[None, None]",partial match
+114,"Before women got the vote, there were no nuclear weapons",[None],"[None, None, None, None]",partial match
+115,"a connection between two ideas that doesn't always mean that one causes the other (correlation vs. causation)
+
+una conexión entre dos ideas que no siempre significa que una causa la otra (correlación vs. causación)",[None],"[None, None, None]",partial match
+116,"My best friend says you’re a liar, so I’m not going to talk to you.",[None],[None],exact match
+117,Maria drives a car. She must be wealthy.,[None],"[None, None]",partial match
+118,"1. All the schools in the area had to kept closed for most part of the week.
+2. Many parents have withdrawn their children from the local schools.",[None],"[None, None]",partial match
+119,What type of persuasive writing is used to influence readers’ feelings (pathos)?,[None],[None],exact match
+120,We should prohibit all cadets from assisting on emergency services missions. Some cadets are so immature they won’t ever stop goofing around.,[None],"[None, None]",partial match
+121,"Teacher: Why don’t you have your homework today?
+
+Student: Well, I did my homework. I was actually really interested in all that info about the quadratic formula. Would you like to hear the song that I wrote to memorize it?",[None],"[None, None, None]",partial match
+122,"Pastor Pete: People are turning to God everywhere! 9 out of 10 people I interviewed said that they had a personal relationship with Jesus Christ.
+
+Fred: Where did you find these people you interviewed?
+Pastor Pete: In my church.",[None],"[None, None]",partial match
+123,"If you are a true American, you will ask your congressman to vote against NAFTA.",[None],"[None, None, None, None]",partial match
+124,"""Everyone is doing it, you should be too!"" is an example of which fallacy?",[None],"[None, None]",partial match
+125,"A is part of B. A has property X. Therefore, B has property X. What fallacy is described in this logical form?",[None],[None],exact match
+126,Mabel wants to get rid of the student newspaper. Next she will probably want to ban free speech! She won't want us to speak at all! She will make it a law that you cannot speak in public.,[None],"[None, None, None]",partial match
+127,"A Congressman calls a Whitehouse Spokesperson a ""giant idiot""",[None],[None],exact match
+128,"""You are not a credible resource person. You haven't finished college.""",[None],"[None, None]",partial match
+129,A commercial shows a group of friends all hanging out wearing clothes from a popular clothing company. This is an example of,[None],"[None, None]",partial match
+130,"I cannot get a job because the public education system failed me;  I have to steal to  survive.  It is society's fault, not mine.",[None],"[None, None, None]",partial match
+131,"“President Jones raised taxes, and then the rate of violent crime went up. Jones is responsible for the rise in crime.""",[None],"[None, None]",partial match
+132,"How do I know the adult film industry is the third largest industry in the United States? Derek Shlongmiester, the adult film star of over 50 years, said it was. That's how I know.",[None],"[None, None]",partial match
+133,Alissa has class with a football player who is a class clown. He disrupts the class and is failing. Alissa decides all football players are not serious students.,[None],"[None, None]",partial match
+134,Fast food is bad for you because is junk.,[None],"[None, None, None, None]",partial match
+135,"Elba: I can’t believe the art critic said my artwork is awful!
+Rowena: He must have meant it in the old sense of the word -- that your artwork inspired awe!
+Elba: Yes!  That makes sense now!
+",[None],"[None, None, None, None]",partial match
+136,"""We're going to protest and not get in trouble because Mr. Iglesias said it's okay.""",[None],"[None, None, None, None, None]",partial match
+137,"If I don't take this AP class, then I won't do well on the exam.  If I don't do well on the AP exam, then I can't get into a good college.  If I can't get into a good college, then I'll never get a good job.  If I can't get a good job, then I'm going to have to live in my parents' basement forever.  Guess I'll sign up for the AP class.",[None],"[None, None, None]",partial match
+138,"Every time I wear this necklace, I pass my exams. Therefore, wearing this necklace causes me to pass my exams.",[None],[None],exact match
+139,"Everyone is getting tattoos in college, so you might as well do it too.",[None],"[None, None]",partial match
+140,"There is no need for additional taxes for education. Every year we throw more money into education, and all they do is hire more management and build more buildings. None of the money actually reaches the classroom or is really used for education.",[None],"[None, None]",partial match
+141,"Mrs. Peters is nominated for teacher of the year, which is voted on by her fellow faculty members. A colleague says that she would never vote for her because she is too young.",[None],"[None, None]",partial match
+142,Don't believe what Kim says about global warming. Kim dropped out of college!,[None],[None],exact match
+143,You're complaining because you have to walk to school? I used to have to give my parents my entire paycheck.,[None],"[None, None, None, None]",partial match
+144,This coin has landed heads-up nine times in a row. So it will probably land tails-up next time it is tossed.,[None],"[None, None, None, None]",partial match
+145,"Son: I am so excited!  I got an “A” on my physics exam!
+Dad:  Why not an “A+”?  This means that you answered something incorrectly.  That is not acceptable!
+",[None],"[None, None, None, None]",partial match
+146,"""The Cardinals are the best football team because they're better than all the other teams. They're better than all the other teams because they're the best.""",[None],[None],exact match
+147,How can you tell me I should exercise to lose weight? All you do is sit behind a desk all day. I've never seen you do a lick of exercise.,[None],[None],exact match
+148,"There are two kinds of people in this world: those who like penguins, and those who are terrible monsters.",[None],[None],exact match
+149,"""Four out of five dentists recommend Happy Glossy toothpaste. Therefore, it must be great.""",[None],"[None, None, None, None]",partial match
+150,A mother says that she does not trust her pediatrician because he has never been a mother.,[None],[None],exact match
+151,"She has always associated with shady people, so she must not be trustworthy.",[None],[None],exact match
+152,"Our garage sale made lots of money before Joan showed up. Obviously, she scared off all the customers.",[None],"[None, None, None, None]",partial match
+153,"Speaker 1: No fault divorce is really harmful to the family and the larger society.
+Speaker 2: Well, you must not really think that since you’re divorced yourself.",[None],"[None, None, None]",partial match
+154,"Mark: Do you believe in virgin births?
+Sue: You mean that babies are born virgins?
+Mark: I mean birth without fertilization.
+Sue: No.
+Mark: How could you not believe in virgin births? Roughly two billion people believe in them, don’t you think you should reconsider your position?
+",[None],"[None, None, None, None]",partial match
+155,"After Will said that we should put more money into health and education, Warren responded by saying that he was surprised that Will hates our country so much that he wants to leave it defenceless by cutting military spending.",[None],"[None, None]",partial match
+156,"I didn't want to the only one not listening to music while I completed my Achieve article, so I listened to music too.",[None],"[None, None, None, None, None]",partial match
+157,"If we take away farmers' ability to grow genetically engineered crops, if we eliminate that option, people will go hungry, in fact, people will starve. Unlike my opponent, I choose to use the technology available to us and save lives.",[None],"[None, None, None, None]",partial match
+158,"I thought you were a good person, but you were not at church today.",[None],"[None, None, None]",partial match
+159,"""We both like music, so we should get married.""",[None],"[None, None, None]",partial match
+160,"Four out of five dentists recommend Happy Glossy Smiley toothpaste brand.  Therefore, it must be great.",[None],"[None, None, None]",partial match
+161,What drugs were you on?,[None],"[None, None]",partial match
+162,“Guns are like hammers—they’re both tools with metal parts that could be used to kill someone. And yet it would be ridiculous to restrict the purchase of hammers—so restrictions on purchasing guns are equally ridiculous.”,[None],"[None, None]",partial match
+163,"A car makes less pollution than a bus. Therefore, cars are less of a pollution problem than buses",[None],[None],exact match
+164,"Sam is riding her bike in her home town in Maine, minding her own business. A station wagon comes up behind her and the driver starts beeping his horn and then tries to force her off the road. As he goes by, the driver yells ""get on the sidewalk where you belong!"" Sam sees that the car has Ohio plates and concludes that all Ohio drivers are jerks.",[None],"[None, None, None, None, None]",partial match
+165,"I’m raising funds to help cure XYZ disease. If you don’t donate, then you’re part of the problem.",[None],"[None, None]",partial match
+166,"If we let the government implant tracking devices in criminals, it's not going to stop there! They're going to want to track us at work, our school children, and then eventually everyone!",[None],"[None, None]",partial match
+167,"Jay: Dude, where are my car keys?
+Silent Bob: (says nothing)
+Jay: I KNEW you took them!
+",[None],"[None, None, None]",partial match
+168,Starbucks is the best because it's expensive.,[None],[None],exact match
+169,"I saw two women get in a car accident. Therefore, all women are bad drivers",[None],"[None, None, None]",partial match
+170,"Matthew: Everyone believes that teachers get paid enough for the job they do. Therefore, it must be true.",[None],"[None, None, None]",partial match
+171,"If your neighbor robs a bank, should you go to jail? is an example of.....",[None],"[None, None, None, None]",partial match
+172,"Jon: ""Go easy on the scotch; you've had three shots already now."" Jeff: ""Oh sure, I'll put down my scotch when you put down that tequila. Lay off, man.""",[None],"[None, None, None, None, None]",partial match
+173,"Broccoli has significantly less fat than the leading candy bar! Plus, it's nowhere near as hot as Hot Cheetos!",[None],"[None, None]",partial match
+174,"Although we have proven that the moon is not made of spare ribs, we have not proven that its core cannot be filled with them; therefore, the moon’s core is filled with spare ribs.
+
+X is true because you cannot prove that X is false.
+X is false because you cannot prove that X is true.",[None],[None],exact match
+175,"Violent video games cause teens to be violent, because violent teens play violent video games.",[None],"[None, None, None]",partial match
+176,"A 2005 Gallup Poll found that an estimated 25% of Americans over the age of 18 believe in astrology—or that the position of the stars and planets can affect people's lives.  That is roughly 75,000,000 people.  Therefore, there must be some truth to astrology!",[None],"[None, None]",partial match
+177,"I saw Ashton Kutcher in a commercial for male skin care. He's looking good for his age, so I'm willing to try the product. He must know what he's talking about.",[None],"[None, None, None]",partial match
+178,Trying the latest social media challenge is a good example of what logical fallacy?,[None],"[None, None, None, None, None]",partial match
+179,"Murder is morally wrong. Therefore, abortion is morally wrong.",[None],"[None, None]",partial match
+180,The party was going great! Then Gerald showed up and little by little people started collecting their coats and heading home. Gerald ruined the party.,[None],"[None, None, None]",partial match
+181,"The Supreme Court right now is deciding whether it is right to execute insane people who have committed murder. I think it is all right to execute insane people. If we ban executions of insane people, then everybody on death row will suddenly decide they are insane and purposely fail sanity tests. It would result in chaos.",[None],"[None, None, None]",partial match
+182,"""That new home looks great! Let's buy it!""",[None],"[None, None, None, None, None]",partial match
+183,"After I listened to the first song of my favorite musician’s new vinyl record, I knew I’d hate the entire record, so I converted it into a Frisbee.",[None],"[None, None, None, None, None, None]",partial match
+184,"John: Members of the UbaTuba White Men's Club are upstanding citizens of the community.
+Marvin: Then why are there so many of these members in jail?
+John: They were never true UbaTuba White Men's Club members.
+Marvin: What’s a true UbaTuba White Men's Club member?
+John: Those who don't go to jail.
+",[None],"[None, None]",partial match
+185,"Tries to persuade the reader to do, think or buy something because it is popular or because ""everyone"" is doing it.",[None],[None],exact match
+186,Why worry about taking attendance when there are so many starving children in the world?,[None],"[None, None, None]",partial match
+187,Purchase our product or no one is going to think you’re attractive.,[None],"[None, None, None]",partial match
+188,Senator Lewis says we should not fund the missile attack program. I disagree. I don't understand why he wants to leave us defenseless like that.,[None],"[None, None]",partial match
+189,"This is an emotional appeal that speaks the concept that many people agree or disagree, so you should, too",[None],[None],exact match
+190,Everyone being referred to as comrade.,[None],"[None, None]",partial match
+191,"Slavery is accepted by just about everyone in our society, so it’s ethical to keep slaves.",[None],"[None, None]",partial match
+192,"You tell me it's unpatriotic to cheat on federal income tax reports. Well, you should know. You've never once listed your huge bonuses.",[None],"[None, None]",partial match
+193,"I shop at Natural Happy Sunshine Store (NHSS), which is much better than your grocery store because at NHSS everything is natural including the 38-year-old store manager’s long gray hair and saggy breasts.",[None],"[None, None, None, None]",partial match
+194,"I took a vitamin this morning and now I’m sick, so the vitamin must have made me ill.",[None],"[None, None]",partial match
+195,Get Verizon--1 billion people can't be wrong.,[None],"[None, None]",partial match
+196,"""If I raise you, I must raise everyone, and then the company goes bankrupt.""",[None],"[None, None, None, None, None]",partial match
+197,Atheists are morally bankrupt.,[None],"[None, None, None]",partial match
+198,Last year I wanted to quit school because my friends treated me like an outcast and talked about me to my friends. I felt betrayed and sad all of the time but now I think I have a place at my new middle school.,[None],"[None, None, None, None, None, None]",partial match
+199,"In order to really look at the problem of global warming, we must first consider how the homeless suffer when it is cold.",[None],"[None, None, None]",partial match
+200,Why should we worry about the negative depiction of women in music videos when thousands of women are dying of AIDS each year?,[None],"[None, None, None]",partial match
+201,Donald Trump mocked Romney for walking like a penguin. He also repeatedly called Jeb Bush low-energy.,[None],"[None, None, None]",partial match
+202,French people are great at kissing. Julie is French. Get me a date!,[None],"[None, None, None, None, None]",partial match
+203,"First we handed out I-pads, now we use Quizizz, next we'll have robot subs!",[None],"[None, None, None]",partial match
+204,There was a thunderstorm with rain therefore I did not finish my homework.,[None],"[None, None, None]",partial match
+205,The sinister fisherman's suspicious smile frightened the innocent children,[None],"[None, None]",partial match
+206,I guess I should buy my 12-year-old daughter an iPhone. Everyone at her new school has one and I want her to fit in with the other kids.,[None],"[None, None]",partial match
+207,"""Everyone else believes it, so it must be true.""",[None],"[None, None]",partial match
+208,"Charlie: Fast food is filled with salt, fat, and added sugars. We need better regulation of the industry.
+
+Bob: That may be, but you’re such a hypocrite! I saw you devour a Triple-Baconator, super-sized fries, and 64 ounces of soda yesterday.",[None],[None],exact match
+209,", motive, or other attribute of the person making the argument.",[None],"[None, None, None]",partial match
+210,"Speaker 1: I'll never talk.
+Speaker 2: We have ways of making you talk.",[None],"[None, None, None, None, None]",partial match
+211,"Last week, the Cowboys played the Texans in Houston. Mrs. Gibson was excited to go to the game because she is a huge Cowboys fan. Because everyone in Houston cheers for the Texans, Mrs. Gibson decided to cheer for the Texans too.",[None],[None],exact match
+212,Everyone is doing it.  You should too.,[None],[None],exact match
+213,Join the crowd and don’t get left behind!,[None],"[None, None]",partial match
+214,"""There I was in the midst of thousands, and yet a perfect stranger; without home and without friends, in the midst of thousands of my own brethren—children of a common Father, and yet I dared not to unfold to any one of them my sad condition."" Check each literary term found in this quote:",[None],"[None, None, None, None]",partial match
+215,"We cannot unlock our child from the closet because if we do, she will want to roam the house.  If we let her roam the house, she will want to roam the neighborhood.  If she roams the neighborhood, she will get picked up by a stranger in a van, who will sell her in a sex slavery ring in some other country.  Therefore, we should keep her locked up in the closet.",[None],"[None, None, None, None, None, None]",partial match
+216,"Even though it's only the first day, I can tell this is going to be a boring course.",[None],[None],exact match
+217,"Eugene is silly in class. Harry is his friend, so Harry must be silly, too.",[None],"[None, None]",partial match
+218,"""How would you know anything about technology? You're too old!""",[None],[None],exact match
+219,"""Everybody is late coming back from lunch, so it shouldn't matter if I'm late.""",[None],"[None, None]",partial match
+220,"Lots of people bought this album, so it must be good.",[None],"[None, None]",partial match
+221,My child was diagnosed with autism after receiving vaccinations. That is proof that vaccines are to blame.,[None],"[None, None, None, None]",partial match
+222,"My parents are democrats, and they are good people. Therefore, all democrats must be good people.",[None],"[None, None]",partial match
+223,"""You can't prove that mermaids actually don't exist and therefore it's reasonable to say that they do"" IS an example of this fallacy.",[None],"[None, None]",partial match
+224,"All Greek gods are mythical.
+All modern day gods are real.
+Therefore, all Greek gods are real.",[None],"[None, None]",partial match
+225,The senator voted for the tax increase. It's not hard to understand why when you consider that he is a millionaire and has never had to worry about money.,[None],"[None, None]",partial match
+226,"Susie bought a flip-phone, so all of her friends bought flip-phones.",[None],"[None, None]",partial match
+227,"Now that the Chiefs are going to the Super Bowl, everybody is suddenly a fan.",[None],"[None, None]",partial match
+228,"Sure, we haven't given raises to our employees in more than ten years. However, we do pride ourselves on providing customer service in over seven different languages.",[None],"[None, None, None, None]",partial match
+229,"Nicholas - ""An apple is a vegetable."" Alexis - ""Don't listen to Nicholas; he is failing AP Language""",[None],[None],exact match
+230,"Laura is the class president. She believes that the class should sponsor a dance as a fundraiser. Then she learns that a group of girls that she doesn't like also support the idea of a dance as a fundraiser. So, Laura changes her mind and decides that the class should plan a race instead.",[None],"[None, None]",partial match
+231,"I can’t stop eating these chocolates.  I really love chocolate, or I seriously lack willpower.  I know I really love chocolate; therefore, I cannot lack willpower.",[None],"[None, None, None]",partial match
+232,Did you really vote for Donald as class treasurer? Didn't you hear that his uncle was imprisoned for embezzling $1.5 million?,[None],"[None, None, None, None]",partial match
+233,"All of my friends are coming to my birthday party. If Micah doesn't, she might as well tell me that she doesn't like me.",[None],"[None, None, None, None]",partial match
+234,"No donkeys are fish.
+Some asses are donkeys.
+Therefore, some asses are fish.",[None],"[None, None]",partial match
+235,I’ve never had the flu because I take my vitamins everyday.,[None],"[None, None, None, None]",partial match
+236,We either ban hairspray or the world will end.,[None],[None],exact match
+237,A speaker chooses a deliberately poor or oversimplified example in order to ridicule and refute an idea,[None],"[None, None]",partial match
+238,"Everyone I know is making fruit smoothies for quick, portable meals, so smoothies must be really good for you.",[None],"[None, None]",partial match
+239,"If we allow a housing development to be built on Sunny Lake, a resort will come next, and soon we won’t have any wilderness left!",[None],"[None, None, None]",partial match
+240,"A: “Many stores are telling their employees to say Happy Holidays instead of Merry Christmas.”
+
+B: “This is crazy! Why are they trying to get rid of Christmas?!”",[None],"[None, None]",partial match
+241,"The government is convinced that it was a bomb that brought down the aircraft. “Our countrymen believe it was a bomb,” said the president. “A survey done a few days after the crash indicates that almost seventy percent of the people believe it was a terrorist’s bomb.”",[None],"[None, None, None]",partial match
+242,"Trying to finish a marathon is impossible, I know because I tried it once.",[None],"[None, None, None]",partial match
+243,"Teacher: You are receiving a zero because you didn't do your homework.
+
+Students: Are you serious? You gave me a zero because you hate me????",[None],"[None, None, None]",partial match
+244,"That German, Fred, stole my wallet. All Germans are thieves.",[None],"[None, None, None]",partial match
+245,"person 1 : ""We should argue with logic facts""
+person 2: ""You should grow a brain before you open your mouth""",[None],"[None, None, None, None]",partial match
+246,We should present Cadet Curry with our squadron’s cadet of the year award. He’s the most active and highest-performing cadet we have. REPLY: But Cadet Arnold has been in CAP longer.,[None],"[None, None, None, None]",partial match
+247,"The more things change, the more they remain the same.",[None],"[None, None, None, None]",partial match
+248,"Utah passed a strict gun-control law, and crime there decreased. Therefore, gun-control laws decrease crime.",[None],"[None, None, None]",partial match
+249,"Bill: I think capital punishment is wrong.
+Adam: No it isn't. If it was wrong, it wouldn't be legal.
+Of which fallacy is this an example?  http://www.funtrivia.com",[None],"[None, None, None, None]",partial match
+250,"Premise: All black bears are omnivores.
+
+Premise: All raccoons are omnivores.
+
+Conclusion: All raccoons are black bears.",[None],"[None, None]",partial match
+251,"Running in the halls at school is against the rules. Therefore, the indoor track team should be written up.",[None],"[None, None, None, None, None]",partial match
+252,"I thought you were a good person, but you weren’t at church today.",[None],"[None, None, None]",partial match
+253,"I saw a student texting in my class yesterday; all my students must be texting, so cell phones should be banned.",[None],"[None, None, None]",partial match
+254,"“The temperature has dropped this morning, and I also have a headache. Therefore, the cold weather must be causing my headache. “",[None],"[None, None]",partial match
+255,A commercial about abandoned animals needing a shelter of a forever home. They ask for a small donation to help these struggling animals.,[None],"[None, None]",partial match
+256,"""You can be a good politician and play dirty or you can drop out.""",[None],[None],exact match
+257,"""I don't know how Professor Resnick can be such a hard grader.  He's always late for class. """,[None],[None],exact match
+258,“The purpose of the Cadet Program is to prepare youth for Air Force Basic Military Training.” REPLY: “This is true because I heard it from the Wing Commander.”,[None],"[None, None]",partial match
+259,"4 out of 5 dentists recommend this toothpaste! (only 5 were asked. Out of 1000 asked, only 20% recommend it)",[None],"[None, None, None, None]",partial match
+260,"It is said that we have a good understanding of our universe. Therefore, we know exactly how it began and when.",[None],"[None, None]",partial match
+261,"We can’t freeze the academic year because then students won’t graduate on time. Next thing you know most people will be unemployed and will resort to crime. The crime rate will skyrocket and society will collapse.
+No podemos congelar el año académico porque entonces los estudiantes no se graduarán a tiempo. Lo siguiente que sabes es que la mayoría de la gente estará desempleada y recurrirá al crimen. La tasa de criminalidad se disparará y la sociedad colapsará.",[None],"[None, None, None]",partial match
+262,"If we allow our 14 year-old to have her first date tonight, what's next? A wedding, kids?",[None],"[None, None, None]",partial match
+263,"If we put limits on the right to bear arms, soon all of our Constitutionally-given  rights will be taken away.",[None],"[None, None]",partial match
+264,A is true because A is true.,[None],"[None, None]",partial match
+265,Have you stopped beating your wife?,[None],"[None, None, None, None]",partial match
+266,No one in your family surfs? But I thought you said you lived in California before this.,[None],"[None, None]",partial match
+267,"Holly said that vaccinations caused autism in children, but her scientifically well-read friend Caleb said that this claim had been debunked and proven false. Their friend Alice offered a compromise that vaccinations must cause some autism, just not all autism.",[None],"[None, None, None]",partial match
+268,Teacher: If I let you go to the bathroom pretty soon everybody will want to go to the bathroom. This is an example of,[None],"[None, None]",partial match
+269,"Your friend says, ""You can't prove that space aliens don't exist, so they must be real"". This is an example of which logical fallacy?",[None],"[None, None]",partial match
+270,This is when you characterize someone with one extreme trait in order to more effectively tear them down.,[None],"[None, None, None]",partial match
+271,40 million people can't be wrong! Buy the new iPhone XIV today!,[None],"[None, None]",partial match
+272,Smoking pot is against the law because it's wrong; I know it's wrong because it is against the law.,[None],[None],exact match
+273,"I believe that when we die, we are all given new, young, perfect bodies, and we spend eternity with those whom we love. I can’t imagine the point of life if it all just ends when we die!",[None],"[None, None]",partial match
+274,"Student: You didn't teach us this; we never learned this.
+
+Teacher: So, you're either lazy or unwilling to learn is that right?",[None],"[None, None]",partial match
+275,"Which fallacy is the following example? ""By rejecting God, you are rejecting goodness, kindness, and love itself.""",[None],"[None, None, None]",partial match
+276,"Ginger: Your dog just ran into our house and ransacked our kitchen!
+Mary: He would never do that, look at how adorable he is with those puppy eyes!
+",[None],"[None, None, None]",partial match
+277,SM 6: North invading South during Civil War,[None],"[None, None, None, None, None]",partial match
+278,"This new test seemed so promising, but the 3 studies that supported its validity turned out to have critical methodological flaws, so the test is probably not valid.",[None],"[None, None]",partial match
+279,"earthquakes in the Andes were correlated with the closest approaches of the planet Uranus. Therefore, Uranus must have caused them.",[None],"[None, None, None]",partial match
+280,attaching an argument to a person of false or appeared authority in order to give credence to their argument,[None],[None],exact match
+281,"Form: Idea X is popular.
+Therefore, X is correct.",[None],"[None, None, None]",partial match
+282,"It says in the Bible that God exists. Since the Bible is God's word, and God never speaks falsely, then everything in the Bible must be true. So, God must exist.",[None],"[None, None, None]",partial match
+283,I shouldn't have to pay for my parking ticket. There are far more dangerous offenses people commit. They should have to pay.,[None],"[None, None]",partial match
+284,"My sister loves shopping, so all girls must love to shop too.",[None],"[None, None]",partial match
+285,"Speaker 1: I’m against the war.
+Speaker 2: You must hate our troops.",[None],"[None, None]",partial match
+286,Vote for me or live through four more years of higher taxes.,[None],"[None, None]",partial match
+287,Two members of my team have become more engaged employees after taking public speaking classes. That proves we should have mandatory public speaking classes for the whole company to improve employee engagement.,[None],"[None, None, None, None]",partial match
+288,"Justin claimed that passing federal laws to control the amount of violence in music is the first step in a process that will eventually result in absolute government control of the media and total censorship over all forms of artistic expression.
+Of what fallacy is this an example?",[None],"[None, None]",partial match
+289,"I'm raising money to help cure XYZ disease. If you do not donate, you are part of the problem.",[None],"[None, None]",partial match
+290,SM 7: No global warming happening,[None],"[None, None]",partial match
+291,Paranormal activity is real because I have experienced what can only be described as paranormal activity.,[None],"[None, None, None]",partial match
+292,"""Once a year, a miracle causes this large rock to float about ten centimeters off the ground since supernatural powers want us to remember the martyrs who died in that spot.""",[None],"[None, None, None, None]",partial match
+293,"""Do not listen to Luisa, she will only tell you lies about the recent activities given in our EAPP class.""",[None],[None],exact match
+294,"Jojo: All New Yorkers are tough
+Charli: I get shoved in a locker every day and cry when I see bunnies
+Jojo: Well, REAL New Yorkers are tough
+Charli: What does toughness have to do with Geography?
+Jojo: Todos los neoyorquinos son duros
+Charli: Me empujan en un casillero todos los días y lloro cuando veo conejitos.
+Jojo: Bueno, los verdaderos neoyorquinos son duros.
+Charli: ¿Qué tiene que ver la dureza con la geografía?",[None],"[None, None, None]",partial match
+295,The Windmill debate- Snowball promises that the Windmill will mean less work and better living conditions. Napoleon says that it's just unnecessary and will be more work.,[None],"[None, None, None, None]",partial match
+296,"Charlie: Fast food is filled with salt, fat, and added sugars. We need better regulation of the industry.
+Bob: That my be, but you're such a hypocrite! I saw you devour a Triple-Baconator, super-sized fries, and 64oz of soda yesterday!",[None],[None],exact match
+297,"Boris is not qualified to make suggestions about our penal system. As an ex-convict, he would always take the criminals’ side.",[None],[None],exact match
+298,"President Bush argues that we should open up the Arctic National Wildlife Refuge for oil drilling. But Bush just wants to reward his rich cronies in the oil industry, so we can't take his arguments seriously.",[None],"[None, None]",partial match

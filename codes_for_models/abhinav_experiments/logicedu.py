@@ -13,24 +13,21 @@ import sklearn.metrics
 import logging
 import argparse
 from random import sample
-from library import eval_classwise, eval_and_store, convert_to_multilabel
+from library import eval_classwise, eval_and_store, convert_to_multilabel, get_corefs, replace_masked_tokens, \
+    replace_char
+from weighted_cross_entropy import CrossEntropyLoss
 
 torch.manual_seed(0)
 
 
-def add(char, num):
-    i = ord(char[0])
-    i += num
-    char = chr(i)
-    return char
-
-
 def get_unique_labels(df, label_col_name, multilabel=False):
-    labels_set = set()
+    labels_dict = {}
     if multilabel:
         for labels in df[label_col_name]:
             for label in labels:
-                labels_set.add(label)
+                if label not in labels_dict.keys():
+                    labels_dict[label] = 0
+                labels_dict[label] += 1
     else:
         candidate_labels = df[label_col_name].unique()
         for label in candidate_labels:
@@ -38,30 +35,15 @@ def get_unique_labels(df, label_col_name, multilabel=False):
             if len(labels) > 1:
                 print(labels)
             labels = [x.strip() for x in labels]
-            labels_set.update(labels)
-    candidate_labels = list(labels_set)
-    return candidate_labels
-
-
-def replace_char(i):
-    return "[" + add('A', i) + "]"
+            for lbl in labels:
+                if lbl not in labels_dict.keys():
+                    labels_dict[lbl] = 0
+                labels_dict[lbl] += 1
+    return labels_dict.keys(), labels_dict
 
 
 def replace_random_sample(i):
     return sample(word_bank, 1)[0]
-
-
-def replace_masked_tokens(input, replace_fn=replace_char):
-    i = 0
-    while True:
-        output = input.replace("MSK<%d>" % i, replace_fn(i))
-        if input == output:
-            output = input.replace("<MSK%d>" % i, replace_fn(i - 1))
-        if input == output and i > 0:
-            break
-        i += 1
-        input = output
-    return output
 
 
 class MNLIDataset:
@@ -86,9 +68,12 @@ class MNLIDataset:
         self.mappings = pd.read_csv("../../data/mappings.csv")
         self.multilabel = multilabel
         if fallacy:
-            self.unique_labels = get_unique_labels(pd.concat([train_df, val_df, test_df]), self.label_col_name,
-                                                   multilabel)
-            print(self.unique_labels)
+            self.unique_labels, self.counts_dict = get_unique_labels(pd.concat([train_df, val_df, test_df]),
+                                                                     self.label_col_name,
+                                                                     multilabel)
+            self.total_count = 0
+            for count in self.counts_dict.values():
+                self.total_count += count
         self.init_data(fallacy, undersample_train, undersample_val, undersample_test,
                        undersample_ratio=undersample_rate, train_strat=train_strat, test_strat=test_strat)
 
@@ -115,6 +100,7 @@ class MNLIDataset:
                     form = list(self.mappings[self.mappings['Original Name'] == label]['Logical Form'])[0]
                     entry.append("This article matches the following logical form: %s" % form)
                 elif self.map == 'masked-logical-form':
+                    # print(self.mappings[self.mappings['Original Name'] == label]['Masked Logical Form'])
                     form = replace_masked_tokens(list(self.mappings[self.mappings['Original Name'] == label]
                                                       ['Masked Logical Form'])[0])
                     entry.append("This article matches the following logical form: %s" % form)
@@ -126,14 +112,17 @@ class MNLIDataset:
                     if undersample and p > undersampling_rate:
                         continue
                     entry.append("contradiction")
+                weight = (self.total_count / self.counts_dict[label]) / 10
+                entry.append([weight * 12, weight, weight])
+                # print(entry)
                 if strat % 2:
                     data.append(entry)
                 if strat > 1:
-                    entry1 = [replace_masked_tokens(row['masked_articles']), entry[1], entry[2]]
+                    entry1 = [replace_masked_tokens(row['masked_articles']), entry[1], entry[2], entry[3]]
                     if entry1[0] != entry[0] or strat == 3:
                         data.append(entry1)
 
-        return pd.DataFrame(data, columns=['sentence1', 'sentence2', 'gold_label'])
+        return pd.DataFrame(data, columns=['sentence1', 'sentence2', 'gold_label', 'weight'])
 
     def init_data(self, fallacy, undersample_train=False, undersample_val=False, undersample_test=False,
                   undersample_ratio=0.02, train_strat=1, test_strat=1):
@@ -144,6 +133,8 @@ class MNLIDataset:
                                                undersampling_rate=undersample_ratio, strat=test_strat)
             self.test_df = self.convert_to_mnli(self.test_df, undersample=undersample_test,
                                                 undersampling_rate=undersample_ratio, strat=test_strat)
+        # print(self.counts_dict, self.total_count)
+        # self.train_df.to_csv('results/temp.csv')
         self.train_data = self.load_data(self.train_df)
         self.val_data = self.load_data(self.val_df)
         self.test_data = self.load_data(self.test_df)
@@ -157,12 +148,14 @@ class MNLIDataset:
         mask_ids = []
         seg_ids = []
         y = []
+        weights = []
 
         premise_list = df['sentence1'].to_list()
         hypothesis_list = df['sentence2'].to_list()
         label_list = df['gold_label'].to_list()
+        weight_list = df['weight'].to_list()
 
-        for (premise, hypothesis, label) in zip(premise_list, hypothesis_list, label_list):
+        for (premise, hypothesis, label, weight) in zip(premise_list, hypothesis_list, label_list, weight_list):
             premise_id = self.tokenizer.encode(premise, add_special_tokens=False)
             hypothesis_id = self.tokenizer.encode(hypothesis, add_special_tokens=False)
             pair_token_ids = [self.tokenizer.cls_token_id] + premise_id + [
@@ -181,12 +174,15 @@ class MNLIDataset:
             seg_ids.append(segment_ids)
             mask_ids.append(attention_mask_ids)
             y.append(self.label_dict[label])
+            weights.append(weight)
 
         token_ids = pad_sequence(token_ids, batch_first=True)
         mask_ids = pad_sequence(mask_ids, batch_first=True)
         seg_ids = pad_sequence(seg_ids, batch_first=True)
         y = torch.tensor(y)
-        dataset = TensorDataset(token_ids, mask_ids, seg_ids, y)
+        # print(token_ids.shape)
+        # print(torch.tensor(weights).shape)
+        dataset = TensorDataset(token_ids, mask_ids, seg_ids, y, torch.tensor(weights))
         # print(len(dataset))
         return dataset
 
@@ -298,7 +294,7 @@ def get_metrics(logits, labels, threshold=0.5, sig=True, tensors=True):
 def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=0.04, positive_weight=12, debug=False):
     train_loader, val_loader, _ = dataset.get_data_loaders()
     min_val_loss = float('inf')
-    loss_fn = nn.CrossEntropyLoss(weight=torch.tensor([positive_weight, 1, 1]).float())
+    loss_fn = CrossEntropyLoss()
     loss_fn.to(device)
     for epoch in range(epochs):
         start = time.time()
@@ -309,7 +305,8 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
         total_train_rec = 0
         if ratio < 1:
             train_loader = dataset.get_undersampled(ratio)
-        for batch_idx, (pair_token_ids, mask_ids, seg_ids, y) in enumerate(train_loader):
+        for batch_idx, (pair_token_ids, mask_ids, seg_ids, y, weights) in enumerate(train_loader):
+            # print(weights.shape)
             if batch_idx % 10 == 0:
                 logger.debug('%d %d', epoch, batch_idx)
             optimizer.zero_grad()
@@ -324,7 +321,9 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
                                   token_type_ids=seg_ids,
                                   attention_mask=mask_ids,
                                   labels=labels).values()
-            loss = loss_fn(prediction, labels)
+            # print(weights.shape)
+            loss = loss_fn(prediction, labels, weights.to(device))
+            print('forward prop done')
             acc, prec, rec = multi_acc(prediction, labels)
             # print(acc,prec,rec)
             loss.backward()
@@ -502,6 +501,6 @@ if __name__ == "__main__":
         df.to_csv(args.classwise_savepath)
     if args.result_path is not None:
         logger.info("Generating results on Dev Set")
-        df = eval_and_store(fallacy_ds, model, logger, device)
+        df = eval_and_store(fallacy_ds, model, logger, device, args.map)
         df = convert_to_multilabel(df)
         df.to_csv(args.result_path)

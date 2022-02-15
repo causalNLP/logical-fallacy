@@ -1,9 +1,9 @@
 from transformers import AutoModelForSequenceClassification, AdamW
 from logicedu import get_logger, MNLIDataset, train, eval1
-from classwiseresults import eval_classwise
 import argparse
 import pandas as pd
 import torch
+from library import eval_classwise, eval_and_store, convert_to_multilabel
 
 torch.manual_seed(0)
 
