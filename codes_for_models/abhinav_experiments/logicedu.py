@@ -294,7 +294,7 @@ def get_metrics(logits, labels, threshold=0.5, sig=True, tensors=True):
 def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=0.04, positive_weight=12, debug=False):
     train_loader, val_loader, _ = dataset.get_data_loaders()
     min_val_loss = float('inf')
-    loss_fn = CrossEntropyLoss()
+    loss_fn = nn.CrossEntropyLoss(weight=torch.tensor([positive_weight, 1, 1]).float())
     loss_fn.to(device)
     for epoch in range(epochs):
         start = time.time()
@@ -322,8 +322,8 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
                                   attention_mask=mask_ids,
                                   labels=labels).values()
             # print(weights.shape)
-            loss = loss_fn(prediction, labels, weights.to(device))
-            print('forward prop done')
+            loss = loss_fn(prediction, labels)
+            # print('forward prop done')
             acc, prec, rec = multi_acc(prediction, labels)
             # print(acc,prec,rec)
             loss.backward()
@@ -346,7 +346,7 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
         total_val_rec = 0
 
         with torch.no_grad():
-            for batch_idx, (pair_token_ids, mask_ids, seg_ids, y) in enumerate(val_loader):
+            for batch_idx, (pair_token_ids, mask_ids, seg_ids, y, weights) in enumerate(val_loader):
                 pair_token_ids = pair_token_ids.to(device)
                 mask_ids = mask_ids.to(device)
                 seg_ids = seg_ids.to(device)
@@ -392,7 +392,7 @@ def eval1(model, test_loader, logger, device):
     with torch.no_grad():
         all_preds = []
         all_labels = []
-        for batch_idx, (pair_token_ids, mask_ids, seg_ids, y) in enumerate(test_loader):
+        for batch_idx, (pair_token_ids, mask_ids, seg_ids, y, weights) in enumerate(test_loader):
             logger.debug("%d", batch_idx)
             pair_token_ids = pair_token_ids.to(device)
             mask_ids = mask_ids.to(device)
