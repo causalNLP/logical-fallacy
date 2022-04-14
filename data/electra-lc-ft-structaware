@@ -1,0 +1,36 @@
+Sender: LSF System <lsfadmin@eu-g3-057>
+Subject: Job 212070672: <python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-mnli -w 12 -ts 2 -ds 2 -f T -s /cluster/project/sachan/abhinav/saved_models/electra-lc-ft-sa -mp masked-logical-form> in cluster <euler> Exited
+
+Job <python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-mnli -w 12 -ts 2 -ds 2 -f T -s /cluster/project/sachan/abhinav/saved_models/electra-lc-ft-sa -mp masked-logical-form> was submitted from host <eu-login-06> by user <alalwani> in cluster <euler> at Fri Apr  1 14:00:47 2022
+Job was executed on host(s) <eu-g3-057>, in queue <gpuhe.4h>, as user <alalwani> in cluster <euler> at Fri Apr  1 14:01:00 2022
+</cluster/home/alalwani> was used as the home directory.
+</cluster/home/alalwani/logical-fallacy/data> was used as the working directory.
+Started at Fri Apr  1 14:01:00 2022
+Terminated at Fri Apr  1 14:01:05 2022
+Results reported at Fri Apr  1 14:01:05 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-mnli -w 12 -ts 2 -ds 2 -f T -s /cluster/project/sachan/abhinav/saved_models/electra-lc-ft-sa -mp masked-logical-form
+------------------------------------------------------------
+
+Exited with exit code 2.
+
+Resource usage summary:
+
+    CPU time :                                   0.19 sec.
+    Max Memory :                                 6 MB
+    Average Memory :                             1.00 MB
+    Total Requested Memory :                     30000.00 MB
+    Delta Memory :                               29994.00 MB
+    Max Swap :                                   -
+    Max Processes :                              1
+    Max Threads :                                1
+    Run time :                                   5 sec.
+    Turnaround time :                            18 sec.
+
+The output (if any) follows:
+
+python: can't open file '/cluster/home/alalwani/logical-fallacy/data/logicclimate.py': [Errno 2] No such file or directory

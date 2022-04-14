@@ -1,16 +1,18 @@
 from sklearn.model_selection import train_test_split
 import pandas as pd
 import sys
+
 sys.path.insert(1, '../abhinav_experiments')
-from logicedu import get_logger,get_unique_labels,get_metrics
+from logicedu import get_logger, get_unique_labels, get_metrics
 from tqdm import tqdm
 import random
 from sklearn.preprocessing import MultiLabelBinarizer
+import argparse
+
 
 class GPT2:
-    def __init__(self):
+    def __init__(self, model_id):
         from transformers import GPT2LMHeadModel, GPT2TokenizerFast
-        model_id = 'gpt2-large'
         self.device = 'cuda'
         self.model = GPT2LMHeadModel.from_pretrained(model_id)
         self.model.to(self.device)
@@ -21,7 +23,7 @@ class GPT2:
         from tqdm import tqdm
 
         candidate_template = 'Please classify a piece of text into the following categories of logical fallacies: ' \
-                          '{labels_str}.\n\nText: {sentence}\nLabel: {label}'
+                             '{labels_str}.\n\nText: {sentence}\nLabel: {label}'
         # candidate_template = 'An example of {label} fallacy is the following: {sentence}'
 
         from efficiency.function import avg, set_seed
@@ -58,13 +60,13 @@ class GPT2:
             if pred in {i.lower() for i in all_labels}:
                 acc = pred in {i.lower() for i in labels}
                 accuracies.append(acc)
-                bar.set_description('accuracy mean={:.2f}%'.format(100* avg(accuracies, decimal=4)))
+                bar.set_description('accuracy mean={:.2f}%'.format(100 * avg(accuracies, decimal=4)))
 
         import pdb;
         pdb.set_trace()
         sent2preds = {sent: preds for sent_id, preds, sent in predictions}
 
-        return sent2preds # predictions
+        return sent2preds  # predictions
 
     def seq2ppl(self, text_input, stride=512):
         # reference: Easier perplexity computation #9648 https://github.com/huggingface/transformers/issues/9648
@@ -93,25 +95,25 @@ class GPT2:
         ppl = torch.exp(torch.stack(lls).sum() / end_loc)
         return ppl
 
-    def classify_zero_shot2(self,data_path):
-        logger=get_logger()
-        fallacy_all=pd.read_csv(data_path)[['source_article','updated_label']]
-        _,fallacy_rem=train_test_split(fallacy_all,test_size=600,random_state=10)
-        _,fallacy_test=train_test_split(fallacy_rem,test_size=300,random_state=10)
-        all_labels=get_unique_labels(fallacy_all,'updated_label')
+    def classify_zero_shot2(self, data_path):
+        logger = get_logger()
+        fallacy_all = pd.read_csv(data_path)[['source_article', 'updated_label']]
+        _, fallacy_rem = train_test_split(fallacy_all, test_size=600, random_state=10)
+        _, fallacy_test = train_test_split(fallacy_rem, test_size=300, random_state=10)
+        all_labels = get_unique_labels(fallacy_all, 'updated_label')
         # candidate_template = 'Please classify a piece of text into the following categories of logical fallacies: ' \
         #                   '{labels_str}.\n\nText: {sentence}\nLabel: {label}'
         candidate_template = 'An example of {label} fallacy is the following: {sentence}'
         mlb = MultiLabelBinarizer()
         mlb.fit([all_labels])
-        labels=[]
-        preds=[]
-        for _,row in tqdm(fallacy_test.iterrows()):
+        labels = []
+        preds = []
+        for _, row in tqdm(fallacy_test.iterrows()):
             if '{labels_str}' in candidate_template:
                 random.shuffle(all_labels)
                 labels_str = ', '.join(all_labels)  # Post hoc, Slippery slope, Circular argument, Unknown type
             label_n_ppl = []
-            sent=row['source_article']
+            sent = row['source_article']
             for label in all_labels:
                 if '{labels_str}' in candidate_template:
                     candidate = candidate_template.format(labels_str=labels_str, label=label, sentence=sent)
@@ -125,8 +127,9 @@ class GPT2:
             labels_mh = mlb.transform([[row['updated_label']]])
             labels.append(labels_mh[0])
             preds.append(preds_mh[0])
-        scores=get_metrics(preds,labels,sig=False,tensors=False)
-        logger.info("micro f1: %f macro f1:%f precision: %f recall: %f exact match %f",scores[4],scores[5],scores[1],scores[2],scores[3])
+        scores = get_metrics(preds, labels, sig=False, tensors=False)
+        logger.info("micro f1: %f macro f1:%f precision: %f recall: %f exact match %f", scores[4], scores[5], scores[1],
+                    scores[2], scores[3])
 
 
 def main():
@@ -138,12 +141,14 @@ def main():
     dr.get_label_explanations()
     data = dr.sentence_n_labels_n_neg_labels
 
-
     gpt2 = GPT2()
 
     gpt2.classification_zero_shot(data)
 
 
 if __name__ == '__main__':
-    gpt2=GPT2()
-    gpt2.classify_zero_shot2('../../data/edu_all_updated.csv')
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-m", "--model", help="model path")
+    args = parser.parse_args()
+    gpt2 = GPT2(args.model)
+    gpt2.classify_zero_shot2('../../data/edu_all.csv')
