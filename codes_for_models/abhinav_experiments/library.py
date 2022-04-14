@@ -39,7 +39,7 @@ def eval_classwise(model, test_loader, logger, unique_labels, device):
     with torch.no_grad():
         all_preds = []
         all_labels = []
-        for batch_idx, (pair_token_ids, mask_ids, seg_ids, y) in enumerate(test_loader):
+        for batch_idx, (pair_token_ids, mask_ids, seg_ids, y, weights) in enumerate(test_loader):
             # logger.debug("%d", batch_idx)
             pair_token_ids = pair_token_ids.to(device)
             mask_ids = mask_ids.to(device)

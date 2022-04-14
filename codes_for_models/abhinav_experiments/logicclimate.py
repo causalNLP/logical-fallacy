@@ -40,6 +40,8 @@ if __name__ == "__main__":
     fallacy_train['logical_fallacies'] = fallacy_train['logical_fallacies'].apply(eval)
     fallacy_dev['logical_fallacies'] = fallacy_dev['logical_fallacies'].apply(eval)
     fallacy_test['logical_fallacies'] = fallacy_test['logical_fallacies'].apply(eval)
+    if args.finetune == 'F':
+        fallacy_test = pd.concat([fallacy_train, fallacy_dev, fallacy_test])
     fallacy_ds = MNLIDataset(args.tokenizer, fallacy_train, fallacy_dev, 'logical_fallacies', args.map, fallacy_test,
                              fallacy=True, train_strat=int(args.train_strat), test_strat=int(args.dev_strat),
                              multilabel=True)

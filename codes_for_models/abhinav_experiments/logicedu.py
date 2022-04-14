@@ -39,7 +39,7 @@ def get_unique_labels(df, label_col_name, multilabel=False):
                 if lbl not in labels_dict.keys():
                     labels_dict[lbl] = 0
                 labels_dict[lbl] += 1
-    return labels_dict.keys(), labels_dict
+    return list(labels_dict.keys()), labels_dict
 
 
 def replace_random_sample(i):
@@ -113,7 +113,9 @@ class MNLIDataset:
                         continue
                     entry.append("contradiction")
                 weight = (self.total_count / self.counts_dict[label]) / 10
-                entry.append([weight * 12, weight, weight])
+                if entry[-1] == "entailment":
+                    weight *= 12
+                entry.append(weight)
                 # print(entry)
                 if strat % 2:
                     data.append(entry)
@@ -150,12 +152,15 @@ class MNLIDataset:
         y = []
         weights = []
 
+        df = df.dropna()
+
         premise_list = df['sentence1'].to_list()
         hypothesis_list = df['sentence2'].to_list()
         label_list = df['gold_label'].to_list()
         weight_list = df['weight'].to_list()
 
         for (premise, hypothesis, label, weight) in zip(premise_list, hypothesis_list, label_list, weight_list):
+
             premise_id = self.tokenizer.encode(premise, add_special_tokens=False)
             hypothesis_id = self.tokenizer.encode(hypothesis, add_special_tokens=False)
             pair_token_ids = [self.tokenizer.cls_token_id] + premise_id + [
@@ -294,7 +299,7 @@ def get_metrics(logits, labels, threshold=0.5, sig=True, tensors=True):
 def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=0.04, positive_weight=12, debug=False):
     train_loader, val_loader, _ = dataset.get_data_loaders()
     min_val_loss = float('inf')
-    loss_fn = nn.CrossEntropyLoss(weight=torch.tensor([positive_weight, 1, 1]).float())
+    loss_fn = nn.CrossEntropyLoss(reduction='none')
     loss_fn.to(device)
     for epoch in range(epochs):
         start = time.time()
@@ -314,6 +319,7 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
             mask_ids = mask_ids.to(device)
             seg_ids = seg_ids.to(device)
             labels = y.to(device)
+            weights = weights.to(device)
             if debug:
                 print(pair_token_ids.shape, seg_ids.shape, mask_ids.shape)
                 break
@@ -323,6 +329,9 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
                                   labels=labels).values()
             # print(weights.shape)
             loss = loss_fn(prediction, labels)
+            # print(loss.shape)
+            len1 = loss.shape[0]
+            loss = torch.dot(loss, weights) / len1
             # print('forward prop done')
             acc, prec, rec = multi_acc(prediction, labels)
             # print(acc,prec,rec)
@@ -351,11 +360,14 @@ def train(model, dataset, optimizer, logger, save_path, device, epochs=5, ratio=
                 mask_ids = mask_ids.to(device)
                 seg_ids = seg_ids.to(device)
                 labels = y.to(device)
+                weights = weights.to(device)
                 _, prediction = model(pair_token_ids,
                                       token_type_ids=seg_ids,
                                       attention_mask=mask_ids,
                                       labels=labels).values()
                 loss = loss_fn(prediction, labels)
+                len1 = loss.shape[0]
+                loss = torch.dot(loss, weights) / len1
                 acc, prec, rec = multi_acc(prediction, labels)
 
                 total_val_loss += loss.item()
