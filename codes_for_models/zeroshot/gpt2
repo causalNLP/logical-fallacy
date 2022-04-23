@@ -1,0 +1,39 @@
+Sender: LSF System <lsfadmin@eu-g2-19>
+Subject: Job 203231670: <python model2_gpt3.py> in cluster <euler> Exited
+
+Job <python model2_gpt3.py> was submitted from host <eu-login-17> by user <alalwani> in cluster <euler> at Thu Feb  3 13:16:17 2022
+Job was executed on host(s) <eu-g2-19>, in queue <gpu.4h>, as user <alalwani> in cluster <euler> at Thu Feb  3 13:16:59 2022
+</cluster/home/alalwani> was used as the home directory.
+</cluster/home/alalwani/logical-fallacy/codes_for_models/zeroshot> was used as the working directory.
+Started at Thu Feb  3 13:16:59 2022
+Terminated at Thu Feb  3 13:17:11 2022
+Results reported at Thu Feb  3 13:17:11 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python model2_gpt3.py
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2.15 sec.
+    Max Memory :                                 772 MB
+    Average Memory :                             267.00 MB
+    Total Requested Memory :                     30000.00 MB
+    Delta Memory :                               29228.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   33 sec.
+    Turnaround time :                            54 sec.
+
+The output (if any) follows:
+
+Traceback (most recent call last):
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/zeroshot/model2_gpt3.py", line 10, in <module>
+    import openai
+ModuleNotFoundError: No module named 'openai'
