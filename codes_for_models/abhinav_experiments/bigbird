@@ -1,0 +1,80 @@
+Sender: LSF System <lsfadmin@eu-g3-049>
+Subject: Job 203250685: <python logicedu.py -t /cluster/project/sachan/abhinav/saved_models/bigbird -m /cluster/project/sachan/abhinav/saved_models/bigbird -w 12 -s /cluster/project/sachan/abhinav/saved_models/bigbird-ft -mp base -ts 1 -ds 1 -f T -sf bigbird-mnli -np /cluster/project/sachan/abhinav/saved_models/multinli> in cluster <euler> Exited
+
+Job <python logicedu.py -t /cluster/project/sachan/abhinav/saved_models/bigbird -m /cluster/project/sachan/abhinav/saved_models/bigbird -w 12 -s /cluster/project/sachan/abhinav/saved_models/bigbird-ft -mp base -ts 1 -ds 1 -f T -sf bigbird-mnli -np /cluster/project/sachan/abhinav/saved_models/multinli> was submitted from host <eu-login-32> by user <alalwani> in cluster <euler> at Thu Feb  3 18:16:35 2022
+Job was executed on host(s) <eu-g3-049>, in queue <gpuhe.4h>, as user <alalwani> in cluster <euler> at Thu Feb  3 18:16:48 2022
+</cluster/home/alalwani> was used as the home directory.
+</cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments> was used as the working directory.
+Started at Thu Feb  3 18:16:48 2022
+Terminated at Thu Feb  3 18:19:41 2022
+Results reported at Thu Feb  3 18:19:41 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python logicedu.py -t /cluster/project/sachan/abhinav/saved_models/bigbird -m /cluster/project/sachan/abhinav/saved_models/bigbird -w 12 -s /cluster/project/sachan/abhinav/saved_models/bigbird-ft -mp base -ts 1 -ds 1 -f T -sf bigbird-mnli -np /cluster/project/sachan/abhinav/saved_models/multinli
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   148.42 sec.
+    Max Memory :                                 11124 MB
+    Average Memory :                             6678.62 MB
+    Total Requested Memory :                     30000.00 MB
+    Delta Memory :                               18876.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                8
+    Run time :                                   200 sec.
+    Turnaround time :                            186 sec.
+
+The output (if any) follows:
+
+device = cuda
+Namespace(tokenizer='/cluster/project/sachan/abhinav/saved_models/bigbird', model='/cluster/project/sachan/abhinav/saved_models/bigbird', weight='12', savepath='/cluster/project/sachan/abhinav/saved_models/bigbird-ft', finetune='T', savepath2='bigbird-mnli', map='base', train_strat='1', dev_strat='1', replace_strat='char', replace_count=1, multinli_path='/cluster/project/sachan/abhinav/saved_models/multinli')
+initializing model
+initializing mnli dataset
+sys:1: DtypeWarning: Columns (7) have mixed types.Specify dtype option on import or set low_memory=False.
+Token indices sequence length is longer than the specified maximum sequence length for this model (10050 > 4096). Running this sequence through the model will result in indexing errors
+finetune on mnli
+0 0
+Attention type 'block_sparse' is not possible if sequence_length: 423 <= num global tokens: 2 * config.block_size + min. num sliding tokens: 3 * config.block_size + config.num_random_blocks * config.block_size + additional buffer: config.num_random_blocks * config.block_size = 704 with config.block_size = 64, config.num_random_blocks = 3. Changing attention type to 'original_full'...
+Traceback (most recent call last):
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/logicedu.py", line 439, in <module>
+    train(model, mnli_ds, optimizer, logger, args.savepath2, ratio=1, epochs=100, positive_weight=1)
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/logicedu.py", line 307, in train
+    _, prediction = model(pair_token_ids,
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/transformers/models/big_bird/modeling_big_bird.py", line 2680, in forward
+    outputs = self.bert(
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/transformers/models/big_bird/modeling_big_bird.py", line 2141, in forward
+    encoder_outputs = self.encoder(
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/transformers/models/big_bird/modeling_big_bird.py", line 1630, in forward
+    layer_outputs = layer_module(
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/transformers/models/big_bird/modeling_big_bird.py", line 1482, in forward
+    self_attention_outputs = self.attention(
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/transformers/models/big_bird/modeling_big_bird.py", line 1383, in forward
+    self_outputs = self.self(
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/transformers/models/big_bird/modeling_big_bird.py", line 372, in forward
+    value_layer = self.transpose_for_scores(self.value(hidden_states))
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/functional.py", line 1848, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: CUDA out of memory. Tried to allocate 40.00 MiB (GPU 0; 23.65 GiB total capacity; 21.97 GiB already allocated; 22.31 MiB free; 22.17 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

@@ -16,6 +16,10 @@ def replace_char(i):
 
 
 def replace_masked_tokens(input, replace_fn=replace_char):
+
+    if isinstance(input, float):
+        return input
+
     j = 0
     for i in range(10):
         output = input.replace("MSK<%d>" % i, replace_fn(j))

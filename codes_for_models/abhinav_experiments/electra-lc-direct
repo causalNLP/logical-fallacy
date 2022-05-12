@@ -1,0 +1,32 @@
+Sender: LSF System <lsfadmin@eu-g3-073>
+Subject: Job 213557215: <python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-ft -w 12 -ts 1 -ds 1> in cluster <euler> Exited
+
+Job <python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-ft -w 12 -ts 1 -ds 1> was submitted from host <eu-login-34> by user <alalwani> in cluster <euler> at Wed Apr 13 15:08:32 2022
+Job was executed on host(s) <eu-g3-073>, in queue <gpuhe.4h>, as user <alalwani> in cluster <euler> at Wed Apr 13 15:08:39 2022
+</cluster/home/alalwani> was used as the home directory.
+</cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments> was used as the working directory.
+Started at Wed Apr 13 15:08:39 2022
+Terminated at Wed Apr 13 15:08:42 2022
+Results reported at Wed Apr 13 15:08:42 2022
+Cannot open your job file: /cluster/shadow/.lsbatch/1649855312.213557215
+TERM_OWNER: job killed by owner.
+Exited with signal termination: 2.
+
+Resource usage summary:
+
+    CPU time :                                   0.16 sec.
+    Max Memory :                                 13 MB
+    Average Memory :                             1.00 MB
+    Total Requested Memory :                     30000.00 MB
+    Delta Memory :                               29987.00 MB
+    Max Swap :                                   -
+    Max Processes :                              2
+    Max Threads :                                2
+    Run time :                                   0 sec.
+    Turnaround time :                            10 sec.
+
+
+PS:
+
+Unable to read output data from the stdout buffer file </cluster/shadow/.lsbatch/1649855312.213557215.out>: your job was probably aborted prematurely.
+

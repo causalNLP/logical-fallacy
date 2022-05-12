@@ -1,0 +1,56 @@
+Sender: LSF System <lsfadmin@eu-g3-070>
+Subject: Job 205101077: <python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-mnli -w 12 -mp masked-logical-form -c results/electra-logic—mask-ft-classwise.csv -sr results/electra-logic-mask-ft-dev-results.csv -s /cluster/project/sachan/abhinav/saved_models/electra-logic-mask-ft -f T -ts 3 -ds 2> in cluster <euler> Exited
+
+Job <python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-mnli -w 12 -mp masked-logical-form -c results/electra-logic—mask-ft-classwise.csv -sr results/electra-logic-mask-ft-dev-results.csv -s /cluster/project/sachan/abhinav/saved_models/electra-logic-mask-ft -f T -ts 3 -ds 2> was submitted from host <eu-login-10> by user <alalwani> in cluster <euler> at Mon Feb 14 16:26:34 2022
+Job was executed on host(s) <eu-g3-070>, in queue <gpuhe.4h>, as user <alalwani> in cluster <euler> at Mon Feb 14 16:34:36 2022
+</cluster/home/alalwani> was used as the home directory.
+</cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments> was used as the working directory.
+Started at Mon Feb 14 16:34:36 2022
+Terminated at Mon Feb 14 16:35:36 2022
+Results reported at Mon Feb 14 16:35:36 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-mnli -w 12 -mp masked-logical-form -c results/electra-logic—mask-ft-classwise.csv -sr results/electra-logic-mask-ft-dev-results.csv -s /cluster/project/sachan/abhinav/saved_models/electra-logic-mask-ft -f T -ts 3 -ds 2
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   35.99 sec.
+    Max Memory :                                 6412 MB
+    Average Memory :                             4276.25 MB
+    Total Requested Memory :                     30000.00 MB
+    Delta Memory :                               23588.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                7
+    Run time :                                   60 sec.
+    Turnaround time :                            542 sec.
+
+The output (if any) follows:
+
+device = cuda
+Namespace(tokenizer='/cluster/project/sachan/abhinav/saved_models/electra-mnli', model='/cluster/project/sachan/abhinav/saved_models/electra-mnli', weight='12', savepath='/cluster/project/sachan/abhinav/saved_models/electra-logic-mask-ft', map='masked-logical-form', train_strat='3', dev_strat='2', finetune='T', classwise_savepath='results/electra-logic—mask-ft-classwise.csv', result_path='results/electra-logic-mask-ft-dev-results.csv')
+initializing model
+creating dataset
+Token indices sequence length is longer than the specified maximum sequence length for this model (578 > 512). Running this sequence through the model will result in indexing errors
+starting training
+0 0
+Traceback (most recent call last):
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/logicclimate.py", line 51, in <module>
+    train(model, fallacy_ds, optimizer, logger, args.savepath, device, ratio=1, epochs=100,
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/logicedu.py", line 322, in train
+    loss = loss_fn(prediction, labels, weights.to(device))
+  File "/cluster/home/alalwani/miniconda3/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/weighted_cross_entropy.py", line 62, in forward
+    return cross_entropy_with_weights(input, target, weights).mean()
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/weighted_cross_entropy.py", line 39, in cross_entropy_with_weights
+    loss = log_sum_exp(logits) - class_select(logits, target)
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/weighted_cross_entropy.py", line 11, in log_sum_exp
+    y = b + torch.log(torch.exp(x - b.expand_as(x)).sum(1))
+RuntimeError: The expanded size of the tensor (3) must match the existing size (32) at non-singleton dimension 1.  Target sizes: [32, 3].  Tensor sizes: [32]

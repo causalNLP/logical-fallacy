@@ -1,0 +1,2 @@
+,text,ground_truth_labels,model_predicted_labels,result
+0,""" Just like students are given a couple of [A] of [D] before taking exams , [B] should also be given few days or [A] to [D] [B] before an operation or [C] , after all [C] is not as easy task "" Is an example of .... ",[],['circular reasoning'],incorrect

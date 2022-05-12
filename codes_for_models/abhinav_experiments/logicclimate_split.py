@@ -47,7 +47,7 @@ for idx, obj in enumerate(objects):
     for label in obj['label']:
         start = max(bisect.bisect_right(start_indices, label[0]) - 1, 0)
         end = min(bisect.bisect_left(start_indices, label[1]), len(doc.sentences) - 1)
-        hot_area = doc.sentences[start:end]
+        hot_area = doc.sentences[start:end + 1]
         hot_area = [sentence.text for sentence in hot_area]
         ans = ' '.join(hot_area)
         if label[2] in mapping.keys():

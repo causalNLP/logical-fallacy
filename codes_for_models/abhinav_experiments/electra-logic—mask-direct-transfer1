@@ -1,0 +1,32 @@
+Sender: LSF System <lsfadmin@eu-g3-053>
+Subject: Job 205250271: <python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-strat3 -w 12 -mp masked-logical-form -c results/electra-logic—mask-direct-transfer-classwise.csv -sr results/electra-logic-mask-direct-transfer-dev-results.csv -ts 2 -ds 2> in cluster <euler> Exited
+
+Job <python logicclimate.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-strat3 -w 12 -mp masked-logical-form -c results/electra-logic—mask-direct-transfer-classwise.csv -sr results/electra-logic-mask-direct-transfer-dev-results.csv -ts 2 -ds 2> was submitted from host <eu-login-44> by user <alalwani> in cluster <euler> at Tue Feb 15 20:39:18 2022
+Job was executed on host(s) <eu-g3-053>, in queue <gpuhe.4h>, as user <alalwani> in cluster <euler> at Tue Feb 15 20:49:08 2022
+</cluster/home/alalwani> was used as the home directory.
+</cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments> was used as the working directory.
+Started at Tue Feb 15 20:49:08 2022
+Terminated at Tue Feb 15 20:49:12 2022
+Results reported at Tue Feb 15 20:49:12 2022
+Cannot open your job file: /cluster/shadow/.lsbatch/1644953958.205250271
+TERM_OWNER: job killed by owner.
+Exited with signal termination: 2.
+
+Resource usage summary:
+
+    CPU time :                                   0.17 sec.
+    Max Memory :                                 10 MB
+    Average Memory :                             7.00 MB
+    Total Requested Memory :                     30000.00 MB
+    Delta Memory :                               29990.00 MB
+    Max Swap :                                   -
+    Max Processes :                              1
+    Max Threads :                                1
+    Run time :                                   0 sec.
+    Turnaround time :                            594 sec.
+
+
+PS:
+
+Unable to read output data from the stdout buffer file </cluster/shadow/.lsbatch/1644953958.205250271.out>: your job was probably aborted prematurely.
+

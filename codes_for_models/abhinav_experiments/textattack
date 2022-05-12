@@ -1,0 +1,41 @@
+Sender: LSF System <lsfadmin@eu-ms-011-13>
+Subject: Job 213997461: <python textattack.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-ft -ts 1 -ds 1 -mp base> in cluster <euler> Exited
+
+Job <python textattack.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-ft -ts 1 -ds 1 -mp base> was submitted from host <eu-login-27> by user <alalwani> in cluster <euler> at Fri Apr 15 15:27:45 2022
+Job was executed on host(s) <eu-ms-011-13>, in queue <normal.4h>, as user <alalwani> in cluster <euler> at Fri Apr 15 15:28:16 2022
+</cluster/home/alalwani> was used as the home directory.
+</cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments> was used as the working directory.
+Started at Fri Apr 15 15:28:16 2022
+Terminated at Fri Apr 15 15:28:22 2022
+Results reported at Fri Apr 15 15:28:22 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python textattack.py -t /cluster/project/sachan/abhinav/saved_models/electra-mnli -m /cluster/project/sachan/abhinav/saved_models/electra-ft -ts 1 -ds 1 -mp base
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   3.67 sec.
+    Max Memory :                                 1998 MB
+    Average Memory :                             652.00 MB
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               -974.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                5
+    Run time :                                   30 sec.
+    Turnaround time :                            37 sec.
+
+The output (if any) follows:
+
+Traceback (most recent call last):
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/textattack.py", line 1, in <module>
+    import textattack
+  File "/cluster/home/alalwani/logical-fallacy/codes_for_models/abhinav_experiments/textattack.py", line 16, in <module>
+    model_wrapper = textattack.models.wrappers.HuggingFaceModelWrapper(model, tokenizer)
+AttributeError: partially initialized module 'textattack' has no attribute 'models' (most likely due to a circular import)

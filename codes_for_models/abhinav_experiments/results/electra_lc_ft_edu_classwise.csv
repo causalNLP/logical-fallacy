@@ -1,0 +1,14 @@
+,Fallacy Name,Precision,Recall,F1,Number of Positive Labels for this Class in Test Set
+0,intentional,0.350253807106599,1.0,0.518796992481203,69
+1,circular reasoning,0.0,0.0,0.0,0
+2,fallacy of credibility,0.0,0.0,0.0,26
+3,fallacy of extension,0.0,0.0,0.0,10
+4,appeal to emotion,0.15748031496062992,0.8695652173913043,0.2666666666666666,23
+5,false causality,0.0,0.0,0.0,10
+6,fallacy of relevance,0.0,0.0,0.0,19
+7,ad hominem,0.0,0.0,0.0,10
+8,faulty generalization,0.15,0.5714285714285714,0.23762376237623759,21
+9,equivocation,0.0,0.0,0.0,5
+10,ad populum,0.0,0.0,0.0,14
+11,false dilemma,0.0,0.0,0.0,8
+12,fallacy of logic,1.0,0.1111111111111111,0.19999999999999998,9
