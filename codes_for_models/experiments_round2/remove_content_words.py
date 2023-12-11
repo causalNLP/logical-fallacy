@@ -263,7 +263,4 @@ if __name__ == '__main__':
     model = SentenceTransformer(args.model)
     client = CoreNLPClient(
         annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref'], timeout=30000)
-    # update_csv_with_masked_content(args.path, args.article_col_name, model, client)
-    # print(word_bank) pickle.dump(word_bank, open("../../data/word_bank.pkl", "wb"))
-    text = "Every time I wash my car, it rains. Me washing my car has a definite effect on the weather."
-    mask_out_content(text, model, client, debug=True)
+    update_csv_with_masked_content(args.path, args.article_col_name, model, client)
